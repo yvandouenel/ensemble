@@ -23,6 +23,8 @@
         "drupal/config_installer": "^1.8",
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.5.3",
+        "drupal/devel": "^1.2",
+        "drupal/metatag": "^1.5",
         "drupal/pathauto": "^1.2",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",

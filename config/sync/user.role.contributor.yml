@@ -1,0 +1,21 @@
+uuid: 7d823bc1-591d-48cc-b052-d56268459518
+langcode: en
+status: true
+dependencies: {  }
+id: contributor
+label: Contributeur
+weight: -8
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'create article content'
+  - 'delete own article content'
+  - 'edit own article content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition demander_une_validation'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view article revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'
