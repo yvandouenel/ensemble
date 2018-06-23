@@ -18,6 +18,9 @@ targetEntityType: node
 bundle: article
 mode: rss
 content:
+  content_moderation_control:
+    weight: -20
+    region: content
   links:
     weight: 100
     region: content
@@ -26,3 +29,4 @@ hidden:
   comment: true
   field_image: true
   field_tags: true
+  langcode: true
