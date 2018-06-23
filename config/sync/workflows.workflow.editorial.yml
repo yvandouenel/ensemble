@@ -1,5 +1,5 @@
 uuid: bac48afc-a3ad-4c06-b065-e5b58304c56c
-langcode: en
+langcode: fr
 status: true
 dependencies:
   config:
@@ -9,7 +9,7 @@ dependencies:
 _core:
   default_config_hash: T_JxNjYlfoRBi7Bj1zs5Xv9xv1btuBkKp5C1tNrjMhI
 id: editorial
-label: Editorial
+label: Éditorial
 type: content_moderation
 type_settings:
   states:
@@ -36,11 +36,11 @@ type_settings:
     published:
       published: true
       default_revision: true
-      label: Publié
+      label: Published
       weight: 0
   transitions:
     archive:
-      label: Archiver
+      label: Archive
       from:
         - published
       to: archived

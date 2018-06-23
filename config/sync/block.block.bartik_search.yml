@@ -1,5 +1,5 @@
 uuid: 76b51043-3cbc-4631-94d8-44b2a0b5a7ec
-langcode: en
+langcode: fr
 status: true
 dependencies:
   module:
@@ -16,7 +16,7 @@ provider: null
 plugin: search_form_block
 settings:
   id: search_form_block
-  label: Search
+  label: Rechercher
   provider: search
   label_display: visible
 visibility: {  }

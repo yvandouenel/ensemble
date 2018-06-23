@@ -1,12 +1,12 @@
 uuid: 2f917a47-b94f-43f2-9152-6def804321ec
-langcode: en
+langcode: fr
 status: true
 dependencies:
   module:
     - editor
 _core:
   default_config_hash: P8ddpAIKtawJDi5SzOwCzVnnNYqONewSTJ6Xn0dW_aQ
-name: 'Basic HTML'
+name: 'HTML simple'
 format: basic_html
 weight: 0
 filters:

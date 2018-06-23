@@ -1,5 +1,5 @@
 uuid: 1e3db14b-2fa9-40ea-9847-55289da9a0f6
-langcode: en
+langcode: fr
 status: true
 dependencies:
   theme:
@@ -14,7 +14,7 @@ provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: 'Primary tabs'
+  label: 'Onglets principaux'
   provider: core
   label_display: '0'
   primary: true

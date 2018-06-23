@@ -1,5 +1,5 @@
 uuid: 79ab3a1c-f828-4bda-9314-b93223e6bc35
-langcode: en
+langcode: fr
 status: true
 dependencies:
   config:
@@ -11,9 +11,9 @@ dependencies:
 _core:
   default_config_hash: 1UIjNd6iIhogbx50cJPDN7Me8cUQx2xCP2IBgrKG6Ms
 id: moderated_content
-label: 'Moderated content'
+label: 'Contenu modéré'
 module: views
-description: 'Find and moderate content.'
+description: 'Trouver et modérer du contenu.'
 tag: ''
 base_table: node_field_revision
 base_field: vid
@@ -22,7 +22,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Maître
     position: 0
     display_options:
       access:
@@ -43,10 +43,10 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Filter
+          submit_button: Filtrer
           reset_button: true
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -58,18 +58,18 @@ display:
           id: 0
           total_pages: null
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
+            previous: '‹ Précédent'
+            next: 'Suivant ›'
+            first: '« Premier'
+            last: 'Dernier »'
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Éléments par page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Tout -'
             offset: false
-            offset_label: Offset
+            offset_label: Décalage
           quantity: 9
       style:
         type: table
@@ -136,7 +136,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Title
+          label: Titre
           exclude: false
           alter:
             alter_text: false
@@ -201,7 +201,7 @@ display:
           relationship: nid
           group_type: group
           admin_label: ''
-          label: 'Content type'
+          label: 'Type de contenu'
           exclude: false
           alter:
             alter_text: false
@@ -266,7 +266,7 @@ display:
           relationship: uid
           group_type: group
           admin_label: ''
-          label: Author
+          label: Auteur
           exclude: false
           alter:
             alter_text: false
@@ -331,7 +331,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Moderation state'
+          label: 'État de modération'
           exclude: false
           alter:
             alter_text: false
@@ -394,7 +394,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Updated
+          label: 'Mis à jour'
           exclude: false
           alter:
             alter_text: false
@@ -461,7 +461,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Operations
+          label: Actions
           exclude: false
           alter:
             alter_text: false
@@ -556,7 +556,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Title
+            label: Titre
             description: ''
             use_operator: false
             operator: title_op
@@ -596,7 +596,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: 'Content type'
+            label: 'Type de contenu'
             description: ''
             use_operator: false
             operator: type_op
@@ -639,7 +639,7 @@ display:
           exposed: true
           expose:
             operator_id: moderation_state_op
-            label: 'Moderation state'
+            label: 'État de modération'
             description: ''
             use_operator: false
             operator: moderation_state_op
@@ -679,7 +679,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Langue
             description: ''
             use_operator: false
             operator: langcode_op
@@ -747,7 +747,7 @@ display:
           entity_type: node
           plugin_id: moderation_state_filter
       sorts: {  }
-      title: 'Moderated content'
+      title: 'Contenu modéré'
       header: {  }
       footer: {  }
       empty:
@@ -805,7 +805,7 @@ display:
   moderated_content:
     display_plugin: page
     id: moderated_content
-    display_title: 'Moderated content'
+    display_title: 'Contenu modéré'
     position: 1
     display_options:
       display_extenders: {  }

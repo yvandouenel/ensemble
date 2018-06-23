@@ -1,12 +1,12 @@
 uuid: b28e005e-176b-411d-a082-9fd41112c2fc
-langcode: en
+langcode: fr
 status: true
 dependencies:
   module:
     - editor
 _core:
   default_config_hash: hewPmBgni9jlDK_IjLxUx1HsTbinK-hdl0lOwjbteIY
-name: 'Full HTML'
+name: 'HTML complet'
 format: full_html
 weight: 1
 filters:
