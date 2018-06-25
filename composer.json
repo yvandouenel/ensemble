@@ -16,17 +16,22 @@
         }
     ],
     "require": {
+        "balbuf/drupal-libraries-installer": "^1.0",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/admin_toolbar": "^1.24",
+        "drupal/bootstrap": "^3.11",
         "drupal/config_installer": "^1.8",
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.5.3",
         "drupal/devel": "^1.2",
         "drupal/features": "^3.7",
+        "drupal/geofield_map": "^2.5",
         "drupal/metatag": "^1.5",
         "drupal/pathauto": "^1.2",
+        "drupal/single_datetime": "^1.6",
+        "drupal/views_geojson": "1.x-dev",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
@@ -71,6 +76,11 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/{$name}": ["type:drupal-drush"]
+        },
+        "drupal-libraries": {
+            "flexslider": "https://github.com/woocommerce/FlexSlider/archive/2.6.4.zip",
+            "chosen": "https://github.com/harvesthq/chosen/releases/download/v1.8.2/chosen_v1.8.2.zip",
+            "datetimepicker": "https://github.com/xdan/datetimepicker/archive/2.5.20.zip"
         }
     }
 }
