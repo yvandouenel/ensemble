@@ -1,0 +1,22 @@
+uuid: 1372a52f-4297-413f-9f1d-73aa8e5df633
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ensemble
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: ensemble_breadcrumbs
+theme: ensemble
+region: navigation
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Fils d''Ariane'
+  provider: system
+  label_display: '0'
+visibility: {  }
