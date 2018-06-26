@@ -17,9 +17,6 @@ framework:
     bootstrap/js/transition.js: {}
 
 leaflet:
-  css:
-    theme:
-      css/leaflet.css: {}
   js:
     js/leaflet/leaflet.js: {}
     js/map.js: {}
