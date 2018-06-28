@@ -1,4 +1,4 @@
-uuid: dfd4a15b-3013-4f77-ba9d-2f49a9020456
+uuid: 097b2e26-40eb-4fbc-a26d-5fa620f82312
 langcode: fr
 status: true
 dependencies:
@@ -7,13 +7,11 @@ dependencies:
     - node.type.article
   module:
     - text
-_core:
-  default_config_hash: Ay3b2hq42cpQTFB_lNu8S2ZxuVIY6-dlBsc7vLeJ-YY
 id: node.article.body
 field_name: body
 entity_type: node
 bundle: article
-label: Corps
+label: Body
 description: ''
 required: false
 translatable: true

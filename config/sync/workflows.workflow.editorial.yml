@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - node.type.article
+    - node.type.event
   module:
     - content_moderation
 _core:
@@ -62,17 +63,22 @@ type_settings:
       to: draft
       weight: 0
       from:
+        - demande_de_modification
+        - demande_de_validation
         - draft
         - published
     demander_une_modification:
       label: 'Demander une modification'
       from:
+        - demande_de_validation
         - draft
+        - published
       to: demande_de_modification
       weight: 6
     demander_une_validation:
       label: 'Demander une validation'
       from:
+        - demande_de_modification
         - draft
       to: demande_de_validation
       weight: 5
@@ -87,3 +93,4 @@ type_settings:
   entity_types:
     node:
       - article
+      - event

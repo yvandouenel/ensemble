@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: Evénement
 type: event
-description: ''
+description: 'Evénement datés et géolocalisés pour affichage sur une carte dynamique.'
 help: ''
 new_revision: false
 preview_mode: 1

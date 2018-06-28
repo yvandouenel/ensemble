@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.event.body
     - field.field.node.event.field_date
+    - field.field.node.event.field_event_type
     - field.field.node.event.field_place
     - field.field.node.event.field_release_date
     - node.type.event
@@ -26,6 +27,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_date:
     weight: 1
     label: hidden
@@ -35,11 +41,19 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_event_type:
+    weight: 4
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_place:
     weight: 2
     label: above
     settings:
-      output_format: wkt
+      output_format: geojson
     third_party_settings: {  }
     type: geofield_default
     region: content
