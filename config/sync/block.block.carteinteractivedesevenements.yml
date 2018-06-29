@@ -1,0 +1,31 @@
+uuid: bf36e709-6278-4278-ae27-b791445cec87
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:017fa96e-4537-46db-8308-d726eaa06dc9'
+  module:
+    - block_content
+    - system
+  theme:
+    - ensemble
+id: carteinteractivedesevenements
+theme: ensemble
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:017fa96e-4537-46db-8308-d726eaa06dc9'
+settings:
+  id: 'block_content:017fa96e-4537-46db-8308-d726eaa06dc9'
+  label: 'Carte interactive des événéments'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

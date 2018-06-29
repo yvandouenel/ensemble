@@ -1,6 +1,6 @@
 uuid: ae6bada7-878c-46ab-9e53-bb1be68bae1a
 langcode: fr
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: ensemble_powered
 theme: ensemble
 region: navigation
-weight: -3
+weight: -4
 provider: null
 plugin: system_powered_by_block
 settings:

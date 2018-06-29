@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.field_address
     - field.field.node.event.field_date
     - field.field.node.event.field_event_type
     - field.field.node.event.field_place
@@ -29,6 +30,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  field_address:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
   field_date:
     weight: 2
     settings:
@@ -46,7 +55,7 @@ content:
     type: single_date_time_widget
     region: content
   field_event_type:
-    weight: 26
+    weight: 10
     settings:
       match_operator: CONTAINS
       size: 60

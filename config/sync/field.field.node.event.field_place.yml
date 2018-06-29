@@ -11,9 +11,9 @@ id: node.event.field_place
 field_name: field_place
 entity_type: node
 bundle: event
-label: Lieu
-description: ''
-required: false
+label: Géolocalisation
+description: 'Dans le champ "Geocode address", vous pouvez entrer une adresse. Vérifiez ensuite sur la carte que le point est bien géolocalisé. Le cas échéant, il vous suffit de cliquer sur l''endroit exact de l''événement sur la carte pour corriger une éventuelle défaillance du système.'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

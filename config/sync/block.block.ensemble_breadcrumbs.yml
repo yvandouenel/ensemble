@@ -11,7 +11,7 @@ _core:
 id: ensemble_breadcrumbs
 theme: ensemble
 region: navigation
-weight: -7
+weight: -5
 provider: null
 plugin: system_breadcrumb_block
 settings:
