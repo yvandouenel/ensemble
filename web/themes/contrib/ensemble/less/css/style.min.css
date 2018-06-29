@@ -1580,11 +1580,11 @@ ol,ul{padding-left:1.5em}
 .control-group .help-inline:first-child,.help-block:first-child{margin-top:0}
 @font-face{font-family:fontello;src:url(../fontello/font/fontello.eot?90885294);src:url(../fontello/font/fontello.eot?90885294#iefix) format('embedded-opentype'),url(../fontello/font/fontello.woff?90885294) format('woff'),url(../fontello/font/fontello.ttf?90885294) format('truetype'),url(../fontello/font/fontello.svg?90885294#fontello) format('svg');font-weight:400;font-style:normal}
 [class*=" icon-"]:hover{text-decoration:none}
-.glyphicon,.glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;color:#777;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:1em;width:1em}
+.glyphicon,.glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;color:#777;font-size:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{position:relative;top:1px}
 .glyphicon-h3-a>h3>span>a:hover:before{text-decoration:none}
-.marker-glyphicon:before,[class*=" iconafter-"]:after{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;text-align:center;font-variant:normal;text-transform:none;line-height:1em;color:#777;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin-right:10px}
-[class*=" iconafter-"]:after{font-size:1em;width:1em}
+.marker-glyphicon:before,[class*=" iconafter-"]:after{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;color:#777}
+[class*=" iconafter-"]:after{font-size:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .icon-facebook:before{content:"\e801"}
 .icon-twitter:before{content:"\e800"}
 .icon-linkedin:before{content:"\e85d"}
@@ -1601,18 +1601,20 @@ ol,ul{padding-left:1.5em}
 .icon-right-open-h3-a>h3>span>a:before,.icon-right-open:before{content:"\e804"}
 .plus-open-h3-a>h3>span>a:after{content:"\e83e";margin-left:10px}
 body{background-color:#fbfcfd}
-#map{width:100%;height:600px;border:1px solid grey}
+#search-block-form{width:200px;float:right}
+#map{clear:both;max-width:100%;height:600px;border:1px solid grey;display:block}
 .marker-glyphicon{width:25px;height:25px}
-.marker-glyphicon:before{width:1em;content:"\e878";font-size:3em}
+.marker-glyphicon:before{text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e878";font-size:3em}
+.ecologie.legend:before,.international.legend:before,.rc.legend:before,.social.legend:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e878";margin-right:3px;width:1em}
 .social:before{color:red}
-.social.legend{border-bottom:2px solid red}
+.social.legend:before{font-size:1em;color:red}
 .ecologie:before{color:#228b22}
-.ecologie.legend{border-bottom:2px solid #228b22}
+.ecologie.legend:before{font-size:1em;color:#228b22}
 .international:before{color:#333}
-.international.legend{border-bottom:2px solid #333}
+.international.legend:before{font-size:1em;color:#333}
 .rc:before{color:#9400d3}
+.rc.legend:before{font-size:1em;color:#9400d3}
 #date-markers-legend:before,.localisation:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#000;text-align:center}
-.rc.legend{border-bottom:2px solid #9400d3}
 .localisation:before{font-size:1em;width:1em;margin-right:10px;content:"\e877"}
 .event-short-date{width:38px;background-color:#fff;font-size:1.2em;margin-left:0;margin-top:5px}
 .date-legend{margin:0 4px}

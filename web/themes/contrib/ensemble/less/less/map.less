@@ -1,7 +1,9 @@
 #map{
-  width: 100%;
+  clear: both;
+  max-width: 100%;
   height: 600px;
   border: 1px solid grey;
+  display: block;
 }
 .marker-glyphicon{
   width: 25px;
@@ -20,7 +22,12 @@
     color: @red-ensemble;
   }
   &.legend{
-    border-bottom: 2px solid @red-ensemble;
+    &:before {
+      .glyphicon();
+      color: @red-ensemble;
+      content: "\e878";
+      margin-right: 3px;
+    }
   }
 }
 .ecologie{
@@ -28,7 +35,12 @@
     color: @green-ensemble;
   }
   &.legend{
-    border-bottom: 2px solid @green-ensemble;
+    &:before {
+      .glyphicon();
+      color: @green-ensemble;
+      content: "\e878";
+      margin-right: 3px;
+    }
   }
 }
 .international{
@@ -36,7 +48,12 @@
     color: @noir-ensemble;
   }
   &.legend{
-    border-bottom: 2px solid @noir-ensemble;
+    &:before {
+      .glyphicon();
+      color: @noir-ensemble;
+      content: "\e878";
+      margin-right: 3px;
+    }
   }
 }
 .rc{
@@ -44,7 +61,12 @@
     color: @violet-ensemble;
   }
   &.legend{
-    border-bottom: 2px solid @violet-ensemble;
+    &:before {
+      .glyphicon();
+      color: @violet-ensemble;
+      content: "\e878";
+      margin-right: 3px;
+    }
   }
 }
 .localisation{
