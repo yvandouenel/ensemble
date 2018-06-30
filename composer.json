@@ -27,6 +27,7 @@
         "drupal/core": "~8.5.3",
         "drupal/devel": "^1.2",
         "drupal/features": "^3.7",
+        "drupal/fixed_block_content": "^1.0@RC",
         "drupal/geofield_map": "^2.5",
         "drupal/metatag": "^1.5",
         "drupal/pathauto": "^1.2",
