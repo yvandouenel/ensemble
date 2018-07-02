@@ -6,6 +6,7 @@
       long,
       adresse,
       title,
+      image,
       description,
       event_type,
       event_date,
@@ -70,6 +71,7 @@
         long = data.features[i].geometry.coordinates[0];
         adresse = data.features[i].properties.adresse;
         title = data.features[i].properties.name;
+        image = data.features[i].properties.image;
         description = data.features[i].properties.description;
         event_type = data.features[i].properties.type;
         event_date = data.features[i].properties.date;
@@ -88,8 +90,10 @@
         }).addTo(map);
         marker[i].bindPopup(
           "<h3>" + title + "</h3>" +
-          event_short_date + " - " + event_date.getHours() + "h" + event_minutes + " - " + adresse +
-          description
+          event_short_date + " - " +
+          event_date.getHours() + "h" + event_minutes + " - " + adresse +
+          description +
+          image
           );
         legend_tab[marker_class] = event_type;
 
