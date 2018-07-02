@@ -13,6 +13,7 @@ module:
   contact: 0
   content_moderation: 0
   contextual: 0
+  crop: 0
   ctools: 0
   datetime: 0
   datetime_range: 0
@@ -20,6 +21,8 @@ module:
   devel: 0
   dynamic_page_cache: 0
   editor: 0
+  embed: 0
+  entity_embed: 0
   features: 0
   features_ui: 0
   field: 0
@@ -33,9 +36,11 @@ module:
   help: 0
   history: 0
   image: 0
+  image_widget_crop: 0
   language: 0
   link: 0
   locale: 0
+  media: 0
   menu_ui: 0
   node: 0
   options: 0
@@ -43,6 +48,7 @@ module:
   path: 0
   quickedit: 0
   rdf: 0
+  responsive_image: 0
   rest: 0
   search: 0
   serialization: 0
@@ -56,6 +62,9 @@ module:
   tour: 0
   update: 0
   user: 0
+  video_embed_field: 0
+  video_embed_media: 0
+  video_embed_wysiwyg: 0
   views_geojson: 0
   views_ui: 0
   workflows: 0

@@ -1,0 +1,24 @@
+uuid: 00299d61-6250-477d-8baf-c5348274c22f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - crop.type.portrait_large
+  module:
+    - crop
+name: portrait_large
+label: 'Portrait large 450x800'
+effects:
+  3350085f-d136-410e-a24f-51116f8cac2b:
+    uuid: 3350085f-d136-410e-a24f-51116f8cac2b
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 450
+      height: 800
+  8bf49ea3-c31e-467d-aab9-70a57b5a947c:
+    uuid: 8bf49ea3-c31e-467d-aab9-70a57b5a947c
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: portrait_large
