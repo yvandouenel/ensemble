@@ -26,6 +26,7 @@ module:
   features: 0
   features_ui: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -38,6 +39,7 @@ module:
   image: 0
   image_widget_crop: 0
   language: 0
+  layout_discovery: 0
   link: 0
   locale: 0
   media: 0
@@ -68,6 +70,7 @@ module:
   views_geojson: 0
   views_ui: 0
   workflows: 0
+  ds: 1
   menu_link_content: 1
   pathauto: 1
   views: 10

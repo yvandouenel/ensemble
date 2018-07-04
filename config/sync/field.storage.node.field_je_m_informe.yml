@@ -1,0 +1,19 @@
+uuid: d52b693f-f6a8-430f-8ac3-1b5d4e861644
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_je_m_informe
+field_name: field_je_m_informe
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

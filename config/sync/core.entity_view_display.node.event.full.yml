@@ -1,107 +1,70 @@
-uuid: 55b9adc4-4cdc-4fd1-b29f-31416d181f93
+uuid: 07bcb9b5-4070-4f21-9f31-6441588e6dce
 langcode: fr
-status: true
+status: false
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.event.body
     - field.field.node.event.field_address
     - field.field.node.event.field_date
     - field.field.node.event.field_event_type
     - field.field.node.event.field_image
-    - field.field.node.event.field_je_m_informe
     - field.field.node.event.field_place
     - field.field.node.event.field_release_date
     - node.type.event
   module:
     - datetime
-    - ds
     - geofield_map
+    - taxonomy
     - text
     - user
-third_party_settings:
-  ds:
-    layout:
-      id: ds_2col_stacked
-      library: ds/ds_2col_stacked
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        wrappers:
-          header: div
-          left: div
-          right: div
-          footer: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class: {  }
-    regions:
-      header:
-        - field_je_m_informe
-        - field_image
-      left:
-        - body
-      right:
-        - field_date
-        - node_changed_date
-        - field_address
-        - field_place
-    fields:
-      node_changed_date:
-        plugin_id: node_changed_date
-        weight: 4
-        label: inline
-        formatter: ds_post_date_medium
-id: node.event.default
+id: node.event.full
 targetEntityType: node
 bundle: event
-mode: default
+mode: full
 content:
   body:
+    label: hidden
     type: text_default
     weight: 2
-    region: left
-    label: hidden
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_address:
-    type: text_default
-    weight: 5
-    region: right
+    weight: 3
     label: inline
     settings: {  }
     third_party_settings: {  }
+    type: text_default
+    region: content
   field_date:
-    type: datetime_custom
-    weight: 3
-    region: right
+    weight: 4
     label: inline
     settings:
       timezone_override: ''
-      date_format: 'l d F Y H:i'
     third_party_settings: {  }
-  field_image:
-    type: entity_reference_entity_view
-    weight: 1
-    region: header
-    label: hidden
-    settings:
-      view_mode: bandeau
-      link: false
-    third_party_settings: {  }
-  field_je_m_informe:
-    weight: 0
-    label: hidden
+    type: datetime_plain
+    region: content
+  field_event_type:
+    weight: 5
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    type: text_default
-    region: header
+    type: entity_reference_rss_category
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    region: content
   field_place:
     type: geofield_google_map
     weight: 6
-    region: right
+    region: content
     label: hidden
     settings:
       map_dimensions:
@@ -117,10 +80,10 @@ content:
         geocode: 'Find my location'
       map_zoom_and_pan:
         zoom:
-          initial: '15'
-          force: '1'
+          initial: '10'
           min: '1'
           max: '22'
+          force: 0
         gestureHandling: auto
         scrollwheel: '1'
         draggable: '1'
@@ -168,7 +131,6 @@ content:
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
-  field_event_type: true
   field_release_date: true
   langcode: true
   links: true

@@ -30,7 +30,9 @@ content:
       preview_image_style: thumbnail
       crop_preview_image_style: large_landscape
       crop_list:
+        - headband_thin
         - large_landsacape
+        - medium_carre
         - portrait_large
       progress_indicator: throbber
       show_crop_area: false

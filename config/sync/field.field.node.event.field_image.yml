@@ -12,7 +12,7 @@ entity_type: node
 bundle: event
 label: Image
 description: "<h3><a class=\"use-ajax\" data-dialog-type=\"modal\" href=\"/media/add/image\">Ajouter une image dans la médiathèque</a></h3>\r\n<h3><a class=\"use-ajax\" data-dialog-type=\"modal\" href=\"/admin/content/media/\">Rechercher une image dans la médiathèque</a></h3>\r\n"
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

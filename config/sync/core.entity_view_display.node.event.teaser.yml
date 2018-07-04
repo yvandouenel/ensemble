@@ -5,10 +5,83 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.body
+    - field.field.node.event.field_address
+    - field.field.node.event.field_date
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_image
+    - field.field.node.event.field_place
+    - field.field.node.event.field_release_date
     - node.type.event
   module:
+    - datetime
+    - ds
+    - field_group
     - text
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_link
+        - node_title
+        - field_image
+        - group_img_txt_date
+        - body
+        - field_date
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          'link text': 'Read more'
+          'link class': read-more-home
+          wrapper: ''
+          class: ''
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h3
+          class: 'event event-article-home-title'
+  field_group:
+    group_img_txt_date:
+      children:
+        - node_link
+        - field_image
+        - body
+        - field_date
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: event-img-txt-date
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'img txt date'
 id: node.event.teaser
 targetEntityType: node
 bundle: event
@@ -17,13 +90,34 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 2
     settings:
-      trim_length: 600
+      trim_length: 200
     third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    region: content
+    region: ds_content
+  field_date:
+    type: datetime_custom
+    weight: 3
+    region: ds_content
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'd-m-Y - H:i'
+    third_party_settings: {  }
+  field_image:
+    type: entity_reference_entity_view
+    weight: 1
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
 hidden:
+  content_moderation_control: true
+  field_address: true
+  field_event_type: true
+  field_place: true
+  field_release_date: true
   langcode: true
+  links: true
