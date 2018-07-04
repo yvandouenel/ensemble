@@ -89,11 +89,11 @@
           })
         }).addTo(map);
         marker[i].bindPopup(
+          image +
           "<h3>" + title + "</h3>" +
           event_short_date + " - " +
           event_date.getHours() + "h" + event_minutes + " - " + adresse +
-          description +
-          image
+          description
           );
         legend_tab[marker_class] = event_type;
 

@@ -22,3 +22,15 @@ leaflet:
     js/map.js: {}
   dependencies:
     - core/jquery
+
+sameheight:
+  js:
+    js/sameheight/jquery.matchHeight-min.js: {}
+  dependencies:
+      - core/jquery
+
+sameheighttitles:
+  js:
+    js/sameheight/same-height-titles.js: {}
+  dependencies:
+      - core/jquery

@@ -6,3 +6,9 @@
  *
  * Place your custom PHP code in this file.
  */
+function ensemble_preprocess_page(&$variables) {
+  if (\Drupal::routeMatch()->getRouteName() == 'view.frontpage.page_1') {
+    $variables['#attached']['library'][] = 'ensemble/sameheight';
+    $variables['#attached']['library'][] = 'ensemble/sameheighttitles';
+  }
+}
