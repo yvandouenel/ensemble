@@ -23,18 +23,22 @@
     var markers_more_mont_tab = [];
     marker = [];
     var months = [];
-    months[0] = "janv.";
-    months[1] = "fev.";
-    months[2] = "mars";
-    months[3] = "avril";
-    months[4] = "mai";
-    months[5] = "juin";
-    months[6] = "juillet";
-    months[7] = "août";
-    months[8] = "sep.";
-    months[9] = "oct.";
-    months[10] = "nov.";
-    months[11] = "déc.";
+    initiateMonth();
+    function initiateMonth () {
+      months[0] = "janv.";
+      months[1] = "fev.";
+      months[2] = "mars";
+      months[3] = "avril";
+      months[4] = "mai";
+      months[5] = "juin";
+      months[6] = "juillet";
+      months[7] = "août";
+      months[8] = "sep.";
+      months[9] = "oct.";
+      months[10] = "nov.";
+      months[11] = "déc.";
+    }
+
 
     // Récupération des dates relatives
     getRelativeDatesTab();
