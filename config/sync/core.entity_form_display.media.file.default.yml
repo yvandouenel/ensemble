@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.media.file.field_media_file
+    - field.field.media.file.field_tag_media
     - media.type.file
   module:
     - content_moderation
@@ -28,6 +29,15 @@ content:
     third_party_settings: {  }
     type: file_generic
     weight: 0
+    region: content
+  field_tag_media:
+    weight: 101
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   langcode:
     type: language_select

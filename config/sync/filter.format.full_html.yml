@@ -4,12 +4,13 @@ status: true
 dependencies:
   module:
     - editor
+    - entity_embed
     - video_embed_wysiwyg
 _core:
   default_config_hash: hewPmBgni9jlDK_IjLxUx1HsTbinK-hdl0lOwjbteIY
 name: 'HTML complet'
 format: full_html
-weight: -10
+weight: -9
 filters:
   filter_align:
     id: filter_align
@@ -47,6 +48,12 @@ filters:
   video_embed_wysiwyg:
     id: video_embed_wysiwyg
     provider: video_embed_wysiwyg
+    status: true
+    weight: 0
+    settings: {  }
+  entity_embed:
+    id: entity_embed
+    provider: entity_embed
     status: true
     weight: 0
     settings: {  }

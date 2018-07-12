@@ -1,18 +1,18 @@
-uuid: 7ff985db-9533-4a8f-ba29-8f59200f2b96
+uuid: 97145191-48bf-46d2-bdfe-c8939319edf6
 langcode: fr
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - media.type.image
+    - field.storage.node.field_document
+    - media.type.file
     - node.type.event
-id: node.event.field_image
-field_name: field_image
+id: node.event.field_document
+field_name: field_document
 entity_type: node
 bundle: event
-label: Image
-description: "\r\n"
-required: true
+label: Document
+description: ''
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -20,10 +20,9 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      image: image
+      file: file
     sort:
-      field: field_media_image.title
-      direction: ASC
-    auto_create: false
+      field: _none
+    auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

@@ -4,30 +4,18 @@ status: true
 dependencies:
   config:
     - field.field.media.video_embed.field_media_video_embed_field
-    - image.style.thumbnail
+    - field.field.media.video_embed.field_tag_media
     - media.type.video_embed
   module:
-    - image
-    - user
     - video_embed_field
 id: media.video_embed.default
 targetEntityType: media
 bundle: video_embed
 mode: default
 content:
-  created:
-    label: hidden
-    type: timestamp
-    weight: 0
-    region: content
-    settings:
-      date_format: medium
-      custom_date_format: ''
-      timezone: ''
-    third_party_settings: {  }
   field_media_video_embed_field:
-    weight: 6
-    label: above
+    weight: 0
+    label: hidden
     settings:
       responsive: true
       width: 854
@@ -36,22 +24,17 @@ content:
     third_party_settings: {  }
     type: video_embed_field_video
     region: content
-  thumbnail:
-    type: image
-    weight: 5
-    label: hidden
+  field_tag_media:
+    weight: 1
+    label: above
     settings:
-      image_style: thumbnail
-      image_link: ''
-    region: content
+      link: true
     third_party_settings: {  }
-  uid:
-    label: hidden
-    type: author
-    weight: 0
+    type: entity_reference_label
     region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  created: true
   langcode: true
   name: true
+  thumbnail: true
+  uid: true

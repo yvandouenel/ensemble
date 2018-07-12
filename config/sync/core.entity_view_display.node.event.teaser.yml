@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.event.field_date
     - field.field.node.event.field_event_type
     - field.field.node.event.field_image
+    - field.field.node.event.field_je_m_informe
     - field.field.node.event.field_place
     - field.field.node.event.field_release_date
     - node.type.event
@@ -36,8 +37,8 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - node_link
         - node_title
+        - node_link
         - field_image
         - group_img_txt_date
         - body
@@ -102,7 +103,7 @@ content:
     label: hidden
     settings:
       timezone_override: ''
-      date_format: 'd-m-Y - H:i'
+      date_format: 'd F Y - H:i'
     third_party_settings: {  }
   field_image:
     type: entity_reference_entity_view
@@ -117,6 +118,7 @@ hidden:
   content_moderation_control: true
   field_address: true
   field_event_type: true
+  field_je_m_informe: true
   field_place: true
   field_release_date: true
   langcode: true
