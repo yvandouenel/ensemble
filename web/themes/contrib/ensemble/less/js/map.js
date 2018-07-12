@@ -9,10 +9,12 @@
       image,
       description,
       event_type,
+      event_type_id,
       event_date,
       event_minutes,
       event_short_date,
-      marker_class;
+      marker_class,
+      group;
     var legend_tab = [];
     var relative_dates_tab = [];
     var markers_this_week_tab = [];
@@ -24,21 +26,7 @@
     marker = [];
     var months = [];
     initiateMonth();
-    function initiateMonth () {
-      months[0] = "janv.";
-      months[1] = "fev.";
-      months[2] = "mars";
-      months[3] = "avril";
-      months[4] = "mai";
-      months[5] = "juin";
-      months[6] = "juillet";
-      months[7] = "août";
-      months[8] = "sep.";
-      months[9] = "oct.";
-      months[10] = "nov.";
-      months[11] = "déc.";
-    }
-
+    createDivLegendEventTypeInDatesArea();
 
     // Récupération des dates relatives
     getRelativeDatesTab();
@@ -64,12 +52,12 @@
 
     // points from drupal view
     $.getJSON('/events', function (data) {
-      addDataToMap(data, map);
+      addDataToMap(data, map, true);
     });
 
 
     // Add Marker and pop up message and manage dates
-    function addDataToMap(data, map) {
+    function addDataToMap(data, map, first_map) {
       for (var i = 0; i < data.features.length; i++) {
         lat = data.features[i].geometry.coordinates[1];
         long = data.features[i].geometry.coordinates[0];
@@ -78,6 +66,7 @@
         image = data.features[i].properties.image;
         description = data.features[i].properties.description;
         event_type = data.features[i].properties.type;
+        event_type_id = data.features[i].properties.type_id;
         event_date = data.features[i].properties.date;
         event_short_date = data.features[i].properties.short_date;
         marker_class = getMarkerClass(event_type);
@@ -99,7 +88,16 @@
           event_date.getHours() + "h" + event_minutes + " - " + adresse +
           description
           );
-        legend_tab[marker_class] = event_type;
+        if (first_map) {
+          legend_tab[marker_class] = {
+            "event_type_label": event_type,
+            "event_type_id": event_type_id
+          };
+        }
+
+        //resize map to fit all markers
+        group = new L.featureGroup(marker);
+        map.fitBounds(group.getBounds(), {padding:[100, 100]});
 
         // on ajoute des marqueurs dans les tableaux en fonction de la date
         if (event_date < relative_dates_tab["next_monday"]) {
@@ -121,8 +119,13 @@
           markers_more_mont_tab.push(marker[i]);
         }
       }
-      addLegend(legend_tab);
+      if(first_map) {
+        addLegend(legend_tab);
+      } else {
+        $(".date-legend:not(:first)").remove();
+      }
       addDateLegend();
+
     }
 
     // Gestion des événements
@@ -132,11 +135,7 @@
       }
     });
     $("#show-markers").click(function () {
-      for (var i = 0; i < marker.length; i++) {
-        marker[i].addTo(map);
-        $(".date-legend").removeClass("selected-period");
-        $(this).addClass("selected-period");
-      }
+      showAllMarkers($(this));
     });
 
     function addLegend(legend_tab) {
@@ -144,10 +143,33 @@
       for (var key in legend_tab) {
         //console.log("cle : " + key + " - valeur : " + legend_tab[key]);
         if (!cpt) {
-          $("<span></span>", {
+          $("<h3></h3>", {
             "class": "label-legend",
-            text: "Légende : ",
+            text: "Recherche par thématiques",
           }).appendTo("#map-legend");
+          $("<span></span>", {
+            "class": "all-legend legend",
+            "id": "all-legend",
+            text: "toutes thématiques ",
+          }).appendTo("#map-legend")
+            .click(function(){
+
+              for (var i = 0; i < marker.length; i++) {
+                map.removeLayer(marker[i]);
+              }
+              $.getJSON('/events', function (data) {
+                emptyDatesArray();
+                addDataToMap(data, map, false);
+                showAllMarkers($("#show-markers"));
+              });
+              $("#label-legend-type-dates")
+                .hide()
+                .text('Pour toutes les thématiques')
+                .slideDown('slow');
+
+              $("#map-legend span.legend").removeClass("selected-type-event").addClass('not-selected-type-event');
+              $(this).addClass("selected-type-event").removeClass("not-selected-type-event");
+            });
         } else {
           $("<span></span>", {
             "class": "label-separator",
@@ -157,8 +179,27 @@
 
         $("<span></span>", {
           "class": key + " legend",
-          text: legend_tab[key],
-        }).appendTo("#map-legend");
+          "id": legend_tab[key]['event_type_id'],
+          "text": legend_tab[key]['event_type_label'],
+        }).appendTo("#map-legend")
+          .click(function(){
+          //console.log($(this).attr("id"));
+          for (var i = 0; i < marker.length; i++) {
+            map.removeLayer(marker[i]);
+          }
+          $.getJSON('/events?field_event_type_target_id=' + $(this).attr("id"), function (data) {
+            emptyDatesArray();
+            addDataToMap(data, map, false);
+            showAllMarkers($("#show-markers"));
+          });
+          $("#label-legend-type-dates")
+            .hide()
+            .text('Pour la thématique "' + $(this).text() + '"')
+            .slideDown('slow');
+
+          $("#map-legend span.legend").removeClass("selected-type-event").addClass('not-selected-type-event');
+          $(this).addClass("selected-type-event").removeClass("not-selected-type-event");
+        });
         cpt++;
       }
     }
@@ -176,6 +217,10 @@
           for (var j = 0; j < markers_this_week_tab.length; j++) {
             markers_this_week_tab[j].addTo(map);
           }
+          //resize map to fit all markers
+          group = new L.featureGroup(markers_this_week_tab);
+          map.fitBounds(group.getBounds(), {padding:[100, 100]});
+
           $(".date-legend").removeClass("selected-period");
           $(this).addClass("selected-period");
         });
@@ -194,6 +239,10 @@
           for (var j = 0; j < markers_second_week_tab.length; j++) {
             markers_second_week_tab[j].addTo(map);
           }
+          //resize map to fit all markers
+          group = new L.featureGroup(markers_second_week_tab);
+          map.fitBounds(group.getBounds(), {padding:[100, 100]});
+
           $(".date-legend").removeClass("selected-period");
           $(this).addClass("selected-period");
         });
@@ -212,6 +261,10 @@
           for (var j = 0; j < markers_third_week_tab.length; j++) {
             markers_third_week_tab[j].addTo(map);
           }
+          //resize map to fit all markers
+          group = new L.featureGroup(markers_third_week_tab);
+          map.fitBounds(group.getBounds(), {padding:[100, 100]});
+
           $(".date-legend").removeClass("selected-period");
           $(this).addClass("selected-period");
         });
@@ -230,6 +283,10 @@
           for (var j = 0; j < markers_fourth_week_tab.length; j++) {
             markers_fourth_week_tab[j].addTo(map);
           }
+          //resize map to fit all markers
+          group = new L.featureGroup(markers_fourth_week_tab);
+          map.fitBounds(group.getBounds(), {padding:[100, 100]});
+
           $(".date-legend").removeClass("selected-period");
           $(this).addClass("selected-period");
         });
@@ -248,6 +305,10 @@
           for (var j = 0; j < markers_fifth_week_tab.length; j++) {
             markers_fifth_week_tab[j].addTo(map);
           }
+          //resize map to fit all markers
+          group = new L.featureGroup(markers_fifth_week_tab);
+          map.fitBounds(group.getBounds(), {padding:[100, 100]});
+
           $(".date-legend").removeClass("selected-period");
           $(this).addClass("selected-period");
         });
@@ -265,6 +326,10 @@
           for (var j = 0; j < markers_more_mont_tab.length; j++) {
             markers_more_mont_tab[j].addTo(map);
           }
+          //resize map to fit all markers
+          group = new L.featureGroup(markers_more_mont_tab);
+          map.fitBounds(group.getBounds(), {padding:[100, 100]});
+
           $(".date-legend").removeClass("selected-period");
           $(this).addClass("selected-period");
         });
@@ -315,6 +380,45 @@
       fifth_monday.setDate(fifth_monday.getDate() + 28);
       relative_dates_tab["fifth_monday"] = fifth_monday;
     }
-  }
+    function initiateMonth () {
+      months[0] = "janv.";
+      months[1] = "fev.";
+      months[2] = "mars";
+      months[3] = "avril";
+      months[4] = "mai";
+      months[5] = "juin";
+      months[6] = "juillet";
+      months[7] = "août";
+      months[8] = "sep.";
+      months[9] = "oct.";
+      months[10] = "nov.";
+      months[11] = "déc.";
+    }
+    function emptyDatesArray(){
+      markers_this_week_tab = [];
+      markers_second_week_tab = [];
+      markers_third_week_tab = [];
+      markers_fourth_week_tab = [];
+      markers_fifth_week_tab = [];
+      markers_more_mont_tab = [];
+      marker = [];
+    }
+    function createDivLegendEventTypeInDatesArea() {
+      $("#h3-map").after($("<div></div>", {
+        "id": "label-legend-type-dates",
+        "text": "",
+      }));
+    }
+    function showAllMarkers(marker_element) {
+      for (var i = 0; i < marker.length; i++) {
+        marker[i].addTo(map);
+        $(".date-legend").removeClass("selected-period");
+        marker_element.addClass("selected-period");
+      }
+      //resize map to fit all markers
+      group = new L.featureGroup(marker);
+      map.fitBounds(group.getBounds(), {padding:[100, 100]});
+    }
 
+  }
 })(jQuery);
