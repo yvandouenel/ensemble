@@ -17,6 +17,13 @@
     font-size: 3em;
   }
 }
+.label-legend{
+  font-size: 1.4em;
+}
+.legend{
+  font-size: 1.2em;
+  margin: 10px 0;
+}
 .social{
   &:before {
     color: @red-ensemble;
@@ -27,6 +34,7 @@
       color: @red-ensemble;
       content: "\e878";
       margin-right: 3px;
+      text-decoration: none;
     }
   }
 }
@@ -40,6 +48,7 @@
       color: @green-ensemble;
       content: "\e878";
       margin-right: 3px;
+      text-decoration: none;
     }
   }
 }
@@ -53,6 +62,17 @@
       color: @noir-ensemble;
       content: "\e878";
       margin-right: 3px;
+      text-decoration: none;
+    }
+  }
+}
+.no-type{
+  &.legend{
+    &:before {
+      .glyphicon();
+      content: "\e878";
+      margin-right: 3px;
+      text-decoration: none;
     }
   }
 }
@@ -66,6 +86,7 @@
       color: @violet-ensemble;
       content: "\e878";
       margin-right: 3px;
+      text-decoration: none;
     }
   }
 }
@@ -91,33 +112,67 @@
 }
 .date-legend{
   margin: 0 4px;
+  display: block;
   &:hover{
     cursor: pointer;
   }
 }
+
 #date-markers-legend{
   &:before {
-    .glyphicon();
+   /* .glyphicon();
     content: "\e807";
     color: #000;
     float: left;
     margin-top: 10px;
-    margin-right: 0;
+    margin-right: 5px;*/
 
   }
   > span {
     display: block;
-    float: left;
     padding: 8px 6px;
     text-decoration: underline;
     &.selected-period{
       color: @red-ensemble;
       text-decoration: none;
+      &:before {
+        color: @red-ensemble;
+      }
+    }
+    &:before {
+      .glyphicon();
+      content: "\e834";
+      text-decoration: none;
     }
   }
-
 }
-
+#map-legend {
+  > span {
+    display: block;
+    padding-left: 5px;
+    text-decoration: underline;
+    &.label-legend {
+      text-decoration: none;
+    }
+    &.all-legend {
+      &:before{
+        .glyphicon();
+        content: "\e830";
+        text-decoration: none;
+        margin-right: 5px;
+      }
+    }
+    &.label-separator {
+      display: none;
+    }
+    &.not-selected-type-event{
+      opacity: 0.6;
+    }
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
 // css initial
 /* required styles */
 
