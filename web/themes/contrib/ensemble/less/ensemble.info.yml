@@ -12,6 +12,7 @@ regions:
   header: 'Top Bar'
   highlighted: 'Highlighted'
   help: 'Help'
+  full_content_header: 'Full content header'
   content: 'Content'
   sidebar_first: 'Primary'
   sidebar_second: 'Secondary'
@@ -23,3 +24,4 @@ libraries-extend:
   bootstrap/framework:
     - ensemble/framework
     - ensemble/leaflet
+    - ensemble/checktopscroll
