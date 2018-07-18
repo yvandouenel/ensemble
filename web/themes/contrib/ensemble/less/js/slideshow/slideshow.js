@@ -13,6 +13,8 @@ jQuery(function($) {
     timer,
     slide_width,
     margin_left_controlers,
+    margin_left_next,
+    margin_left_previous,
     control_zone_width,
     first_mvt_width,
     mvt_width,
@@ -37,17 +39,17 @@ jQuery(function($) {
     // Création des controleurs
     createControleurs();
 
+    // Création des boutons previous et next
+    createPreviousNext();
+
     // Mise en place de la class controler-selected sur le premier controler
     $(".controler:first").addClass("controler-selected");
 
     // Ajout de la derniere diapo au début
     first_slide = $(".row-diapo:first");
     last_slide  = $(".row-diapo:last");
-    console.log("last_slide :");
-    console.log(last_slide.text());
 
     $(".wrapper-diapo").prepend(last_slide);
-    console.log("je viens d'ajouter la derniere diapo au début ");
 
     initiate_slide_show();
 
@@ -67,22 +69,40 @@ jQuery(function($) {
         }
       });
     });
+    console.log("selected_slide : " + selected_slide);
+    // Gestion des click sur le bouton next
+    $('#next-ss').click(function(event){
+      if(animate){
+        moove(selected_slide + 1);
+        return false;
+      }
+    });
+
+    // Gestion des click sur le bouton previous
+    $('#previous-ss').click(function(event){
+      if(animate){
+        moove(selected_slide - 1);
+        return false;
+      }
+    });
+
   }
 
   // lancement automatique du slideshow
-  /*$(function(){
-   var num = 0;
-   var interval = setInterval(function(){
-   num = num % nb_slide;
-   if (num < nb_slide){
-   moove(num, true);
-   }else clearInterval(interval);
-   num++;
-   }, 5000);
-   $('.wrapper-diapo').hover(function(){
-   clearInterval(interval);
-   });
-   });*/
+  /*$(function () {
+    var num = 0;
+    var interval = setInterval(function () {
+      num = num % nb_slide;
+      if (num < nb_slide) {
+        moove(num, true);
+      } else clearInterval(interval);
+      num++;
+    }, 5000);
+    $('.wrapper-diapo').hover(function () {
+      clearInterval(interval);
+    });
+  });*/
+
 
   /**
    * Fonction d'animation
@@ -90,7 +110,7 @@ jQuery(function($) {
    * @ infinite_right : boolean - if true, the slideshow continue to slide on the right
    * *****************************************************/
   function moove(num_controler, infinite_right){
-
+    console.log(num_controler);
     // dans le cas d'un mvt automatique et infini vers la droite, le slide selectionné
     // devient (-1) quand on arrive à la dernière diapo
     if(infinite_right){
@@ -124,10 +144,14 @@ jQuery(function($) {
       $(".wrapper-diapo").animate({marginLeft: "-=" + mvt_width}, 1000, function () {
         // Gestion des textes
         $(".txt-diapo").hide();
-        $(".txt-diapo:eq(1)").show();
+        $(".txt-diapo:eq( 1 )").show();
       })
     }
     selected_slide = num_controler;
+
+    // Gestion du controleur sélectionné
+    $(".controler").removeClass("controler-selected");
+    $(".controler:eq( "+ num_controler + " )").addClass("controler-selected");
   }
 
   /* Fonction d'initialisation du slideshow ***********************************/
@@ -144,14 +168,21 @@ jQuery(function($) {
       margin_left_controlers = (window_width / 2) - (control_zone_width / 2);
 
 
-      /* margin_left_controlers_1 = ((window_width - slide_show_central_zone) / 2);
-       margin_left_controlers_2 = margin_left_controlers_1 + slide_show_central_zone - control_zone_width;*/
+      margin_left_previous = (((window_width - slide_show_central_zone) / 2) + 100);
+      margin_left_next = margin_left_previous + slide_show_central_zone - control_zone_width - 70;
+       /*margin_left_controlers_2 = margin_left_controlers_1 + slide_show_central_zone - control_zone_width;*/
 
       first_mvt_width = - slide_width + (window_width -slide_width) / 2 ;
 
       // Placement des controleurs
       $('#controlers-ss').css('left', margin_left_controlers + 'px');
-      console.log("first_mvt_width : " + first_mvt_width)
+
+      // Placement de previous
+      $('#previous-ss').css('left', margin_left_previous + 'px');
+
+      // Placement de next
+      $('#next-ss').css('left', margin_left_next + 'px');
+
       // Re-positionnement du slideshow
       //$(".wrapper-diapo").animate({marginLeft:first_mvt_width},0);
     }else{
@@ -172,7 +203,18 @@ jQuery(function($) {
       }).appendTo("#controlers-ss");
     });
     control_zone_width = $("#controlers-ss").width();
+  }
 
+  function createPreviousNext() {
+    $("<div></div>", {
+      "class": "previous-next-ss",
+      "id": "previous-ss",
+    }).appendTo(".wrapper-diapo");
+
+    $("<div></div>", {
+      "class": "previous-next-ss",
+      "id": "next-ss",
+    }).appendTo(".wrapper-diapo");
   }
 
 });
