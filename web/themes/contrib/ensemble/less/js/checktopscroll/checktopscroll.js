@@ -13,9 +13,9 @@
         scrolled = true;
 
       } else if (scrolled && $(window).scrollTop() == 0) {
-        $("#full-content-header").css("margin-top","15px");
+        $("#full-content-header").css("margin-top","-6px");
         $(".logo img").animate({
-          height: "130px"
+          height: "90px"
         }, 500, function() {
           // Animation complete.
         });
