@@ -44,3 +44,9 @@ slideshow:
     js/slideshow/slideshow.js: {}
   dependencies:
       - core/jquery
+
+incentive:
+  js:
+    js/incentive/incentive.js: {}
+  dependencies:
+      - core/jquery
