@@ -1,9 +1,12 @@
+#top-home-ss-incentive{
+  margin-top: 143px;
+}
 @media (min-width: @screen-md){
   #block-views-block-frontpage-block-slideshow{
+    position: relative;
     max-height: 483px;
     overflow: hidden;
     position: relative;
-    margin-top: 150px;
     .wrapper-diapo{
       .row-diapo{
         float: left;
@@ -15,9 +18,8 @@
           .h3-ss-home {
             position: absolute;
             z-index: 1;
-            top: 50px;
+            top: 30px;
             width: 80%;
-            margin: 0 0 30px 100px;
             .cartouche-noir();
             a {
               display: block;
@@ -27,20 +29,24 @@
           }
           .txt-diapo{
             position: absolute;
-            top: 250px;
-            left: 175px;
             text-align: center;
-            width: 59%;
+            width: 80%;
             text-transform: uppercase;
             font-weight: 700;
+
             p,
             div{
               .cartouche-noir();
-              font-size: 1.2em;
               display: inline;
               margin: 0;
               text-transform: none;
               text-align: justify;
+            }
+            div{
+              font-size: 1.2em;
+            }
+            p{
+              font-size: 1em;
             }
             a > p:after{
               .glyphicon();
@@ -129,7 +135,6 @@
 }
 #controlers-ss{
   position: absolute;
-  top: 420px;
   z-index: 2;
   height: 30px;
   padding: 5px 0 0 5px;
@@ -154,7 +159,6 @@
 #next-ss,
 #previous-ss {
   position: absolute;
-  top: 240px;
   z-index: 2;
   width: 50px;
   height: 50px;
