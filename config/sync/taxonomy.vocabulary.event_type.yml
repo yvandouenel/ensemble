@@ -2,8 +2,8 @@ uuid: d968c228-95d2-4dd6-928b-dbcdafd8b81c
 langcode: fr
 status: true
 dependencies: {  }
-name: 'Type d''événement'
+name: Thématiques
 vid: event_type
-description: ''
+description: 'pour les événement, les articles et les argumentaires'
 hierarchy: 0
 weight: 0

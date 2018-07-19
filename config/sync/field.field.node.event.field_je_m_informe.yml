@@ -11,7 +11,7 @@ id: node.event.field_je_m_informe
 field_name: field_je_m_informe
 entity_type: node
 bundle: event
-label: 'Je m''informe'
+label: 'Liens vers l''information et l''action'
 description: ''
 required: true
 translatable: false

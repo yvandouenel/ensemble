@@ -1,0 +1,24 @@
+uuid: d0997fe7-67a0-4a9a-87a9-5f50a8ff1e93
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_informations
+    - node.type.event
+  module:
+    - text
+id: node.event.field_informations
+field_name: field_informations
+entity_type: node
+bundle: event
+label: Informations
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "<h3 align=\"left\">Je m’informe&nbsp;:</h3>\r\n\r\n<ul>\r\n\t<li>\r\n\t<p><a href=\"http://local.ensemble.my/node/ensemble34\">Ensemble!34 Ques aquo&nbsp;?</a></p>\r\n\t</li>\r\n\t<li>\r\n\t<p><a href=\"http://local.ensemble.my/newsletter\">Newsletter</a>&nbsp;(Donner le choix des thématiques pour sondage)</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><a href=\"http://local.ensemble.my/node/agenda\">Agenda</a>&nbsp;(Donner le choix des thématiques pour sondage)</p>\r\n\t</li>\r\n\t<li>\r\n\t<p id=\"pause-cafe\">Je réponds à mes collègues du boulot pendant la pause café&nbsp;!</p>\r\n\t</li>\r\n</ul>\r\n"
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

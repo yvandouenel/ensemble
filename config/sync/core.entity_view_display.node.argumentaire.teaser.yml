@@ -1,0 +1,29 @@
+uuid: c9920e02-57ba-44b6-a006-eb347edd4eed
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.argumentaire.body
+    - node.type.argumentaire
+  module:
+    - text
+    - user
+id: node.argumentaire.teaser
+targetEntityType: node
+bundle: argumentaire
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

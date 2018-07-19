@@ -5,10 +5,13 @@ dependencies:
   config:
     - field.field.node.event.body
     - field.field.node.event.field_address
+    - field.field.node.event.field_argumentaires
+    - field.field.node.event.field_bloc
     - field.field.node.event.field_date
     - field.field.node.event.field_document
     - field.field.node.event.field_event_type
     - field.field.node.event.field_image
+    - field.field.node.event.field_informations
     - field.field.node.event.field_je_m_informe
     - field.field.node.event.field_place
     - field.field.node.event.field_release_date
@@ -50,6 +53,9 @@ third_party_settings:
         - field_address
         - field_document
         - field_place
+      footer:
+        - field_bloc
+        - field_argumentaires
     fields:
       node_changed_date:
         plugin_id: node_changed_date
@@ -75,6 +81,23 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
+  field_argumentaires:
+    weight: 9
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: footer
+  field_bloc:
+    weight: 8
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: footer
   field_date:
     type: datetime_custom
     weight: 3
@@ -180,6 +203,7 @@ content:
 hidden:
   content_moderation_control: true
   field_event_type: true
+  field_informations: true
   field_release_date: true
   langcode: true
   links: true
