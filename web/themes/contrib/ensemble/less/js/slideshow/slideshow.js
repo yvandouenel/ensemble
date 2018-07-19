@@ -12,6 +12,7 @@ jQuery(function($) {
     nb_mvt,
     timer,
     slide_width,
+    frame_width, // Taille de l'élément dans lequel les slides défilent
     margin_left_controlers,
     margin_left_next,
     margin_left_previous,
@@ -21,6 +22,7 @@ jQuery(function($) {
     selected_slide,
     first_slide,
     last_slide,
+    block_id,
     animate;
 
   window_width = $( window ).width();
@@ -30,10 +32,15 @@ jQuery(function($) {
     initiate_slide_show();
   });
 
-  /* Opérations nécessaires uniquement au premier chargement ******************/
+  /* Opérations nécessaires uniquement au premier chargement **********************************************************/
   if (animate) {
-    slide_show_height = 483; // pour l'instant, le diapo ne s'adapte pas en hauteur
-    slide_width = 860; // pour l'instant, le diapo ne s'adapte pas en largeur
+    // Eléments à modifier pour chaque slide show **********************************/
+    block_id = "block-views-block-frontpage-block-slideshow";
+    slide_show_height = 360; // pour l'instant, le diapo ne s'adapte pas en hauteur
+    slide_width = 640; // pour l'instant, le diapo ne s'adapte pas en largeur
+    /********************************************************************************/
+
+    frame_width = $("#" + block_id ).width(); // Taille de l'élément dans lequel les slides défilent
     selected_slide = 0;
 
     // Création des controleurs
@@ -69,7 +76,6 @@ jQuery(function($) {
         }
       });
     });
-    console.log("selected_slide : " + selected_slide);
     // Gestion des click sur le bouton next
     $('#next-ss').click(function(event){
       if(animate){
@@ -110,7 +116,6 @@ jQuery(function($) {
    * @ infinite_right : boolean - if true, the slideshow continue to slide on the right
    * *****************************************************/
   function moove(num_controler, infinite_right){
-    console.log(num_controler);
     // dans le cas d'un mvt automatique et infini vers la droite, le slide selectionné
     // devient (-1) quand on arrive à la dernière diapo
     if(infinite_right){
@@ -165,26 +170,36 @@ jQuery(function($) {
       $('.wrapper-diapo').width(wrapper_slide_show_width);
 
       slide_show_central_zone = (window_width > 1230) ? 1100 : 992;
-      margin_left_controlers = (window_width / 2) - (control_zone_width / 2);
+      margin_left_controlers = (frame_width / 2) - (control_zone_width / 2);
 
 
-      margin_left_previous = (((window_width - slide_show_central_zone) / 2) + 100);
-      margin_left_next = margin_left_previous + slide_show_central_zone - control_zone_width - 70;
+      margin_left_previous = (frame_width - slide_width) - ((frame_width - slide_width) / 2) - 20;
+      margin_left_next = margin_left_previous + slide_width - 10;
        /*margin_left_controlers_2 = margin_left_controlers_1 + slide_show_central_zone - control_zone_width;*/
 
-      first_mvt_width = - slide_width + (window_width -slide_width) / 2 ;
+      first_mvt_width = - slide_width + (frame_width -slide_width) / 2 ;
 
       // Placement des controleurs
       $('#controlers-ss').css('left', margin_left_controlers + 'px');
+      $('#controlers-ss').css('top', (slide_show_height - 28) + 'px');
 
       // Placement de previous
       $('#previous-ss').css('left', margin_left_previous + 'px');
+      $('#previous-ss').css('top', (slide_show_height / 2 - 20) + 'px');
+
 
       // Placement de next
       $('#next-ss').css('left', margin_left_next + 'px');
+      $('#next-ss').css('top', (slide_show_height / 2 - 20) + 'px');
+
+      //placement du texte
+      $(".h3-ss-home").css('left', (slide_width / 10)  + 'px');
+      $(".txt-diapo").css('left', (slide_width / 10)  + 'px');
+      $(".txt-diapo").css('top', (slide_show_height / 3 * 2) + 'px');
+
 
       // Re-positionnement du slideshow
-      //$(".wrapper-diapo").animate({marginLeft:first_mvt_width},0);
+      $(".wrapper-diapo").animate({marginLeft:first_mvt_width},0);
     }else{
       $(".wrapper-diapo").animate({marginLeft:30},0);
     }
