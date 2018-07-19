@@ -1,23 +1,23 @@
-uuid: 5500234f-9ae8-4df1-8f81-e778cf736030
+uuid: 0ac9aac3-7f73-4bac-a71c-3c34d3ad8e0e
 langcode: fr
-status: false
+status: true
 dependencies:
   config:
-    - fixed_block_content.fixed_block_content.carte_permanente
+    - fixed_block_content.fixed_block_content.incitation_action
   module:
     - fixed_block_content
     - system
   theme:
     - ensemble
-id: cartepermanente
+id: incitationaction
 theme: ensemble
-region: content
-weight: -5
+region: incentive
+weight: 0
 provider: null
-plugin: 'fixed_block_content:carte_permanente'
+plugin: 'fixed_block_content:incitation_action'
 settings:
-  id: 'fixed_block_content:carte_permanente'
-  label: 'Carte permanente'
+  id: 'fixed_block_content:incitation_action'
+  label: 'Incitation action'
   provider: fixed_block_content
   label_display: '0'
   view_mode: ''

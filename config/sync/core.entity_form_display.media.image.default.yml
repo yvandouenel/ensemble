@@ -35,6 +35,7 @@ content:
         - large_landsacape
         - medium_carre
         - portrait_large
+        - slideshow
       progress_indicator: throbber
       show_crop_area: false
     third_party_settings: {  }
