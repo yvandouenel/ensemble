@@ -13,6 +13,8 @@ regions:
   highlighted: 'Highlighted'
   help: 'Help'
   full_content_header: 'Full content header'
+  slideshow: 'Slideshow'
+  incentive: 'Incentive'
   content: 'Content'
   sidebar_first: 'Primary'
   sidebar_second: 'Secondary'
