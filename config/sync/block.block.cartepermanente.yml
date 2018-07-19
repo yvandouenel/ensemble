@@ -1,6 +1,6 @@
 uuid: 5500234f-9ae8-4df1-8f81-e778cf736030
 langcode: fr
-status: false
+status: true
 dependencies:
   config:
     - fixed_block_content.fixed_block_content.carte_permanente
