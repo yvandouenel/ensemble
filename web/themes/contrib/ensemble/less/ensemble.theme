@@ -12,4 +12,7 @@ function ensemble_preprocess_page(&$variables) {
     $variables['#attached']['library'][] = 'ensemble/sameheighttitles';
     $variables['#attached']['library'][] = 'ensemble/slideshow';
   }
+  else if ($variables['node']->getType() == "event"){
+    $variables['#attached']['library'][] = 'ensemble/incentive';
+  }
 }
