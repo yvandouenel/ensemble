@@ -943,6 +943,12 @@
       "src": "linecons"
     },
     {
+      "uid": "492fe0ef4cb41d4e4de8502897685399",
+      "css": "cafe",
+      "code": 59480,
+      "src": "maki"
+    },
+    {
       "uid": "2458519cf2686137171ecceb53fbc899",
       "css": "fleche-gauche-diapo-selecter",
       "code": 59483,
