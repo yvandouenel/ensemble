@@ -1,3 +1,3 @@
 jQuery(function ($) {
-  $('.event-article-home-title').matchHeight();
+  $('.same-height-title').matchHeight();
 });
