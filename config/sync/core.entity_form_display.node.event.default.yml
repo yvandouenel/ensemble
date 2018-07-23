@@ -8,12 +8,13 @@ dependencies:
     - field.field.node.event.field_address
     - field.field.node.event.field_argumentaires
     - field.field.node.event.field_bloc
+    - field.field.node.event.field_bloc_incitation
     - field.field.node.event.field_date
     - field.field.node.event.field_document
     - field.field.node.event.field_event_type
     - field.field.node.event.field_image
-    - field.field.node.event.field_informations
-    - field.field.node.event.field_je_m_informe
+    - field.field.node.event.field_inscription
+    - field.field.node.event.field_link_info_go
     - field.field.node.event.field_place
     - field.field.node.event.field_release_date
     - node.type.event
@@ -24,6 +25,7 @@ dependencies:
     - path
     - single_datetime
     - text
+    - webform
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -57,6 +59,15 @@ content:
     region: content
   field_bloc:
     weight: 28
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_bloc_incitation:
+    weight: 31
     settings:
       match_operator: CONTAINS
       size: 60
@@ -117,13 +128,21 @@ content:
       open: false
       field_widget_display_settings: {  }
     third_party_settings: {  }
-  field_informations:
-    weight: 27
+  field_inscription:
+    weight: 30
     settings:
-      rows: 5
+      default_data: true
+    third_party_settings: {  }
+    type: webform_entity_reference_select
+    region: content
+  field_link_info_go:
+    weight: 29
+    settings:
+      match_operator: CONTAINS
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
+    type: entity_reference_autocomplete
     region: content
   field_place:
     weight: 10
@@ -217,7 +236,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_je_m_informe: true
   langcode: true
   status: true
   uid: true

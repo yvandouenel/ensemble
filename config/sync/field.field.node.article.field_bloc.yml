@@ -1,0 +1,32 @@
+uuid: 0849b89b-40b8-4f71-b5ff-900595f1bde1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.node.field_bloc
+    - node.type.article
+  content:
+    - 'block_content:basic:64cdcee8-66d9-449d-ae6d-7c82cfd0d30d'
+id: node.article.field_bloc
+field_name: field_bloc
+entity_type: node
+bundle: article
+label: 'Bloc information'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    target_uuid: 64cdcee8-66d9-449d-ae6d-7c82cfd0d30d
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      basic: basic
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

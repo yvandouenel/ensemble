@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: Argumentaire
 type: argumentaire
-description: ''
+description: 'Argumentaire sous forme de question (le titre) et de réponse (le corps du texte).'
 help: ''
 new_revision: false
 preview_mode: 1

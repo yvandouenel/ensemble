@@ -10,6 +10,7 @@ dependencies:
     - draggableviews
     - node
     - user
+    - views_bootstrap
 _core:
   default_config_hash: ezK5Dw8P_4bqJdDQIiecSAJak9p1Wf1yDwHzTutGFuQ
 id: frontpage
@@ -326,16 +327,17 @@ display:
       path: node
       display_extenders: {  }
       style:
-        type: grid
+        type: views_bootstrap_grid
         options:
+          row_class: ''
+          default_row_class: true
           uses_fields: false
-          columns: 3
-          automatic_width: true
           alignment: horizontal
-          col_class_default: true
-          col_class_custom: col-md-4
-          row_class_default: true
-          row_class_custom: row
+          columns: '3'
+          col_xs: col-xs-12
+          col_sm: col-sm-12
+          col_md: col-md-4
+          col_lg: col-lg-4
       defaults:
         style: false
         row: false

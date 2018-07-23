@@ -4,13 +4,43 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
+    - field.field.node.article.field_bloc
+    - field.field.node.article.field_bloc_incitation
     - field.field.node.article.field_image
+    - field.field.node.article.field_link_info_go
     - field.field.node.article.field_release_date
     - node.type.article
   module:
-    - datetime_range
+    - ds
     - text
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_stacked
+      library: ds/ds_2col_stacked
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          header: div
+          left: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - field_link_info_go
+        - field_image
+      footer:
+        - body
+        - field_bloc
+        - field_bloc_incitation
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -19,34 +49,48 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  content_moderation_control:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_image:
     weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: footer
+  field_bloc:
+    weight: 3
     label: hidden
     settings:
-      view_mode: full
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: footer
+  field_bloc_incitation:
+    weight: 4
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: footer
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: bandeau
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
-    region: content
-  field_release_date:
-    weight: 3
-    label: above
+    region: header
+  field_link_info_go:
+    weight: 0
+    label: hidden
     settings:
-      separator: '-'
-      format_type: medium
-      timezone_override: ''
+      link: true
+      view_mode: default
     third_party_settings: {  }
-    type: daterange_default
-    region: content
+    type: entity_reference_entity_view
+    region: header
 hidden:
+  content_moderation_control: true
+  field_release_date: true
   langcode: true
   links: true

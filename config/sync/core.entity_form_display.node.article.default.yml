@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
+    - field.field.node.article.field_bloc
+    - field.field.node.article.field_bloc_incitation
     - field.field.node.article.field_image
+    - field.field.node.article.field_link_info_go
     - field.field.node.article.field_release_date
     - node.type.article
   module:
@@ -32,8 +35,35 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_bloc:
+    weight: 125
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_bloc_incitation:
+    weight: 124
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_image:
     weight: 122
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_link_info_go:
+    weight: 126
     settings:
       match_operator: CONTAINS
       size: 60

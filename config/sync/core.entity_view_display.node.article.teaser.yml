@@ -5,7 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.body
+    - field.field.node.article.field_bloc
+    - field.field.node.article.field_bloc_incitation
     - field.field.node.article.field_image
+    - field.field.node.article.field_link_info_go
+    - field.field.node.article.field_release_date
     - node.type.article
   module:
     - ds
@@ -30,10 +34,10 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - node_link
         - node_title
-        - field_image
+        - node_link
         - group_img_txt
+        - field_image
         - body
     fields:
       node_link:
@@ -54,7 +58,7 @@ third_party_settings:
         settings:
           link: true
           wrapper: h3
-          class: 'article event-article-home-title'
+          class: 'article event-article-home-title same-height-title'
   field_group:
     group_img_txt:
       children:
@@ -99,5 +103,9 @@ content:
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
+  field_bloc: true
+  field_bloc_incitation: true
+  field_link_info_go: true
+  field_release_date: true
   langcode: true
   links: true

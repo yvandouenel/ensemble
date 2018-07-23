@@ -6,11 +6,15 @@ dependencies:
     - core.entity_view_mode.node.slideshow
     - field.field.node.event.body
     - field.field.node.event.field_address
+    - field.field.node.event.field_argumentaires
+    - field.field.node.event.field_bloc
+    - field.field.node.event.field_bloc_incitation
     - field.field.node.event.field_date
     - field.field.node.event.field_document
     - field.field.node.event.field_event_type
     - field.field.node.event.field_image
-    - field.field.node.event.field_je_m_informe
+    - field.field.node.event.field_inscription
+    - field.field.node.event.field_link_info_go
     - field.field.node.event.field_place
     - field.field.node.event.field_release_date
     - node.type.event
@@ -80,10 +84,14 @@ content:
 hidden:
   content_moderation_control: true
   field_address: true
+  field_argumentaires: true
+  field_bloc: true
+  field_bloc_incitation: true
   field_date: true
   field_document: true
   field_event_type: true
-  field_je_m_informe: true
+  field_inscription: true
+  field_link_info_go: true
   field_place: true
   field_release_date: true
   langcode: true

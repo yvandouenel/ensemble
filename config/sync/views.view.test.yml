@@ -86,7 +86,7 @@ display:
             title: title
           info:
             nid:
-              sortable: false
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''

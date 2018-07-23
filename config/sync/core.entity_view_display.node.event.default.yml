@@ -7,12 +7,13 @@ dependencies:
     - field.field.node.event.field_address
     - field.field.node.event.field_argumentaires
     - field.field.node.event.field_bloc
+    - field.field.node.event.field_bloc_incitation
     - field.field.node.event.field_date
     - field.field.node.event.field_document
     - field.field.node.event.field_event_type
     - field.field.node.event.field_image
-    - field.field.node.event.field_informations
-    - field.field.node.event.field_je_m_informe
+    - field.field.node.event.field_inscription
+    - field.field.node.event.field_link_info_go
     - field.field.node.event.field_place
     - field.field.node.event.field_release_date
     - node.type.event
@@ -22,6 +23,7 @@ dependencies:
     - geofield_map
     - text
     - user
+    - webform
 third_party_settings:
   ds:
     layout:
@@ -43,7 +45,7 @@ third_party_settings:
           layout_class: {  }
     regions:
       header:
-        - field_je_m_informe
+        - field_link_info_go
         - field_image
       left:
         - body
@@ -55,7 +57,9 @@ third_party_settings:
         - field_place
       footer:
         - field_bloc
+        - field_bloc_incitation
         - field_argumentaires
+        - field_inscription
     fields:
       node_changed_date:
         plugin_id: node_changed_date
@@ -82,7 +86,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_argumentaires:
-    weight: 9
+    weight: 10
     label: hidden
     settings:
       link: true
@@ -95,6 +99,15 @@ content:
     settings:
       view_mode: default
       link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: footer
+  field_bloc_incitation:
+    weight: 9
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: footer
@@ -125,12 +138,22 @@ content:
       view_mode: bandeau
       link: false
     third_party_settings: {  }
-  field_je_m_informe:
+  field_inscription:
+    weight: 11
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: footer
+  field_link_info_go:
     weight: 0
     label: hidden
-    settings: {  }
+    settings:
+      link: true
+      view_mode: default
     third_party_settings: {  }
-    type: text_default
+    type: entity_reference_entity_view
     region: header
   field_place:
     type: geofield_google_map
@@ -203,7 +226,6 @@ content:
 hidden:
   content_moderation_control: true
   field_event_type: true
-  field_informations: true
   field_release_date: true
   langcode: true
   links: true
