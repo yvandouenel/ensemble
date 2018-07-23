@@ -1608,8 +1608,7 @@ body p{line-height:1.5em;font-size:1.2em}
 #sticky-headband,#sticky-headband div.row{background-color:#FFF}
 #sticky-headband div.row #navbar{margin-bottom:0}
 #sticky-headband div.row .logo img{height:90px}
-body:not(.path-frontpage) .region-content{margin-top:100px}
-#full-content-header{margin-top:160px}
+#full-content-header,body:not(.path-frontpage) .main-container{margin-top:160px}
 .cartouche-noir{color:#fff;background:rgba(0,0,0,.7);display:inline;box-shadow:10px 0 0 rgba(0,0,0,.7),-10px 0 0 rgba(0,0,0,.7);line-height:1.3em}
 .link-to-arg{display:block}
 .link-to-arg:before{font-family:fontello;font-size:1em;display:inline-block;width:1em;line-height:1em;content:"\e858";color:#333}
