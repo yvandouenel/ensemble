@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.article.field_image
     - field.field.node.article.field_link_info_go
     - field.field.node.article.field_release_date
+    - field.field.node.article.field_thematique
     - node.type.article
   module:
     - ds
@@ -89,6 +90,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: header
+  field_thematique:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
 hidden:
   content_moderation_control: true
   field_release_date: true

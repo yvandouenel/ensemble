@@ -3,16 +3,19 @@ langcode: fr
 status: true
 dependencies:
   config:
+    - entity_browser.browser.assets_browser
     - field.field.node.article.body
     - field.field.node.article.field_bloc
     - field.field.node.article.field_bloc_incitation
     - field.field.node.article.field_image
     - field.field.node.article.field_link_info_go
     - field.field.node.article.field_release_date
+    - field.field.node.article.field_thematique
     - node.type.article
   module:
     - content_moderation
     - datetime_range
+    - entity_browser
     - path
     - text
 id: node.article.default
@@ -56,11 +59,16 @@ content:
   field_image:
     weight: 122
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      entity_browser: assets_browser
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_browser_entity_reference
     region: content
   field_link_info_go:
     weight: 126
@@ -76,6 +84,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
+    region: content
+  field_thematique:
+    weight: 127
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   langcode:
     type: language_select

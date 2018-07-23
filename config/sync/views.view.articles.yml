@@ -6,8 +6,10 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - node.type.article
     - system.menu.main
+    - taxonomy.vocabulary.event_type
   module:
     - node
+    - taxonomy
     - user
     - views_bootstrap
 id: articles
@@ -153,6 +155,53 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+        field_thematique_target_id:
+          id: field_thematique_target_id
+          table: node__field_thematique
+          field: field_thematique_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_thematique_target_id_op
+            label: Thématique
+            description: ''
+            use_operator: false
+            operator: field_thematique_target_id_op
+            identifier: field_thematique_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              contributor: '0'
+              moderator: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: event_type
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       sorts:
         created:
           id: created
@@ -181,13 +230,15 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  page_1:
+  page_articles:
     display_plugin: page
-    id: page_1
+    id: page_articles
     display_title: Page
     position: 1
     display_options:
@@ -207,7 +258,9 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
