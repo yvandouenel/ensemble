@@ -1,25 +1,25 @@
-uuid: 0ac9aac3-7f73-4bac-a71c-3c34d3ad8e0e
+uuid: fb4948dd-f756-4fc2-ab39-194bfcb9c0e0
 langcode: fr
 status: true
 dependencies:
   config:
-    - fixed_block_content.fixed_block_content.incitation_action
+    - fixed_block_content.fixed_block_content.incitation_homepage
   module:
     - fixed_block_content
     - system
   theme:
     - ensemble
-id: incitationaction
+id: incitationpagedaccueil
 theme: ensemble
 region: incentive
 weight: 0
 provider: null
-plugin: 'fixed_block_content:incitation_action'
+plugin: 'fixed_block_content:incitation_homepage'
 settings:
-  id: 'fixed_block_content:incitation_action'
-  label: 'Incitation action'
+  id: 'fixed_block_content:incitation_homepage'
+  label: 'Incitation page d''accueil'
   provider: fixed_block_content
-  label_display: '0'
+  label_display: visible
   view_mode: ''
 visibility:
   request_path:
