@@ -19,7 +19,7 @@ settings:
   id: 'fixed_block_content:incitation_homepage'
   label: 'Incitation page d''accueil'
   provider: fixed_block_content
-  label_display: visible
+  label_display: '0'
   view_mode: ''
 visibility:
   request_path:
