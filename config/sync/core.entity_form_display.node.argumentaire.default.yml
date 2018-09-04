@@ -6,10 +6,12 @@ dependencies:
     - entity_browser.browser.assets_browser
     - field.field.node.argumentaire.body
     - field.field.node.argumentaire.field_image
+    - field.field.node.argumentaire.field_release_date
     - field.field.node.argumentaire.field_thematique
     - node.type.argumentaire
   module:
     - content_moderation
+    - datetime_range
     - entity_browser
     - path
     - text
@@ -46,6 +48,12 @@ content:
       field_widget_display_settings: {  }
     third_party_settings: {  }
     type: entity_browser_entity_reference
+    region: content
+  field_release_date:
+    weight: 124
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
     region: content
   field_thematique:
     weight: 122

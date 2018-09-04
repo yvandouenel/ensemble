@@ -456,7 +456,7 @@ display:
           type: datetime_custom
           settings:
             timezone_override: ''
-            date_format: d-m
+            date_format: d/m
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -959,13 +959,14 @@ display:
         row: false
         filters: false
         filter_groups: false
+        group_by: false
+        query: false
       row:
         type: data_entity
         options: {  }
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 10
           offset: 0
       filters:
         status:
@@ -1082,6 +1083,15 @@ display:
         operator: AND
         groups:
           1: AND
+      group_by: false
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: true
+          replica: false
+          query_comment: ''
+          query_tags: null
     cache_metadata:
       max-age: -1
       contexts:
