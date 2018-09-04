@@ -1637,14 +1637,14 @@ body p{line-height:1.5em;font-size:1.2em}
 .social.legend:before,.social:before{color:#f40000}
 .label-legend{font-size:1.4em}
 .legend{font-size:1.2em;margin:10px 0}
-.ecologie.legend:before,.international.legend:before,.no-type.legend:before,.rc.legend:before,.social.legend:before{content:"\e878";margin-right:3px;text-decoration:none;position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.ecologie.legend:before,.international.legend:before,.no-type.legend:before,.rc.legend:before,.social.legend:before{content:"\e878";margin-right:3px;text-decoration:none;position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;width:1em;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:center}
 .ecologie.legend:before,.ecologie:before{color:#70a12c}
 .international.legend:before,.international:before{color:#333}
 .no-type.legend:before{color:#777}
 .rc.legend:before,.rc:before{color:#9400d3}
 .localisation:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e877";color:#000}
 #date-markers-legend>span:before,#next-ss:before{content:"\e834"}
-.event-short-date{width:38px;background-color:#fff;font-size:1.2em;margin-left:0;margin-top:5px}
+.event-short-date{width:80px;text-align:center;background-color:#fff;font-size:1.2em;margin-left:-20px;margin-top:5px}
 .date-legend{margin:0 4px;display:block}
 #date-markers-legend>span{display:block;padding:8px 6px;text-decoration:underline}
 #date-markers-legend>span.selected-period{color:#f40000;text-decoration:none}
