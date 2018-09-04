@@ -38,6 +38,7 @@
         "drupal/image_widget_crop": "^2.1",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/metatag": "^1.5",
+        "drupal/migrate_tools": "^4.0",
         "drupal/pathauto": "^1.2",
         "drupal/rules": "^3.0@alpha",
         "drupal/rules_role_email": "^1.0@alpha",
