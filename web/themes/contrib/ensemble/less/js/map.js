@@ -11,6 +11,7 @@
       event_type,
       event_type_id,
       event_date,
+      map_date,
       event_minutes,
       event_short_date,
       marker_class,
@@ -59,6 +60,7 @@
     // Add Marker and pop up message and manage dates
     function addDataToMap(data, map, first_map) {
       for (var i = 0; i < data.features.length; i++) {
+
         lat = data.features[i].geometry.coordinates[1];
         long = data.features[i].geometry.coordinates[0];
         adresse = data.features[i].properties.adresse;
@@ -67,25 +69,26 @@
         description = data.features[i].properties.description;
         event_type = data.features[i].properties.type;
         event_type_id = data.features[i].properties.type_id;
-        event_date = data.features[i].properties.date;
-        event_short_date = data.features[i].properties.short_date;
+        event_date = $.trim(data.features[i].properties.date).split(",");
+        event_short_date = data.features[i].properties.short_date.split(",");
+        map_date = manageMapDate(event_short_date);
+
         marker_class = getMarkerClass(event_type);
-        var event_date = new Date(event_date);
-        event_minutes = (event_date.getMinutes() > 9) ? event_date.getMinutes() : "0" + event_date.getMinutes();
+       /* var event_date = new Date(event_date);
+        event_minutes = (event_date.getMinutes() > 9) ? event_date.getMinutes() : "0" + event_date.getMinutes();*/
 
         //console.log(lat + " - " + long+ " - " + title+ " - " + description + " - " + event_type);
         marker[i] = new L.Marker([lat, long], {
           icon: new L.DivIcon({
             className: 'my-div-icon',
             html: '<div class="marker-glyphicon ' + marker_class + '"></div>' +
-            '<div class="event-short-date">' + event_short_date + '</div>'
+            '<div class="event-short-date">' + map_date + '</div>'
           })
         }).addTo(map);
         marker[i].bindPopup(
           image +
           "<h3>" + title + "</h3>" +
-          event_short_date + " - " +
-          event_date.getHours() + "h" + event_minutes + " - " + adresse +
+          map_date + " - " + adresse +
           description
           );
         if (first_map) {
@@ -100,25 +103,34 @@
         map.fitBounds(group.getBounds(), {padding:[100, 100]});
 
         // on ajoute des marqueurs dans les tableaux en fonction de la date
-        if (event_date < relative_dates_tab["next_monday"]) {
-          markers_this_week_tab.push(marker[i]);
+        for (var j = 0; j < event_date.length; j ++) {
+
+          event_date[j] = new Date($.trim(event_date[j]));
+          console.log("Taille tableau : " + event_date.length + " - date " + j + " : " +event_date[j]);
+
+          if (event_date[j] < relative_dates_tab["next_monday"]) {
+            markers_this_week_tab.push(marker[i]);
+          }
+          else if (event_date[j] >= relative_dates_tab["next_monday"] && event_date[j] < relative_dates_tab["second_monday"]) {
+            markers_second_week_tab.push(marker[i]);
+          }
+          else if (event_date[j] >= relative_dates_tab["second_monday"] && event_date[j] < relative_dates_tab["third_monday"]) {
+            markers_third_week_tab.push(marker[i]);
+          }
+          else if (event_date[j] >= relative_dates_tab["third_monday"] && event_date[j] < relative_dates_tab["fourth_monday"]) {
+            markers_fourth_week_tab.push(marker[i]);
+          }
+          else if (event_date[j] >= relative_dates_tab["fourth_monday"] && event_date [j]< relative_dates_tab["fifth_monday"]) {
+            markers_fifth_week_tab.push(marker[i]);
+          }
+          else if (event_date[j] >= relative_dates_tab["fifth_monday"]) {
+            markers_more_mont_tab.push(marker[i]);
+          }
         }
-        else if (event_date >= relative_dates_tab["next_monday"] && event_date < relative_dates_tab["second_monday"]) {
-          markers_second_week_tab.push(marker[i]);
-        }
-        else if (event_date >= relative_dates_tab["second_monday"] && event_date < relative_dates_tab["third_monday"]) {
-          markers_third_week_tab.push(marker[i]);
-        }
-        else if (event_date >= relative_dates_tab["third_monday"] && event_date < relative_dates_tab["fourth_monday"]) {
-          markers_fourth_week_tab.push(marker[i]);
-        }
-        else if (event_date >= relative_dates_tab["fourth_monday"] && event_date < relative_dates_tab["fifth_monday"]) {
-          markers_fifth_week_tab.push(marker[i]);
-        }
-        else if (event_date >= relative_dates_tab["fifth_monday"] ) {
-          markers_more_mont_tab.push(marker[i]);
-        }
-      }
+
+      } // Fin de la récupération des données
+
+
       if(first_map) {
         addLegend(legend_tab);
       } else {
@@ -317,7 +329,7 @@
         $("<span></span>", {
           "class": "date-legend",
           text: "après le " +
-          (relative_dates_tab["fifth_monday"].getDate() - 1) +
+          (relative_dates_tab["fifth_monday"].getDate()) +
           " " + months[relative_dates_tab["fifth_monday"].getMonth()],
         }).appendTo("#date-markers-legend").click(function () {
           for (var i = 0; i < marker.length; i++) {
@@ -418,6 +430,13 @@
       //resize map to fit all markers
       group = new L.featureGroup(marker);
       map.fitBounds(group.getBounds(), {padding:[100, 100]});
+    }
+
+    function manageMapDate(mapdate) {
+      if (mapdate.length > 1) {
+        return mapdate[0] + ">" + $.trim(mapdate[(mapdate.length-1)]);
+      }
+      return mapdate;
     }
 
   }
