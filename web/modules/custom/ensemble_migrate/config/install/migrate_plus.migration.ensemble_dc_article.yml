@@ -11,8 +11,8 @@ process:
   body/format:
     plugin: default_value
     default_value: full_html
-  body/value: post_content
-  body/summary: post_excerpt
+  body/value: post_content_xhtml
+  body/summary: post_excerpt_xhtml
   field_thematique:
     plugin: migration_lookup
     migration: ensemble_dc_thematique
