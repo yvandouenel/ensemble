@@ -32,11 +32,6 @@ process:
   created: post_dt
   changed: post_upddt
   promote: post_selected
-  alias:
-    plugin: concat
-    source:
-      - constants/slash
-      - post_url
 destination:
   plugin: 'entity:node'
   default_bundle: article
