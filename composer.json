@@ -23,7 +23,6 @@
         "drupal/admin_toolbar": "^1.24",
         "drupal/bootstrap": "^3.11",
         "drupal/config_installer": "^1.8",
-        "drupal/console": "^1.0.2",
         "drupal/core": "~8.5.3",
         "drupal/crop": "^2.0",
         "drupal/devel": "^1.2",
@@ -53,6 +52,7 @@
         "webmozart/path-util": "^2.3"
     },
     "require-dev": {
+        "drupal/console": "^1.8",
         "webflo/drupal-core-require-dev": "~8.5.3"
     },
     "conflict": {
