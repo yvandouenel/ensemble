@@ -81,6 +81,15 @@ class EnsembleArticle extends SqlBase {
     $tz = $row->getSourceProperty('post_tz');
     $row->setSourceProperty('post_dt', strtotime($created . ' ' . $tz));
     $row->setSourceProperty('post_upddt', strtotime($updated . ' ' . $tz));
+
+    // Corriger les URL des fichiers incluses directement dans le corps de
+    // texte.
+    $post_excerpt = $row->getSourceProperty('post_excerpt_xhtml');
+    $post_content = $row->getSourceProperty('post_content_xhtml');
+    $post_excerpt = str_replace('"/images/', '"/files/legacy/images/', $post_excerpt);
+    $post_content = str_replace('"/images/', '"/files/legacy/images/', $post_content);
+    $row->setSourceProperty('post_excerpt_xhtml', $post_excerpt);
+    $row->setSourceProperty('post_content_xhtml', $post_content);
   }
 
 }
