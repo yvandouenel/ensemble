@@ -12,6 +12,7 @@ function ensemble_migrate_uninstall() {
   // Delete this module migrations.
   $config_factory = Drupal::configFactory();
   $migrations = [
+    'ensemble_dc_file',
     'ensemble_dc_thematique',
     'ensemble_dc_article',
     'ensemble_dc_url_alias',
