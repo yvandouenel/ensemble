@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - image.style.thumbnail
-    - media.type.audio
     - media.type.file
     - media.type.image
     - media.type.video_embed
@@ -519,7 +518,6 @@ display:
           admin_label: ''
           operator: in
           value:
-            audio: audio
             image: image
             video_embed: video_embed
           group: 1
