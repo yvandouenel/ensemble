@@ -90,6 +90,7 @@
 .icon-cafe:before { content: '\e858'; } /* '' */
 .icon-right-dir-1:before { content: '\e859'; } /* '' */
 .icon-left-dir:before { content: '\e85a'; } /* '' */
+.icon-icon-exclamation:before { content: '\e85b'; } /* '' */
 .icon-linkedin-squared:before { content: '\e85c'; } /* '' */
 .icon-linkedin:before { content: '\e85d'; } /* '' */
 .icon-viadeo:before { content: '\e85e'; } /* '' */
@@ -125,6 +126,12 @@
 .icon-thumbs-down:before { content: '\e87c'; } /* '' */
 .icon-heart:before { content: '\e87d'; } /* '' */
 .icon-thumbs-up-1:before { content: '\e87e'; } /* '' */
+.icon-icon-partager:before { content: '\e87f'; } /* '' */
+.icon-icon-partager-noir:before { content: '\e880'; } /* '' */
+.icon-icon-participer:before { content: '\e881'; } /* '' */
+.icon-icon-participer-noir:before { content: '\e882'; } /* '' */
+.icon-icon-sinformer:before { content: '\e883'; } /* '' */
+.icon-icon-sinformer-noir:before { content: '\e884'; } /* '' */
 .icon-heart-broken:before { content: '\f028'; } /* '' */
 .icon-location-4:before { content: '\f031'; } /* '' */
 .icon-blank:before { content: '\f0c8'; } /* '' */
