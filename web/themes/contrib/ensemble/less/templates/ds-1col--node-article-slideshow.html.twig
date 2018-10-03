@@ -15,12 +15,12 @@
 <{{ ds_content_wrapper }}{{ attributes.addClass('ds-1col', 'clearfix', 'diapositive') }}>
 
 {{ title_suffix.contextual_links }}
-
-<h3 class="h3-ss-home"><a href="{{ path_to_node }}">{{ content.title }}</a></h3>
 <a href="{{ path_to_node }}">{{ content.field_image }}</a>
-<div class="txt-diapo">
-    {{ content.body }}
+<div class="diapo-h3-txt article">
+    <h3 class="h3-ss-home"><a href="{{ path_to_node }}">{{ content.title }}</a></h3>
+    <div class="txt-diapo">
+        {{ content.body }}
+    </div>
 </div>
-
 
 </{{ ds_content_wrapper }}>
