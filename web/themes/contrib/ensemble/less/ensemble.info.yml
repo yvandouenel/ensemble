@@ -27,3 +27,4 @@ libraries-extend:
     - ensemble/framework
     - ensemble/leaflet
     - ensemble/checktopscroll
+    - ensemble/searchsm

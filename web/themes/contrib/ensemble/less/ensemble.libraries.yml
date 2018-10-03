@@ -50,3 +50,15 @@ incentive:
     js/incentive/incentive.js: {}
   dependencies:
       - core/jquery
+
+searchsm:
+  js:
+    js/search/searchsm.js: {}
+  dependencies:
+      - core/jquery
+
+managedates:
+  js:
+    js/managedates/managedates.js: {}
+  dependencies:
+      - core/jquery
