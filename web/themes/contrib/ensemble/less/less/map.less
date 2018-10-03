@@ -1,180 +1,195 @@
-#map{
-  clear: both;
-  max-width: 100%;
-  height: 600px;
-  border: 1px solid grey;
-  display: block;
-}
-.marker-glyphicon{
-  width: 25px;
-  height:25px;
-  /*
-  border: 1px solid red;
-  */
-  &:before {
-    .glyphicon();
-    content: "\e878";
-    font-size: 3em;
+#block-cartepermanente {
+  h2.localisation {
+    .title-regular();
+    text-transform: uppercase;
+    font-size: 1.6em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: @gray-darker-ensemble;
   }
-}
-.label-legend{
-  font-size: 1.4em;
-}
-.legend{
-  font-size: 1.2em;
-  margin: 10px 0;
-}
-.social{
-  &:before {
-    color: @red-ensemble;
-  }
-  &.legend{
-    &:before {
-      .glyphicon();
-      color: @red-ensemble;
-      content: "\e878";
-      margin-right: 3px;
-      text-decoration: none;
+  .col-md-3 {
+    > * {
+      margin-left: 20px;
     }
   }
-}
-.ecologie{
-  &:before {
-    color: @green-ensemble;
+  #h3-map,
+  .label-legend {
+    .title-bold();
+    border-top: 1px solid @gray-darker-ensemble;
+    padding-top: 15px;
+    padding-bottom: 10px;
   }
-  &.legend{
+  .label-legend {
+    margin-top: 30px;
+  }
+  #map{
+    clear: both;
+    max-width: 100%;
+    height: 600px;
+    display: block;
+  }
+  .marker-glyphicon{
+    width: 25px;
+    height:25px;
+    /*
+    border: 1px solid red;
+    */
     &:before {
       .glyphicon();
+      content: "\e878";
+      font-size: 3em;
+    }
+  }
+
+  .legend{
+    font-size: 1.2em;
+    margin: 10px 0;
+    &:hover {
       color: @green-ensemble;
-      content: "\e878";
-      margin-right: 3px;
-      text-decoration: none;
     }
   }
-}
-.international{
-  &:before {
-    color: @black-ensemble;
-  }
-  &.legend{
+  .social{
     &:before {
-      .glyphicon();
-      color: @black-ensemble;
-      content: "\e878";
-      margin-right: 3px;
-      text-decoration: none;
-    }
-  }
-}
-.no-type{
-  &.legend{
-    &:before {
-      .glyphicon();
-      content: "\e878";
-      margin-right: 3px;
-      text-decoration: none;
-    }
-  }
-}
-.rc{
-  &:before {
-    color: @violet-ensemble;
-  }
-  &.legend{
-    &:before {
-      .glyphicon();
-      color: @violet-ensemble;
-      content: "\e878";
-      margin-right: 3px;
-      text-decoration: none;
-    }
-  }
-}
-.localisation{
-  &:before {
-    .glyphicon();
-    content: "\e877";
-    color: #000;
-  }
-}
-.event-short-date{
-  width: 80px;
-  text-align: center;
-  background-color: #fff;
-  font-size: 1.2em;
-  margin-left: -20px;
-  margin-top: 5px;
-
-}
-#hide-markers,
-#show-markers{
-  &:hover{
-    cursor: pointer;
-  }
-}
-.date-legend{
-  margin: 0 4px;
-  display: block;
-  &:hover{
-    cursor: pointer;
-  }
-}
-
-#date-markers-legend{
-  &:before {
-   /* .glyphicon();
-    content: "\e807";
-    color: #000;
-    float: left;
-    margin-top: 10px;
-    margin-right: 5px;*/
-
-  }
-  > span {
-    display: block;
-    padding: 8px 6px;
-    text-decoration: underline;
-    &.selected-period{
       color: @red-ensemble;
-      text-decoration: none;
-      &:before {
-        color: @red-ensemble;
-      }
     }
-    &:before {
-      .glyphicon();
-      content: "\e834";
-      text-decoration: none;
+    &.legend{
+      &:before {
+        .glyphicon();
+        color: @red-ensemble;
+        content: "\e878";
+        margin-right: 3px;
+        text-decoration: none;
+      }
     }
   }
-}
-#map-legend {
-  > span {
-    display: block;
-    padding-left: 5px;
-    text-decoration: underline;
-    &.label-legend {
-      text-decoration: none;
+  .ecologie{
+    &:before {
+      color: @green-ensemble;
     }
-    &.all-legend {
-      &:before{
+    &.legend{
+      &:before {
         .glyphicon();
-        content: "\e830";
+        color: @green-ensemble;
+        content: "\e878";
+        margin-right: 3px;
         text-decoration: none;
-        margin-right: 5px;
       }
     }
-    &.label-separator {
-      display: none;
+  }
+  .international{
+    &:before {
+      color: @black-ensemble;
     }
-    &.not-selected-type-event{
-      opacity: 0.6;
+    &.legend{
+      &:before {
+        .glyphicon();
+        color: @black-ensemble;
+        content: "\e878";
+        margin-right: 3px;
+        text-decoration: none;
+      }
     }
+  }
+  .no-type{
+    &.legend{
+      &:before {
+        .glyphicon();
+        content: "\e878";
+        margin-right: 3px;
+        text-decoration: none;
+      }
+    }
+  }
+  .rc{
+    &:before {
+      color: @violet-ensemble;
+    }
+    &.legend{
+      &:before {
+        .glyphicon();
+        color: @violet-ensemble;
+        content: "\e878";
+        margin-right: 3px;
+        text-decoration: none;
+      }
+    }
+  }
+  .event-short-date{
+    width: 80px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 1.2em;
+    margin-left: -20px;
+    margin-top: 5px;
+
+  }
+  #hide-markers,
+  #show-markers{
     &:hover{
       cursor: pointer;
     }
   }
+  .date-legend{
+    margin: 0 4px;
+    display: block;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  #date-markers-legend{
+    .txt-regular();
+    > span {
+      display: block;
+      padding: 8px 6px;
+      &.selected-period{
+        color: @red-ensemble;
+        text-decoration: none;
+        &:before {
+          color: @red-ensemble;
+        }
+      }
+      &:before {
+        .glyphicon();
+        content: "\e834";
+        text-decoration: none;
+      }
+      &:hover {
+        color: @red-ensemble;
+        &:before {
+          color: @red-ensemble;
+        }
+      }
+    }
+  }
+  #map-legend {
+    > span {
+      display: block;
+      padding-left: 5px;
+      &.label-legend {
+        text-decoration: none;
+      }
+      &.all-legend {
+        &:before{
+          .glyphicon();
+          content: "\e830";
+          text-decoration: none;
+          margin-right: 5px;
+        }
+      }
+      &.label-separator {
+        display: none;
+      }
+      &.not-selected-type-event{
+        opacity: 0.6;
+      }
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
 }
+
 // css initial
 /* required styles */
 

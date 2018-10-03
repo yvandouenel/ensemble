@@ -29,12 +29,12 @@
   .under-inci-info {
     padding: 30px 20px;
     height: 360px;
-    background-color: @black-ensemble;
+    background-color: white;
     h3{
       min-height: 30px;
       margin-top: 20px;
       &.h3-information {
-        margin-top: 120px;
+        margin-top: 50px;
       }
     }
     @media (max-width: @screen-md) {
@@ -48,13 +48,25 @@
           margin-top: -30px;
         }
         a{
-          background-color: @black-ensemble;
+          background-color: transparent;
           display: block;
           padding: 5px 20px;
           border-radius: 5px;
+          border: 3px solid @gray-darker-ensemble;
           width: 80%;
           margin: 0 auto;
           text-align: center;
+          font-size: 2em;
+          padding-top: 60px;
+          &:before {
+            float: left;
+            margin-top: -50px;
+          }
+          &:after {
+            content: "";
+            display: block;
+            clear: both;
+          }
         }
       }
     }
@@ -69,19 +81,49 @@
     padding: 6px;
   }
   .information {
-    color: white;
+    color: @red-ensemble;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    &:hover {
+      color: @green-ensemble;
+      &:before {
+        background-color: @green-ensemble;
+      }
+    }
     &:before {
       .glyphicon();
-      content: "\e818";
-      color: #FFF;
+      content: "\e883";
+      color: white;
+      display: block;
+      font-size: 4em;
+      background-color: @red-ensemble;
+      border-radius: 35px;
+      margin-bottom: 10px;
+      left: 50px;
     }
   }
   .incitation {
-    color: white;
+    color: @red-ensemble;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    &:hover {
+      color: @green-ensemble;
+      &:before {
+        background-color: @green-ensemble;
+      }
+    }
     &:before {
       .glyphicon();
-      content: "\e87b";
-      color: #FFF;
+      content: "\e882";
+      color: white;
+      display: block;
+      font-size: 4em;
+      background-color: @red-ensemble;
+      border-radius: 35px;
+      margin-bottom: 10px;
+      left: 50px;
     }
   }
   h3 {
@@ -95,10 +137,8 @@
     background-color: transparent;
     height: auto;
     h3 {
-
       padding: 0;
-      background-color: black;
-      width: 90%;
+      width: 100%;
       border-radius: 8px;
       margin: 10px auto;
       a {
