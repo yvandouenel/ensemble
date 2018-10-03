@@ -106,7 +106,7 @@
         for (var j = 0; j < event_date.length; j ++) {
 
           event_date[j] = new Date($.trim(event_date[j]));
-          console.log("Taille tableau : " + event_date.length + " - date " + j + " : " +event_date[j]);
+          //console.log("Taille tableau : " + event_date.length + " - date " + j + " : " +event_date[j]);
 
           if (event_date[j] < relative_dates_tab["next_monday"]) {
             markers_this_week_tab.push(marker[i]);

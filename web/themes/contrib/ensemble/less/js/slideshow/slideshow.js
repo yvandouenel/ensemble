@@ -64,8 +64,8 @@ jQuery(function($) {
     $(".wrapper-diapo").animate({marginLeft:first_mvt_width},0);
 
     // Gestion des textes
-    $(".txt-diapo").hide();
-    $(".txt-diapo:eq(1)").show();
+    $(".diapo-h3-txt").hide();
+    $(".diapo-h3-txt:eq(1)").show();
 
     // Gestion des click sur les contrôleurs
     $('.controler').each(function(index){
@@ -135,8 +135,8 @@ jQuery(function($) {
           $(this).css({marginLeft:first_mvt_width}).find(".row-diapo:last").after($(this).find(".row-diapo:first"));
         }
         // Gestion des textes
-        $(".txt-diapo").hide();
-        $(".txt-diapo:eq(1)").show();
+        $(".diapo-h3-txt").hide();
+        $(".diapo-h3-txt:eq(1)").show();
       });
       // on recule ************************************************/
     }else if((num_controler - selected_slide) < 0) {
@@ -148,8 +148,8 @@ jQuery(function($) {
       }
       $(".wrapper-diapo").animate({marginLeft: "-=" + mvt_width}, 1000, function () {
         // Gestion des textes
-        $(".txt-diapo").hide();
-        $(".txt-diapo:eq( 1 )").show();
+        $(".diapo-h3-txt").hide();
+        $(".diapo-h3-txt:eq( 1 )").show();
       })
     }
     selected_slide = num_controler;
