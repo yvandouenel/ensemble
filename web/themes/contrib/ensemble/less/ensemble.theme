@@ -19,6 +19,9 @@ function ensemble_preprocess_page(&$variables) {
     $variables['#attached']['library'][] = 'ensemble/sameheight';
     $variables['#attached']['library'][] = 'ensemble/sameheighttitles';
   }
+  else if ((\Drupal::routeMatch()->getRouteName() == 'view.events.list_event')) {
+    $variables['#attached']['library'][] = 'ensemble/monthevents';
+  }
 
   else if ((isset($variables['node']) && $variables['node']->getType() == "event") ||
     (isset($variables['node']) && $variables['node']->getType() == "article")){

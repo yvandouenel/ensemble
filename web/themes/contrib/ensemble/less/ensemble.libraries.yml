@@ -62,3 +62,9 @@ managedates:
     js/managedates/managedates.js: {}
   dependencies:
       - core/jquery
+
+monthevents:
+  js:
+    js/managedates/monthevents.js: {}
+  dependencies:
+      - core/jquery
