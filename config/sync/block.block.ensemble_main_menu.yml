@@ -13,7 +13,7 @@ _core:
 id: ensemble_main_menu
 theme: ensemble
 region: navigation
-weight: -6
+weight: -9
 provider: null
 plugin: 'system_menu_block:main'
 settings:
