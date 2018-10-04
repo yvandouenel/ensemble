@@ -118,8 +118,10 @@ content:
     label: inline
     settings:
       timezone_override: ''
-      date_format: 'l d F Y H:i'
-    third_party_settings: {  }
+      date_format: 'd F Y - H:i'
+    third_party_settings:
+      ds:
+        ds_limit: ''
   field_document:
     type: entity_reference_entity_view
     weight: 6

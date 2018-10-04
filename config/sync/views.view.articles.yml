@@ -11,7 +11,6 @@ dependencies:
     - node
     - taxonomy
     - user
-    - views_bootstrap
 id: articles
 label: Articles
 module: views
@@ -55,10 +54,13 @@ display:
       pager:
         type: mini
         options:
-          items_per_page: 10
+          items_per_page: 100
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -67,21 +69,12 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
       style:
-        type: views_bootstrap_grid
+        type: default
         options:
           row_class: ''
           default_row_class: true
           uses_fields: false
-          alignment: horizontal
-          columns: '3'
-          col_xs: col-xs-12
-          col_sm: col-sm-12
-          col_md: col-md-4
-          col_lg: col-lg-4
       row:
         type: 'entity:node'
         options:

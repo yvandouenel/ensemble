@@ -15,9 +15,22 @@ features:
   favicon: 1
   node_user_picture: 1
 logo:
-  path: themes/contrib/ensemble/less/images/logoEnsemble34.gif
+  path: themes/contrib/ensemble/less/images/logo-ensemble-34.png
   url: ''
   use_default: 0
 table_responsive: '-1'
 table: ''
+region_wells:
+  navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  full_content_header: ''
+  slideshow: ''
+  incentive: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: well
+  footer: ''
 langcode: fr

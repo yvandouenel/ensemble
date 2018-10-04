@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.article.field_image
     - field.field.node.article.field_link_info_go
     - field.field.node.article.field_release_date
+    - field.field.node.article.field_thematique
     - node.type.article
   module:
     - ds
@@ -34,10 +35,11 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - node_title
+        - group_group_title
         - node_link
-        - group_img_txt
         - field_image
+        - node_title
+        - group_img_txt
         - body
     fields:
       node_link:
@@ -52,7 +54,7 @@ third_party_settings:
           class: ''
       node_title:
         plugin_id: node_title
-        weight: 0
+        weight: 1
         label: hidden
         formatter: default
         settings:
@@ -66,7 +68,7 @@ third_party_settings:
         - field_image
         - body
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: html_element
       format_settings:
         label: 'img txt'
@@ -79,6 +81,22 @@ third_party_settings:
         id: ''
         classes: img-txt
       label: 'img txt'
+    group_group_title:
+      children:
+        - node_title
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'group-title same-height-title'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Group title'
 id: node.article.teaser
 targetEntityType: node
 bundle: article
@@ -86,7 +104,7 @@ mode: teaser
 content:
   body:
     label: hidden
-    type: text_summary_or_trimmed
+    type: text_trimmed
     weight: 2
     settings:
       trim_length: 200
@@ -107,5 +125,6 @@ hidden:
   field_bloc_incitation: true
   field_link_info_go: true
   field_release_date: true
+  field_thematique: true
   langcode: true
   links: true

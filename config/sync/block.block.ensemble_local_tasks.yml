@@ -9,7 +9,7 @@ _core:
 id: ensemble_local_tasks
 theme: ensemble
 region: content
-weight: -2
+weight: -3
 provider: null
 plugin: local_tasks_block
 settings:

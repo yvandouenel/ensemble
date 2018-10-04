@@ -42,12 +42,13 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - node_title
         - node_link
+        - node_title
+        - group_group_title
         - field_image
         - group_img_txt_date
-        - body
         - field_date
+        - body
     fields:
       node_link:
         plugin_id: node_link
@@ -67,27 +68,44 @@ third_party_settings:
         settings:
           link: true
           wrapper: h3
-          class: 'event event-article-home-title same-height-title'
+          class: 'event event-article-home-title'
   field_group:
     group_img_txt_date:
       children:
         - node_link
         - field_image
-        - body
         - field_date
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: html_element
       format_settings:
-        id: ''
-        classes: event-img-txt-date
+        label: 'img txt date'
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'event-img-txt-date event-event'
       label: 'img txt date'
+    group_group_title:
+      children:
+        - node_title
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: 'Group title'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'group-title same-height-title'
+      label: 'Group title'
 id: node.event.teaser
 targetEntityType: node
 bundle: event
@@ -96,7 +114,7 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 2
+    weight: 3
     settings:
       trim_length: 200
     third_party_settings: {  }
@@ -108,8 +126,10 @@ content:
     label: hidden
     settings:
       timezone_override: ''
-      date_format: 'd F Y - H:i'
-    third_party_settings: {  }
+      date_format: 'Y-m-d H:i:00'
+    third_party_settings:
+      ds:
+        ds_limit: ''
   field_image:
     type: entity_reference_entity_view
     weight: 1

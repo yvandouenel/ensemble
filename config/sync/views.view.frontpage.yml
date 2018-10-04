@@ -327,10 +327,23 @@ display:
       defaults:
         style: false
         row: false
+        header: false
       row:
         type: 'entity:node'
         options:
           view_mode: teaser
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<h3 class="home-actu">Actualités</h3>'
+          plugin_id: text_custom
     display_plugin: page
     display_title: Page
     id: page_1
