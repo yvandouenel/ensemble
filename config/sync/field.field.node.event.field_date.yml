@@ -11,9 +11,9 @@ id: node.event.field_date
 field_name: field_date
 entity_type: node
 bundle: event
-label: 'Date de l''événement'
-description: ''
-required: false
+label: Dates
+description: 'Dates de l''événement'
+required: true
 translatable: false
 default_value:
   -

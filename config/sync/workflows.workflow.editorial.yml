@@ -1,42 +1,30 @@
-uuid: bac48afc-a3ad-4c06-b065-e5b58304c56c
+uuid: 49de62d5-75c7-46bb-b9c7-2823a81df1db
 langcode: fr
 status: true
 dependencies:
-  config:
-    - node.type.event
   module:
     - content_moderation
 _core:
   default_config_hash: T_JxNjYlfoRBi7Bj1zs5Xv9xv1btuBkKp5C1tNrjMhI
 id: editorial
-label: Éditorial
+label: Editorial
 type: content_moderation
 type_settings:
   states:
     archived:
+      label: Archived
+      weight: 5
       published: false
       default_revision: true
-      label: Archivé
-      weight: 5
-    demande_de_modification:
-      published: false
-      default_revision: false
-      label: 'Demande de modification'
-      weight: 7
-    demande_de_validation:
-      published: false
-      default_revision: false
-      label: 'Demande de validation'
-      weight: 6
     draft:
+      label: Draft
       published: false
       default_revision: false
-      label: Brouillon
       weight: -5
     published:
+      label: Published
       published: true
       default_revision: true
-      label: Published
       weight: 0
   transitions:
     archive:
@@ -46,49 +34,29 @@ type_settings:
       to: archived
       weight: 2
     archived_draft:
-      label: 'Désarchirver vers brouillon'
+      label: 'Restore to Draft'
       from:
         - archived
       to: draft
       weight: 3
     archived_published:
-      label: Restorer
+      label: Restore
       from:
         - archived
       to: published
       weight: 4
     create_new_draft:
-      label: 'Créer un nouveau brouillon'
+      label: 'Create New Draft'
       to: draft
       weight: 0
       from:
-        - demande_de_modification
-        - demande_de_validation
         - draft
         - published
-    demander_une_modification:
-      label: 'Demander une modification'
-      from:
-        - demande_de_validation
-        - draft
-        - published
-      to: demande_de_modification
-      weight: 6
-    demander_une_validation:
-      label: 'Demander une validation'
-      from:
-        - demande_de_modification
-        - draft
-      to: demande_de_validation
-      weight: 5
     publish:
-      label: Publier
+      label: Publish
       to: published
       weight: 1
       from:
-        - demande_de_validation
         - draft
         - published
-  entity_types:
-    node:
-      - event
+  entity_types: {  }

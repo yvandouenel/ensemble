@@ -1,7 +1,9 @@
 uuid: 7d823bc1-591d-48cc-b052-d56268459518
-langcode: en
+langcode: fr
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: cx0lrNmcodnKwm6A1NvFg80wT2JmUL7OhJmko5jKZaE
 id: contributor
 label: Contributeur
 weight: -8

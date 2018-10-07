@@ -19,11 +19,11 @@ dependencies:
     - field.field.node.event.field_release_date
     - node.type.event
   module:
-    - content_moderation
+    - datetime
+    - datetime_range
     - entity_browser
     - geofield_map
     - path
-    - single_datetime
     - text
     - webform
 id: node.event.default
@@ -78,18 +78,11 @@ content:
   field_date:
     weight: 2
     settings:
-      hour_format: 24h
-      allow_times: '15'
-      disable_days: {  }
-      exclude_date: ''
-      inline: false
-      datetimepicker_theme: default
-      min_date: ''
-      max_date: ''
-      year_start: ''
-      year_end: ''
+      date_order: DMY
+      time_type: '24'
+      increment: 15
     third_party_settings: {  }
-    type: single_date_time_widget
+    type: datetime_datelist
     region: content
   field_document:
     weight: 4
@@ -180,32 +173,20 @@ content:
   field_release_date:
     weight: 5
     settings:
-      hour_format: 24h
-      allow_times: '60'
-      exclude_date: ''
-      datetimepicker_theme: default
-      min_date: ''
-      max_date: ''
-      year_start: ''
-      year_end: ''
-      disable_days:
-        1: 0
-        2: 0
-        3: 0
-        4: 0
-        5: 0
-        6: 0
-        7: 0
-      inline: 0
+      date_order: DMY
+      time_type: none
+      increment: 15
     third_party_settings: {  }
-    type: single_date_time_range_widget
+    type: daterange_datelist
     region: content
   moderation_state:
-    type: moderation_state_default
-    weight: 8
-    settings: {  }
-    region: content
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
   path:
     type: path
     weight: 9

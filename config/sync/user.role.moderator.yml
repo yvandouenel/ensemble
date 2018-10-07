@@ -1,7 +1,9 @@
 uuid: 3506035f-4dde-4d1c-97c7-bfa0f53d2b39
-langcode: en
+langcode: fr
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: E-WrCjXyXIMYrYgoPPdqldkwzjaBAssl1DyTtLABCRs
 id: moderator
 label: Moderateur
 weight: -7

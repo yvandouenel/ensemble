@@ -7,7 +7,7 @@ dependencies:
   module:
     - crop
 name: bandeau_fin
-label: 'bandeau fin (1140 x 100)'
+label: 'Haut événement (768x331)'
 effects:
   4a0f44f5-80bc-4dd2-ac6b-dddd14f662ef:
     uuid: 4a0f44f5-80bc-4dd2-ac6b-dddd14f662ef
@@ -20,5 +20,5 @@ effects:
     id: image_resize
     weight: 2
     data:
-      width: 1140
-      height: 100
+      width: 768
+      height: 331
