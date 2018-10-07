@@ -7,16 +7,14 @@ dependencies:
     - field.field.node.event.body
     - field.field.node.event.field_address
     - field.field.node.event.field_argumentaires
-    - field.field.node.event.field_bloc
-    - field.field.node.event.field_bloc_incitation
     - field.field.node.event.field_date
     - field.field.node.event.field_document
     - field.field.node.event.field_event_type
     - field.field.node.event.field_image
     - field.field.node.event.field_inscription
-    - field.field.node.event.field_link_info_go
     - field.field.node.event.field_place
     - field.field.node.event.field_release_date
+    - field.field.node.event.field_retour_liste
     - node.type.event
   module:
     - datetime
@@ -41,7 +39,7 @@ content:
     third_party_settings: {  }
     region: content
   field_address:
-    weight: 11
+    weight: 10
     settings:
       size: 60
       placeholder: ''
@@ -49,25 +47,7 @@ content:
     type: text_textfield
     region: content
   field_argumentaires:
-    weight: 26
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_bloc:
-    weight: 28
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_bloc_incitation:
-    weight: 31
+    weight: 12
     settings:
       match_operator: CONTAINS
       size: 60
@@ -99,7 +79,7 @@ content:
     type: entity_browser_entity_reference
     region: content
   field_event_type:
-    weight: 12
+    weight: 11
     settings:
       match_operator: CONTAINS
       size: 60
@@ -122,23 +102,14 @@ content:
       field_widget_display_settings: {  }
     third_party_settings: {  }
   field_inscription:
-    weight: 30
+    weight: 15
     settings:
       default_data: true
     third_party_settings: {  }
     type: webform_entity_reference_select
     region: content
-  field_link_info_go:
-    weight: 29
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_place:
-    weight: 10
+    weight: 9
     settings:
       map_google_places:
         places_control: '1'
@@ -179,6 +150,14 @@ content:
     third_party_settings: {  }
     type: daterange_datelist
     region: content
+  field_retour_liste:
+    type: text_textfield
+    weight: 17
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   moderation_state:
     weight: 32
     settings:
@@ -189,7 +168,7 @@ content:
     region: content
   path:
     type: path
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }

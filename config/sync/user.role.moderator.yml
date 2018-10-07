@@ -63,6 +63,7 @@ permissions:
   - 'use editorial transition demander_une_modification'
   - 'use editorial transition demander_une_validation'
   - 'use editorial transition publish'
+  - 'use exclude node title'
   - 'use text format basic_html'
   - 'use text format full_html'
   - 'view all revisions'

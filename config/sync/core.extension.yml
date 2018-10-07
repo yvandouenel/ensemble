@@ -11,7 +11,6 @@ module:
   config: 0
   config_update: 0
   contact: 0
-  content_moderation: 0
   contextual: 0
   coopernetredirect: 0
   crop: 0
@@ -26,6 +25,7 @@ module:
   embed: 0
   entity_browser: 0
   entity_embed: 0
+  exclude_node_title: 0
   features: 0
   features_ui: 0
   field: 0
@@ -86,11 +86,11 @@ module:
   webform_node: 0
   webform_scheduled_email: 0
   webform_ui: 0
-  workflows: 0
   ds: 1
   menu_link_content: 1
   pathauto: 1
   webform_bootstrap: 1
+  ds_extras: 2
   views: 10
   standard: 1000
 theme:

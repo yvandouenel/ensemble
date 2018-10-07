@@ -47,6 +47,7 @@ permissions:
   - 'use editorial transition create_new_draft'
   - 'use editorial transition demande_de_validation'
   - 'use editorial transition demander_une_validation'
+  - 'use exclude node title'
   - 'use text format basic_html'
   - 'use text format full_html'
   - 'view all revisions'

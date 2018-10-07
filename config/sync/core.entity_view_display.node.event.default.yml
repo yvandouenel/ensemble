@@ -6,16 +6,14 @@ dependencies:
     - field.field.node.event.body
     - field.field.node.event.field_address
     - field.field.node.event.field_argumentaires
-    - field.field.node.event.field_bloc
-    - field.field.node.event.field_bloc_incitation
     - field.field.node.event.field_date
     - field.field.node.event.field_document
     - field.field.node.event.field_event_type
     - field.field.node.event.field_image
     - field.field.node.event.field_inscription
-    - field.field.node.event.field_link_info_go
     - field.field.node.event.field_place
     - field.field.node.event.field_release_date
+    - field.field.node.event.field_retour_liste
     - node.type.event
   module:
     - datetime
@@ -94,24 +92,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: footer
-  field_bloc:
-    weight: 9
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: footer
-  field_bloc_incitation:
-    weight: 10
-    label: hidden
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: footer
   field_date:
     type: datetime_custom
     weight: 5
@@ -157,15 +137,6 @@ content:
     third_party_settings: {  }
     type: webform_entity_reference_entity_view
     region: footer
-  field_link_info_go:
-    weight: 3
-    label: hidden
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: right
   field_place:
     type: geofield_google_map
     weight: 8
@@ -234,6 +205,13 @@ content:
         markercluster_control: 0
       gmap_api_key: ''
     third_party_settings: {  }
+  field_retour_liste:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
 hidden:
   content_moderation_control: true
   field_release_date: true
