@@ -1607,6 +1607,8 @@ ol,ul{list-style:none;padding-left:1.5em}
 .plus-open-h3-a>h3>span>a:after{content:"\e83e";margin-left:10px}
 body{background-color:#f4f4f4;font-family:Roboto,sans-serif;font-weight:400;font-style:normal}
 body p{line-height:1.5em;font-size:1.2em}
+body p a{color:#00a400;text-decoration:underline}
+body p a:hover{color:#4d4d4d}
 body .container{background-color:#fff}
 .no-gutter{padding-left:0;padding-right:0}
 #sticky-headband>div.container>div.row{background-color:#FFF}
@@ -1693,7 +1695,7 @@ footer.container .menu-footer .menu--footer li a:hover{color:#e42621}
 .path-frontpage .group-title.same-height-title{position:relative;display:table-cell;width:100%;vertical-align:bottom}
 .path-frontpage .group-title.same-height-title .field--name-node-title .event-article-home-title.event a{color:#4d4d4d;font-family:Nunito,sans-serif;font-weight:700;font-style:normal;font-size:1.4em;width:100%;display:block}
 .path-frontpage .group-title.same-height-title .field--name-node-title .event-article-home-title.article a{color:#4d4d4d;font-family:Nunito,sans-serif;font-weight:700;font-style:normal;font-size:1.4em}
-#block-cartepermanente h2.localisation,.path-frontpage .home-actu{font-weight:400;text-transform:uppercase;margin-bottom:20px;font-family:Nunito,sans-serif;font-style:normal;text-align:center}
+#block-cartepermanente h2.localisation,.path-frontpage .home-actu{font-weight:400;margin-bottom:20px;font-family:Nunito,sans-serif;font-style:normal;text-align:center;text-transform:uppercase}
 .path-frontpage .group-title.same-height-title a{display:block}
 .path-frontpage .home-actu{padding:20px;color:#FFF;background-color:#70b52c}
 .path-frontpage .feed-icons{display:none}
@@ -1843,6 +1845,11 @@ footer.container .menu-footer .menu--footer li a:hover{color:#e42621}
 .leaflet-tooltip-right:before{left:0;margin-left:-12px;border-right-color:#fff}
 .page-node-type-event .field--name-body{padding-right:30px}
 .page-node-type-event .field--name-field-address,.page-node-type-event .field--name-field-media-image{margin-bottom:30px}
+.page-node-type-event .incitation,.page-node-type-event .information{float:left;background-color:transparent;border:0;margin-bottom:20px}
+.page-node-type-event .field--name-field-address,.page-node-type-event .field--name-field-date{clear:both}
+.page-node-type-event .field--name-field-date:after{content:'';display:block;clear:both;margin-bottom:15px}
+.page-node-type-event .field--name-node-changed-date{clear:both;padding-top:15px}
+.page-node-type-event .field--name-field-place{margin-top:30px}
 body.path-agenda h2.page-header{color:#4d4d4d;font-family:Nunito,sans-serif;font-weight:400;font-style:normal;font-size:1em}
 body.path-agenda #links-months{margin:0 auto;display:table}
 body.path-agenda #links-months #current-month,body.path-agenda #links-months #next-month,body.path-agenda #links-months #previous-month{display:table-cell;vertical-align:middle}
