@@ -1,3 +1,85 @@
+.modal-body {
+  li {
+    &#custom-form-this-event{
+      a {
+        .lien-modal();
+        font-size: 1.8em;
+        &:before {
+          .glyphicon();
+          content: "\e85b";
+          color: @red-ensemble;
+        }
+      }
+    }
+    p {
+      a {
+        .lien-modal();
+      }
+    }
+    &#pause-cafe {
+      margin: 0;
+      display: block;
+      background-color: @gray-ensemble;
+      font-size: 1.4em;
+      padding: 10px 20px;
+      color: #000;
+      text-decoration: none;
+      a{
+        padding: 10px;
+        &:hover {
+          text-decoration: none;
+          color: white;
+          background-color: black;
+          &:before {
+            color: #FFF;
+          }
+        }
+
+      }
+    }
+  }
+
+}
+.lien-modal {
+  display: block;
+  background-color: @gray-light-ensemble;
+  font-size: 1.4em;
+  padding: 10px 20px;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 10px;
+  text-align: center;
+  &:hover {
+    background-color: black;
+    color: #FFF;
+  }
+}
+#block-information {
+  .title-modal();
+}
+#block-incitation {
+  .title-modal();
+  h4.modal-title {
+    &:before {
+      content: "\e882";
+    }
+  }
+}
+.title-modal{
+  h4.modal-title {
+    .title-regular();
+    font-size: 2em;
+    text-transform: uppercase;
+    &:before {
+      .glyphicon();
+      content: "\e883";
+      color: @red-ensemble;
+      background-color: #FFF;
+      font-size: 2em;
+      top: 10px;
+    }
+  }
+}
 
 .group-header {
   position: relative;

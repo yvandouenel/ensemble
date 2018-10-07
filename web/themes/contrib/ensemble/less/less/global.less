@@ -176,10 +176,16 @@ body:not(.path-frontpage) {
 
 .link-to-arg {
   display: block;
+  margin: 10px;
+  color: @red-ensemble;
+  text-decoration: none;
   &:before {
     .glyphicon();
     content: "\e858";
-    color: @black-ensemble;
+    color: @red-ensemble;
+  }
+  &:hover {
+    color: #000;
   }
 }
 

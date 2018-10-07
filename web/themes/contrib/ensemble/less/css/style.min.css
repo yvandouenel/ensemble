@@ -1073,9 +1073,10 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .pager li>a:focus,.pager li>a:hover{text-decoration:none;background-color:#eee}
 .pager .next>a,.pager .next>span{float:right}
 .pager .previous>a,.pager .previous>span{float:left}
+.close,.list-group-item>.badge{float:right}
 .pager .disabled>a,.pager .disabled>a:focus,.pager .disabled>a:hover,.pager .disabled>span{color:#777;background-color:#fff;cursor:not-allowed}
+a.badge:focus,a.badge:hover,a.label:focus,a.label:hover{color:#fff;cursor:pointer;text-decoration:none}
 .label{display:inline;padding:.2em .6em .3em;font-size:75%;color:#fff;vertical-align:baseline;border-radius:.25em}
-a.label:focus,a.label:hover{color:#fff;text-decoration:none;cursor:pointer}
 .label:empty{display:none}
 .label-default{background-color:#777}
 .label-default[href]:focus,.label-default[href]:hover{background-color:#5e5e5e}
@@ -1093,10 +1094,8 @@ a.label:focus,a.label:hover{color:#fff;text-decoration:none;cursor:pointer}
 .badge:empty{display:none}
 .media-object,.thumbnail{display:block}
 .btn-group-xs>.btn .badge,.btn-xs .badge{top:0;padding:1px 5px}
-a.badge:focus,a.badge:hover{color:#fff;text-decoration:none;cursor:pointer}
 .list-group-item.active>.badge,.nav-pills>.active>a>.badge{color:#337ab7;background-color:#fff}
 .jumbotron,.jumbotron .h1,.jumbotron h1{color:inherit}
-.list-group-item>.badge{float:right}
 .list-group-item>.badge+.badge{margin-right:5px}
 .nav-pills>li>a>.badge{margin-left:3px}
 .jumbotron{padding-top:30px;padding-bottom:30px;margin-bottom:30px;background-color:#eee}
@@ -1270,7 +1269,7 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:focus,a.list-gro
 .well blockquote{border-color:#ddd;border-color:rgba(0,0,0,.15)}
 .well-lg{padding:24px;border-radius:6px}
 .well-sm{padding:9px;border-radius:3px}
-.close{float:right;font-size:21px;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20)}
+.close{font-size:21px;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20)}
 .progress-wrapper .percentage,.progress-wrapper .progress-label,.tooltip{font-size:12px}
 .popover,.tooltip{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-style:normal;font-weight:400;letter-spacing:normal;line-break:auto;line-height:1.42857143;text-shadow:none;text-transform:none;white-space:normal;word-break:normal;word-spacing:normal;word-wrap:normal;text-decoration:none}
 .close:focus,.close:hover{color:#000;text-decoration:none;cursor:pointer;opacity:.5;filter:alpha(opacity=50)}
@@ -1586,7 +1585,7 @@ ol,ul{list-style:none;padding-left:1.5em}
 .control-group .help-inline:first-child,.help-block:first-child{margin-top:0}
 @font-face{font-family:fontello;src:url(../fontello/font/fontello.eot?90885294);src:url(../fontello/font/fontello.eot?90885294#iefix) format('embedded-opentype'),url(../fontello/font/fontello.woff?90885294) format('woff'),url(../fontello/font/fontello.ttf?90885294) format('truetype'),url(../fontello/font/fontello.svg?90885294#fontello) format('svg');font-weight:400;font-style:normal}
 [class*=" icon-"]:hover{text-decoration:none}
-.glyphicon,.glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{text-decoration:inherit;font-size:1em;speak:none;display:inline-block;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;color:#777;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-weight:400;font-style:normal;font-family:fontello;width:1em}
+.glyphicon,.glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{text-decoration:inherit;font-family:fontello;font-size:1em;speak:none;display:inline-block;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;color:#777;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-weight:400;font-style:normal}
 .glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{position:relative;top:1px}
 .glyphicon-h3-a>h3>span>a:hover:before{text-decoration:none}
 [class*=" iconafter-"]:after{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;color:#777;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
@@ -1639,9 +1638,10 @@ h2.page-header{font-family:Nunito,sans-serif;font-weight:700;font-style:normal;f
 }
 #full-content-header,body:not(.path-frontpage) .main-container{margin-top:145px}
 .cartouche-noir{color:#fff;background:rgba(0,0,0,.7);display:inline;box-shadow:10px 0 0 rgba(0,0,0,.7),-10px 0 0 rgba(0,0,0,.7);line-height:1.3em}
-.link-to-arg{display:block}
-.event-img-txt-date.event-event:before,.link-to-arg:before{font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.link-to-arg:before{position:relative;top:1px;font-family:fontello;width:1em;content:"\e858";color:#333}
+.link-to-arg{display:block;margin:10px;color:#e42621;text-decoration:none}
+.event-img-txt-date.event-event:before,.link-to-arg:before{font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.link-to-arg:before{position:relative;top:1px;width:1em;content:"\e858";color:#e42621}
+.link-to-arg:hover{color:#000}
 .btn-primary{background-color:#333}
 .event-img-txt-date,.img-txt{margin-top:15px;border:2px solid #ccc;position:relative}
 .event-img-txt-date img,.img-txt img{display:block;clear:both}
@@ -1656,7 +1656,7 @@ h2.page-header{font-family:Nunito,sans-serif;font-weight:700;font-style:normal;f
 .event-img-txt-date .field--name-body,.img-txt .field--name-body{width:100%}
 }
 .event-img-txt-date.event-event{position:relative}
-.event-img-txt-date.event-event:before{font-family:fontello;content:"\e807";color:#000;background-color:#fff;width:40px;height:40px;border-radius:20px;opacity:.5;position:absolute;top:10px;left:10px;z-index:1;padding:12px}
+.event-img-txt-date.event-event:before{content:"\e807";color:#000;background-color:#fff;width:40px;height:40px;border-radius:20px;opacity:.5;position:absolute;top:10px;left:10px;z-index:1;padding:12px}
 footer.container #top-footer #facebook-bottom:before,footer.container #top-footer #twitter-bottom:before{font-family:fontello;display:inline-block;text-decoration:inherit;width:1em;text-align:center;text-transform:none;font-size:2em;background-color:#e42621;font-weight:400;font-style:normal}
 #block-cartepermanente .marker-glyphicon:before,footer.container #top-footer #facebook-bottom:before,footer.container #top-footer #twitter-bottom:before{position:relative;top:1px;speak:none;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 footer.container{margin-top:0;padding-top:0}
@@ -1716,8 +1716,9 @@ footer.container .menu-footer .menu--footer li a:hover{color:#e42621}
 #block-cartepermanente .rc.legend:before,#block-cartepermanente .rc:before{color:#9400d3}
 #block-cartepermanente .event-short-date{width:80px;text-align:center;background-color:#fff;font-size:1.2em;margin-left:-20px;margin-top:5px}
 #block-cartepermanente .date-legend{margin:0 4px;display:block}
+.leaflet-bottom .leaflet-control,.modal-body li p a{margin-bottom:10px}
 #block-cartepermanente #date-markers-legend{font-family:Roboto,sans-serif;font-weight:400;font-style:normal}
-#block-cartepermanente #date-markers-legend>span:before,#block-cartepermanente #map-legend>span.all-legend:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;width:1em;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-decoration:none;text-align:center}
+#block-cartepermanente #date-markers-legend>span:before,#block-cartepermanente #map-legend>span.all-legend:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;width:1em;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;text-decoration:none;speak:none;text-align:center;-moz-osx-font-smoothing:grayscale}
 #block-cartepermanente #date-markers-legend>span{display:block;padding:8px 6px}
 #block-cartepermanente #date-markers-legend>span.selected-period{color:#e42621;text-decoration:none}
 #block-cartepermanente #date-markers-legend>span.selected-period:before{color:#e42621}
@@ -1762,7 +1763,6 @@ footer.container .menu-footer .menu--footer li a:hover{color:#e42621}
 .leaflet-left{left:0}
 .leaflet-right .leaflet-control{float:right;margin-right:10px}
 .leaflet-top .leaflet-control{margin-top:10px}
-.leaflet-bottom .leaflet-control{margin-bottom:10px}
 .leaflet-left .leaflet-control{margin-left:10px}
 .leaflet-fade-anim .leaflet-tile{will-change:opacity}
 .leaflet-fade-anim .leaflet-popup{opacity:0;-webkit-transition:opacity .2s linear;-moz-transition:opacity .2s linear;-o-transition:opacity .2s linear;transition:opacity .2s linear}
@@ -1843,6 +1843,10 @@ footer.container .menu-footer .menu--footer li a:hover{color:#e42621}
 .leaflet-tooltip-left:before,.leaflet-tooltip-right:before{top:50%;margin-top:-6px}
 .leaflet-tooltip-left:before{right:0;margin-right:-12px;border-left-color:#fff}
 .leaflet-tooltip-right:before{left:0;margin-left:-12px;border-right-color:#fff}
+.page-node-type-event .field--name-field-event-type{font-family:Nunito,sans-serif;font-weight:400;font-style:normal;text-transform:uppercase;font-size:.7em}
+.page-node-type-event .field--name-field-event-type a{color:#000}
+.page-node-type-event .field--name-node-title>h2.page-header{font-size:1em}
+.page-node-type-event .field--name-node-title>h2.page-header:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e807";color:#ccc;font-size:2em}
 .page-node-type-event .field--name-body{padding-right:30px}
 .page-node-type-event .field--name-field-address,.page-node-type-event .field--name-field-media-image{margin-bottom:30px}
 .page-node-type-event .incitation,.page-node-type-event .information{float:left;background-color:transparent;border:0;margin-bottom:20px}
@@ -1854,14 +1858,15 @@ body.path-agenda h2.page-header{color:#4d4d4d;font-family:Nunito,sans-serif;font
 body.path-agenda #links-months{margin:0 auto;display:table}
 body.path-agenda #links-months #current-month,body.path-agenda #links-months #next-month,body.path-agenda #links-months #previous-month{display:table-cell;vertical-align:middle}
 body.path-agenda #links-months #current-month a,body.path-agenda #links-months #next-month a,body.path-agenda #links-months #previous-month a{font-family:Roboto,sans-serif;font-weight:900;font-style:normal;text-transform:uppercase;color:#4d4d4d;text-decoration:none}
-body.path-agenda #links-months #next-month a:before,body.path-agenda #links-months #previous-month a:after{position:relative;top:1px;font-family:fontello;font-weight:400;font-size:1em;speak:none;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;border-radius:25px;margin-right:10px;font-style:normal;display:inline-block}
+body.path-agenda #links-months #next-month a:before,body.path-agenda #links-months #previous-month a:after{font-family:fontello;font-weight:400;font-size:1em;text-transform:none;border-radius:25px;margin-right:10px}
+body.path-agenda #links-months #next-month a:before,body.path-agenda #links-months #previous-month a:after,body.path-agenda .view-content div.item-list h3:before{position:relative;top:1px;font-style:normal;speak:none;display:inline-block;text-decoration:inherit;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 body.path-agenda #links-months #current-month a:hover,body.path-agenda #links-months #next-month a:hover,body.path-agenda #links-months #previous-month a:hover{color:#e42621}
 body.path-agenda #links-months #previous-month{width:0%;text-align:right}
-body.path-agenda #links-months #previous-month a:after{text-decoration:inherit;width:1em;text-align:center;content:"\e833";padding:5px 20px 3px 4px;color:#FFF;background-color:#4d4d4d;margin-left:10px}
+body.path-agenda #links-months #previous-month a:after{width:1em;text-align:center;content:"\e833";padding:5px 20px 3px 4px;color:#FFF;background-color:#4d4d4d;margin-left:10px}
 body.path-agenda #links-months #previous-month a:hover{color:#e42621}
 body.path-agenda #links-months #previous-month a:hover:after{background-color:#e42621}
 body.path-agenda #links-months #next-month{width:0%}
-body.path-agenda #links-months #next-month a:before{text-decoration:inherit;width:1em;text-align:center;content:"\e834";padding:5px 15px 3px 8px;color:#FFF;background-color:#4d4d4d}
+body.path-agenda #links-months #next-month a:before{width:1em;text-align:center;content:"\e834";padding:5px 15px 3px 8px;color:#FFF;background-color:#4d4d4d}
 body.path-agenda #links-months #next-month a:hover{color:red}
 body.path-agenda #links-months #next-month a:hover:after{background-color:#e42621}
 body.path-agenda #links-months h3#viewed-month{font-family:Nunito,sans-serif;font-weight:700;font-style:normal;font-size:2em;text-align:center;text-transform:uppercase}
@@ -1870,14 +1875,33 @@ body.path-agenda #links-months h3#viewed-month{font-family:Nunito,sans-serif;fon
 body.path-agenda .view-content{padding-top:30px}
 body.path-agenda .view-content div.item-list{padding:10px 0;border-bottom:1px solid #4d4d4d}
 body.path-agenda .view-content div.item-list h3{float:left;font-family:Roboto,sans-serif;font-weight:900;font-style:normal;font-size:1.5em;padding:5px;color:#70b52c;margin-right:20px}
-body.path-agenda .view-content div.item-list h3:before,body.path-agenda .view-content div.item-list ul li a:before{top:1px;font-style:normal;font-size:1em;speak:none;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;position:relative}
-body.path-agenda .view-content div.item-list h3:before{font-family:fontello;font-weight:400;display:inline-block;text-decoration:inherit;width:1em;color:#70b52c;content:"\e834"}
+body.path-agenda .view-content div.item-list h3:before{font-family:fontello;font-weight:400;font-size:1em;width:1em;margin-right:10px;text-align:center;text-transform:none;color:#70b52c;content:"\e834"}
 body.path-agenda .view-content div.item-list ul{float:left;width:80%}
 body.path-agenda .view-content div.item-list ul li a{text-decoration:none;display:block;padding:10px;color:#4d4d4d;font-family:Roboto,sans-serif;font-weight:900;font-style:normal}
-body.path-agenda .view-content div.item-list ul li a:before{font-family:fontello;font-weight:400;display:inline-block;text-decoration:inherit;width:1em;color:#ccc;content:"\e83C"}
+.modal-body li#custom-form-this-event a:before,body.path-agenda .view-content div.item-list ul li a:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;width:1em;margin-right:10px;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:center}
+body.path-agenda .view-content div.item-list ul li a:before{font-size:1em;display:inline-block;text-decoration:inherit;color:#ccc;content:"\e83C"}
 body.path-agenda .view-content div.item-list ul li a:hover{color:#e42621;background-color:#e6e6e6}
 body.path-agenda .view-content div.item-list ul li a:hover:before{color:#e42621}
 body.path-agenda .view-content div.item-list:after{display:block;content:"";clear:both}
+.modal-body li#custom-form-this-event a{display:block;background-color:#e6e6e6;padding:10px 20px;color:#000;text-decoration:none;margin-bottom:10px;text-align:center;font-size:1.8em}
+.modal-body li#custom-form-this-event a:hover{background-color:#000;color:#FFF}
+.modal-body li#custom-form-this-event a:before{font-size:1em;display:inline-block;text-decoration:inherit;content:"\e85b";color:#e42621}
+.lien-modal,.modal-body li p a,.modal-body li#pause-cafe{display:block;font-size:1.4em}
+.modal-body li p a{background-color:#e6e6e6;padding:10px 20px;color:#000;text-decoration:none;text-align:center}
+.modal-body li p a:hover{background-color:#000;color:#FFF}
+.modal-body li#pause-cafe{margin:0;background-color:#ccc;padding:10px 20px;color:#000;text-decoration:none}
+.modal-body li#pause-cafe a{padding:10px}
+.modal-body li#pause-cafe a:hover{text-decoration:none;color:#fff;background-color:#000}
+.modal-body li#pause-cafe a:hover:before{color:#FFF}
+.lien-modal{background-color:#e6e6e6;padding:10px 20px;color:#000;text-decoration:none;margin-bottom:10px;text-align:center}
+.lien-modal:hover{background-color:#000;color:#FFF}
+#block-incitation h4.modal-title:before,#block-information h4.modal-title:before,.title-modal h4.modal-title:before{font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#e42621;background-color:#FFF;font-size:2em;top:10px;position:relative}
+#block-information h4.modal-title{font-family:Nunito,sans-serif;font-weight:400;font-style:normal;font-size:2em;text-transform:uppercase}
+#block-information h4.modal-title:before{font-family:fontello;text-transform:none;content:"\e883"}
+#block-incitation h4.modal-title{font-family:Nunito,sans-serif;font-weight:400;font-style:normal;font-size:2em;text-transform:uppercase}
+#block-incitation h4.modal-title:before{font-family:fontello;text-transform:none;content:"\e882"}
+.title-modal h4.modal-title{font-family:Nunito,sans-serif;font-weight:400;font-style:normal;font-size:2em;text-transform:uppercase}
+.title-modal h4.modal-title:before{font-family:fontello;text-transform:none;content:"\e883"}
 .group-header{position:relative}
 .group-header .under-inci-info{position:absolute;z-index:999;right:0;top:-1px;width:290px;height:101px}
 @media (max-width:992px){.group-header .under-inci-info{position:static;width:auto;height:auto}
