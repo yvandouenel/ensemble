@@ -12,7 +12,7 @@
   }
 
   function moveLinkArgument() {
-    $(".field--name-field-argumentaires .field--item a").insertAfter("#pause-cafe").addClass("link-to-arg");
+    $(".field--name-field-argumentaires .field--item a").appendTo("#pause-cafe").addClass("link-to-arg");
   }
 
   function moveWebform() {
