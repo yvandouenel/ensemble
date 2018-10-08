@@ -196,19 +196,29 @@
             <div id="top-footer">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="/themes/contrib/ensemble/less/images/etiquette-footer-small.png" alt="" id="logo-bottom">
-                        <a href="https://twitter.com/Ensemble_FdG"><div id="twitter-bottom"><span class="sr-only">Twitter Ensemble 34</span></div></a>
-                        <a href="https://www.facebook.com/ga.herault/"><div id="facebook-bottom"><span class="sr-only">Facebook Ensemble 34</span></div></a>
+                        <img src="/themes/contrib/ensemble/less/images/etiquette-footer-small.png" alt=""
+                             id="logo-bottom">
+                        <a href="https://twitter.com/Ensemble_FdG">
+                            <div id="twitter-bottom"><span class="sr-only">Twitter Ensemble 34</span></div>
+                        </a>
+                        <a href="https://www.facebook.com/ga.herault/">
+                            <div id="facebook-bottom"><span class="sr-only">Facebook Ensemble 34</span></div>
+                        </a>
                     </div>
                     <div class="col-md-6">
-                        <div id="bottom-base-line">Mouvement pour une alternative de gauche, écologiste et solidaire &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div id="bottom-base-line">Mouvement pour une alternative de gauche, écologiste et solidaire
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                     </div>
                 </div>
             </div>
             <div class="menu-footer">
-                {% if page.footer %}
-                    {{ page.footer }}
-                {% endif %}
+                <div class="row">
+                    <div class="col-sm-12">
+                        {% if page.footer %}
+                            {{ page.footer }}
+                        {% endif %}
+                    </div>
+                </div>
             </div>
         </footer>
     {% endblock %}
