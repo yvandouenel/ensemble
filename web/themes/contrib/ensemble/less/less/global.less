@@ -15,6 +15,28 @@ body {
   .container {
     background-color: white;
   }
+  .field--label-inline .field--label::after {
+    content: ' :';
+  }
+  div.txt-highlighted {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: @gray-light-ensemble;
+    line-height: 1.5em;
+    &:before {
+      .glyphicon();
+      content: "\e85b";
+      font-size: 6em;
+      color: #FFF;
+      position: static;
+      float: left;
+    }
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+  }
 }
 
 /* Grille grid ********************************************************************************************************/
