@@ -10,11 +10,11 @@ dependencies:
     - field.field.node.event.field_date
     - field.field.node.event.field_document
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_home_slideshow
     - field.field.node.event.field_image
     - field.field.node.event.field_inscription
     - field.field.node.event.field_place
     - field.field.node.event.field_release_date
-    - field.field.node.event.field_retour_liste
     - node.type.event
   module:
     - datetime
@@ -143,9 +143,9 @@ hidden:
   field_argumentaires: true
   field_document: true
   field_event_type: true
+  field_home_slideshow: true
   field_inscription: true
   field_place: true
   field_release_date: true
-  field_retour_liste: true
   langcode: true
   links: true

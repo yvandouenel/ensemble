@@ -4,10 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
-    - field.field.node.article.field_bloc
-    - field.field.node.article.field_bloc_incitation
+    - field.field.node.article.field_home_slideshow
     - field.field.node.article.field_image
-    - field.field.node.article.field_link_info_go
     - field.field.node.article.field_release_date
     - field.field.node.article.field_thematique
     - node.type.article
@@ -36,12 +34,21 @@ third_party_settings:
           layout_class: {  }
     regions:
       header:
-        - field_link_info_go
-        - field_image
-      footer:
+        - field_thematique
+        - node_title
+      left:
         - body
-        - field_bloc
-        - field_bloc_incitation
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h2
+          class: page-header
+          exclude_node_title: '0'
+          link: false
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -53,53 +60,28 @@ content:
     weight: 2
     settings: {  }
     third_party_settings: {  }
-    region: footer
-  field_bloc:
+    region: left
+  field_home_slideshow:
     weight: 3
-    label: hidden
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: footer
-  field_bloc_incitation:
-    weight: 4
-    label: hidden
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: footer
-  field_image:
-    weight: 1
-    label: hidden
-    settings:
-      view_mode: bandeau
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: header
-  field_link_info_go:
-    weight: 0
-    label: hidden
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: header
-  field_thematique:
-    weight: 5
     label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_thematique:
+    weight: 0
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
+    region: header
 hidden:
   content_moderation_control: true
+  field_image: true
   field_release_date: true
   langcode: true
   links: true

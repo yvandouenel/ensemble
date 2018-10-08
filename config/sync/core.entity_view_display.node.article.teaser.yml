@@ -5,10 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.body
-    - field.field.node.article.field_bloc
-    - field.field.node.article.field_bloc_incitation
+    - field.field.node.article.field_home_slideshow
     - field.field.node.article.field_image
-    - field.field.node.article.field_link_info_go
     - field.field.node.article.field_release_date
     - field.field.node.article.field_thematique
     - node.type.article
@@ -35,12 +33,12 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - group_group_title
         - node_link
+        - group_group_title
         - field_image
         - node_title
-        - group_img_txt
         - body
+        - group_img_txt
     fields:
       node_link:
         plugin_id: node_link
@@ -121,9 +119,7 @@ content:
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
-  field_bloc: true
-  field_bloc_incitation: true
-  field_link_info_go: true
+  field_home_slideshow: true
   field_release_date: true
   field_thematique: true
   langcode: true

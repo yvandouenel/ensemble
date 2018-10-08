@@ -5,10 +5,8 @@ dependencies:
   config:
     - entity_browser.browser.assets_browser
     - field.field.node.article.body
-    - field.field.node.article.field_bloc
-    - field.field.node.article.field_bloc_incitation
+    - field.field.node.article.field_home_slideshow
     - field.field.node.article.field_image
-    - field.field.node.article.field_link_info_go
     - field.field.node.article.field_release_date
     - field.field.node.article.field_thematique
     - node.type.article
@@ -37,23 +35,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_bloc:
-    weight: 125
+  field_home_slideshow:
+    weight: 129
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      display_label: true
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_bloc_incitation:
-    weight: 124
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: boolean_checkbox
     region: content
   field_image:
     weight: 122
@@ -68,15 +55,6 @@ content:
       field_widget_display_settings: {  }
     third_party_settings: {  }
     type: entity_browser_entity_reference
-    region: content
-  field_link_info_go:
-    weight: 126
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
   field_release_date:
     weight: 123

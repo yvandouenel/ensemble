@@ -10,11 +10,11 @@ dependencies:
     - field.field.node.event.field_date
     - field.field.node.event.field_document
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_home_slideshow
     - field.field.node.event.field_image
     - field.field.node.event.field_inscription
     - field.field.node.event.field_place
     - field.field.node.event.field_release_date
-    - field.field.node.event.field_retour_liste
     - node.type.event
   module:
     - datetime
@@ -87,6 +87,13 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_home_slideshow:
+    weight: 33
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_image:
     type: entity_browser_entity_reference
     weight: 3
@@ -150,14 +157,6 @@ content:
     third_party_settings: {  }
     type: daterange_datelist
     region: content
-  field_retour_liste:
-    type: text_textfield
-    weight: 17
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   moderation_state:
     weight: 32
     settings:

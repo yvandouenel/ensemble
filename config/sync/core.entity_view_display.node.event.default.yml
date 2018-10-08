@@ -9,11 +9,11 @@ dependencies:
     - field.field.node.event.field_date
     - field.field.node.event.field_document
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_home_slideshow
     - field.field.node.event.field_image
     - field.field.node.event.field_inscription
     - field.field.node.event.field_place
     - field.field.node.event.field_release_date
-    - field.field.node.event.field_retour_liste
     - node.type.event
   module:
     - datetime
@@ -120,6 +120,16 @@ content:
     settings:
       link: true
     third_party_settings: {  }
+  field_home_slideshow:
+    weight: 14
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_image:
     type: entity_reference_entity_view
     weight: 1
@@ -205,13 +215,6 @@ content:
         markercluster_control: 0
       gmap_api_key: ''
     third_party_settings: {  }
-  field_retour_liste:
-    weight: 13
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
 hidden:
   content_moderation_control: true
   field_release_date: true

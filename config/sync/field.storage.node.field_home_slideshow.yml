@@ -1,17 +1,15 @@
-uuid: 76abb47a-7400-4032-a5f8-4695dd1bc588
+uuid: 1a0f1b05-dad4-461f-b339-99283a16f72a
 langcode: fr
 status: true
 dependencies:
   module:
     - node
-    - text
-id: node.field_retour_liste
-field_name: field_retour_liste
+id: node.field_home_slideshow
+field_name: field_home_slideshow
 entity_type: node
-type: text
-settings:
-  max_length: 255
-module: text
+type: boolean
+settings: {  }
+module: core
 locked: false
 cardinality: 1
 translatable: true
