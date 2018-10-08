@@ -5,7 +5,6 @@ dependencies:
   config:
     - fixed_block_content.fixed_block_content.incitation
   module:
-    - ctools
     - fixed_block_content
   theme:
     - ensemble
@@ -21,12 +20,4 @@ settings:
   provider: fixed_block_content
   label_display: '0'
   view_mode: ''
-visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    bundles:
-      article: article
-      event: event
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
+visibility: {  }
