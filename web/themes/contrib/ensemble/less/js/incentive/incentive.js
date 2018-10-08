@@ -3,6 +3,9 @@
   if($(".field--name-field-argumentaires .field--item").length) {
     moveLinkArgument();
   }
+  else {
+    $("#pause-cafe").hide(0);
+  }
   if($(".webform-submission-form").length
   && (!($(".webform-submission-form .alert-dismissible").length &&
     !($("body.user-logged-in").length)))) {
@@ -12,7 +15,10 @@
   }
 
   function moveLinkArgument() {
-    $(".field--name-field-argumentaires .field--item a").appendTo("#pause-cafe").addClass("link-to-arg");
+    if($(".field--name-field-argumentaires .field--item a").length) {
+      $(".field--name-field-argumentaires .field--item a").appendTo("#pause-cafe").addClass("link-to-arg");
+    }
+
   }
 
   function moveWebform() {
