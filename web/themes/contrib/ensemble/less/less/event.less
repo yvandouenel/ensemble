@@ -105,6 +105,9 @@ body.path-agenda {
       display: table-cell;
       vertical-align: middle;
       a {
+        @media (max-width: @screen-sm) {
+          font-size: 0.7em;
+        }
         .txt-bold();
         text-transform: uppercase;
         color: @gray-darker-ensemble;
@@ -160,6 +163,10 @@ body.path-agenda {
       font-size: 2em;
       text-align: center;
       text-transform: uppercase;
+      @media (max-width: @screen-sm) {
+        font-size: 0.8em;
+        margin-right: 10px;
+      }
     }
     @media (min-width: @screen-md) {
       width: 70%;

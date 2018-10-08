@@ -1577,7 +1577,7 @@ body.toolbar-loading.toolbar{margin-bottom:15px}
 .ui-autocomplete .ui-menu-item.ui-state-hover{background:#f5f5f5;color:#262626}
 .ui-autocomplete .ui-menu-item.ui-state-active,.ui-autocomplete .ui-menu-item.ui-state-focus{background:#337ab7;color:#fff}
 ol,ul{list-style:none;padding-left:1.5em}
-.footer{margin-top:45px;padding-top:35px;padding-bottom:36px;border-top:1px solid #E5E5E5}
+.footer{margin-top:45px;padding-top:35px;padding-bottom:36px}
 .region-help>.glyphicon{font-size:18px;float:left;margin:-.05em .5em 0 0}
 .control-group .help-inline,.help-block{color:#777;font-size:12px;margin:5px 0 10px;padding:0}
 .control-group .help-inline:first-child,.help-block:first-child{margin-top:0}
@@ -1609,11 +1609,11 @@ body p a:hover{color:#4d4d4d}
 body .container{background-color:#fff}
 body .field--label-inline .field--label::after{content:' :'}
 body div.txt-highlighted{padding:20px;margin:20px 0;background-color:#e6e6e6;line-height:1.5em}
-#sticky-headband>div.container>div.row .col-sm-12,.no-gutter [class*=col-]{padding:0}
 body div.txt-highlighted:before{top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e85b";font-size:6em;color:#FFF;position:static;float:left}
 body div.txt-highlighted:after{display:block;content:'';clear:both}
-.no-gutter{padding-left:0;padding-right:0}
+.no-gutter,.no-gutter [class*=col-]{padding-right:0;padding-left:0}
 #sticky-headband>div.container>div.row{background-color:#FFF}
+#sticky-headband>div.container>div.row .col-sm-12{padding:0}
 @media (min-width:992px){#sticky-headband>div.container{position:relative}
 }
 @media (max-width:768px){#sticky-headband #icon-search-sm{display:table;margin:10px 10px 20px 90%;width:30px;height:30px}
@@ -1725,7 +1725,7 @@ footer.container .menu-footer .menu--footer li a:hover{color:#e42621}
 #block-cartepermanente #date-markers-legend>span.selected-period{color:#e42621;text-decoration:none}
 #block-cartepermanente #date-markers-legend>span.selected-period:before{color:#e42621}
 #block-cartepermanente #date-markers-legend>span:before{display:inline-block;margin-right:10px;color:#777;content:"\e834"}
-#block-cartepermanente #date-markers-legend>span:hover,#block-cartepermanente #date-markers-legend>span:hover:before{color:#e42621}
+#block-cartepermanente #date-markers-legend>span:hover,#block-cartepermanente #date-markers-legend>span:hover:before,body.path-agenda #links-months #current-month a:hover,body.path-agenda #links-months #next-month a:hover,body.path-agenda #links-months #previous-month a:hover{color:#e42621}
 #block-cartepermanente #map-legend>span{display:block;padding-left:5px}
 #block-cartepermanente #map-legend>span.label-legend{text-decoration:none}
 #block-cartepermanente #map-legend>span.all-legend:before{display:inline-block;color:#777;content:"\e830";margin-right:5px}
@@ -1866,9 +1866,9 @@ body.path-agenda h2.page-header{color:#4d4d4d;font-family:Nunito,sans-serif;font
 body.path-agenda #links-months{margin:0 auto;display:table}
 body.path-agenda #links-months #current-month,body.path-agenda #links-months #next-month,body.path-agenda #links-months #previous-month{display:table-cell;vertical-align:middle}
 body.path-agenda #links-months #current-month a,body.path-agenda #links-months #next-month a,body.path-agenda #links-months #previous-month a{font-family:Roboto,sans-serif;font-weight:900;font-style:normal;text-transform:uppercase;color:#4d4d4d;text-decoration:none}
-body.path-agenda #links-months #next-month a:before,body.path-agenda #links-months #previous-month a:after{font-family:fontello;font-weight:400;font-size:1em;text-transform:none;border-radius:25px;margin-right:10px}
-body.path-agenda #links-months #next-month a:before,body.path-agenda #links-months #previous-month a:after,body.path-agenda .view-content div.item-list h3:before{position:relative;top:1px;font-style:normal;speak:none;display:inline-block;text-decoration:inherit;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-body.path-agenda #links-months #current-month a:hover,body.path-agenda #links-months #next-month a:hover,body.path-agenda #links-months #previous-month a:hover{color:#e42621}
+@media (max-width:768px){body.path-agenda #links-months #current-month a,body.path-agenda #links-months #next-month a,body.path-agenda #links-months #previous-month a{font-size:.7em}
+}
+body.path-agenda #links-months #next-month a:before,body.path-agenda #links-months #previous-month a:after{font-family:fontello;font-weight:400;font-size:1em;text-transform:none;border-radius:25px;margin-right:10px;position:relative;top:1px;font-style:normal;speak:none;display:inline-block;text-decoration:inherit;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 body.path-agenda #links-months #previous-month{width:0%;text-align:right}
 body.path-agenda #links-months #previous-month a:after{width:1em;text-align:center;content:"\e833";padding:5px 20px 3px 4px;color:#FFF;background-color:#4d4d4d;margin-left:10px}
 body.path-agenda #links-months #previous-month a:hover{color:#e42621}
@@ -1878,12 +1878,14 @@ body.path-agenda #links-months #next-month a:before{width:1em;text-align:center;
 body.path-agenda #links-months #next-month a:hover{color:red}
 body.path-agenda #links-months #next-month a:hover:after{background-color:#e42621}
 body.path-agenda #links-months h3#viewed-month{font-family:Nunito,sans-serif;font-weight:700;font-style:normal;font-size:2em;text-align:center;text-transform:uppercase}
+@media (max-width:768px){body.path-agenda #links-months h3#viewed-month{font-size:.8em;margin-right:10px}
+}
 @media (min-width:992px){body.path-agenda #links-months{width:70%}
 }
 body.path-agenda .view-content{padding-top:30px}
 body.path-agenda .view-content div.item-list{padding:10px 0;border-bottom:1px solid #4d4d4d}
 body.path-agenda .view-content div.item-list h3{float:left;font-family:Roboto,sans-serif;font-weight:900;font-style:normal;font-size:1.5em;padding:5px;color:#70b52c;margin-right:20px}
-body.path-agenda .view-content div.item-list h3:before{font-family:fontello;font-weight:400;font-size:1em;width:1em;margin-right:10px;text-align:center;text-transform:none;color:#70b52c;content:"\e834"}
+body.path-agenda .view-content div.item-list h3:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#70b52c;content:"\e834"}
 body.path-agenda .view-content div.item-list ul{float:left;width:80%}
 .modal-body li#custom-form-this-event a:before,body.path-agenda .view-content div.item-list ul li a:before{position:relative;top:1px;font-style:normal;speak:none;width:1em;margin-right:10px;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:center}
 body.path-agenda .view-content div.item-list ul li a{text-decoration:none;display:block;padding:10px;color:#4d4d4d;font-family:Roboto,sans-serif;font-weight:900;font-style:normal}
