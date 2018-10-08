@@ -1631,7 +1631,7 @@ body div.txt-highlighted:after{display:block;content:'';clear:both}
 #sticky-headband>div.container #navbar ul.menu--main{background-color:#e42621;display:table;margin:0 auto -1px;float:none}
 @media (max-width:768px){#sticky-headband>div.container #navbar ul.menu--main{background-color:#000;display:block}
 #sticky-headband>div.container #navbar ul.menu--main a{display:block;padding-left:20 %;border-bottom:1px solid #777}
-#sticky-headband>div.container h1{margin-left:-25px}
+#sticky-headband>div.container h1{margin-left:-50px}
 }
 #sticky-headband>div.container #navbar ul.menu--main a:hover,#sticky-headband>div.container #navbar ul.menu--main li.active a{background-color:#70b52c}
 #sticky-headband>div.container #navbar ul.menu--main a{color:#fff;text-transform:uppercase;font-family:Roboto,sans-serif;font-weight:900;font-style:normal;display:block;padding:15px 28px}
@@ -1725,7 +1725,7 @@ footer.container .menu-footer .menu--footer li a:hover{color:#e42621}
 #block-cartepermanente #date-markers-legend>span.selected-period{color:#e42621;text-decoration:none}
 #block-cartepermanente #date-markers-legend>span.selected-period:before{color:#e42621}
 #block-cartepermanente #date-markers-legend>span:before{display:inline-block;margin-right:10px;color:#777;content:"\e834"}
-#block-cartepermanente #date-markers-legend>span:hover,#block-cartepermanente #date-markers-legend>span:hover:before,body.path-agenda #links-months #current-month a:hover,body.path-agenda #links-months #next-month a:hover,body.path-agenda #links-months #previous-month a:hover{color:#e42621}
+#block-cartepermanente #date-markers-legend>span:hover,#block-cartepermanente #date-markers-legend>span:hover:before{color:#e42621}
 #block-cartepermanente #map-legend>span{display:block;padding-left:5px}
 #block-cartepermanente #map-legend>span.label-legend{text-decoration:none}
 #block-cartepermanente #map-legend>span.all-legend:before{display:inline-block;color:#777;content:"\e830";margin-right:5px}
@@ -1869,6 +1869,7 @@ body.path-agenda #links-months #current-month a,body.path-agenda #links-months #
 @media (max-width:768px){body.path-agenda #links-months #current-month a,body.path-agenda #links-months #next-month a,body.path-agenda #links-months #previous-month a{font-size:.7em}
 }
 body.path-agenda #links-months #next-month a:before,body.path-agenda #links-months #previous-month a:after{font-family:fontello;font-weight:400;font-size:1em;text-transform:none;border-radius:25px;margin-right:10px;position:relative;top:1px;font-style:normal;speak:none;display:inline-block;text-decoration:inherit;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body.path-agenda #links-months #current-month a:hover,body.path-agenda #links-months #next-month a:hover,body.path-agenda #links-months #previous-month a:hover{color:#e42621}
 body.path-agenda #links-months #previous-month{width:0%;text-align:right}
 body.path-agenda #links-months #previous-month a:after{width:1em;text-align:center;content:"\e833";padding:5px 20px 3px 4px;color:#FFF;background-color:#4d4d4d;margin-left:10px}
 body.path-agenda #links-months #previous-month a:hover{color:#e42621}
@@ -1925,6 +1926,7 @@ body.page-node-type-article .incitation,body.page-node-type-article .information
 @media (max-width:768px){.group-header img{display:none!important}
 }
 .path-frontpage .under-inci-info{padding:30px 20px;height:360px;background-color:#fff}
+.path-frontpage .under-inci-info .btn-primary{background-color:transparent;border:0;margin:0}
 .path-frontpage .under-inci-info h3{min-height:30px;margin-top:20px}
 .path-frontpage .under-inci-info h3.h3-information{margin-top:50px}
 @media (max-width:992px){.path-frontpage .under-inci-info{background-color:transparent;padding:0;height:auto}
