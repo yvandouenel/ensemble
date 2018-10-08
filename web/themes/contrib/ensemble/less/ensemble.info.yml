@@ -28,3 +28,4 @@ libraries-extend:
     - ensemble/leaflet
     - ensemble/checktopscroll
     - ensemble/searchsm
+    - ensemble/incentive

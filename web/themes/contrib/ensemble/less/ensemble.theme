@@ -22,9 +22,4 @@ function ensemble_preprocess_page(&$variables) {
   else if ((\Drupal::routeMatch()->getRouteName() == 'view.events.list_event')) {
     $variables['#attached']['library'][] = 'ensemble/monthevents';
   }
-
-  else if ((isset($variables['node']) && $variables['node']->getType() == "event") ||
-    (isset($variables['node']) && $variables['node']->getType() == "article")){
-    $variables['#attached']['library'][] = 'ensemble/incentive';
-  }
 }
