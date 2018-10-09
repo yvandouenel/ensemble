@@ -1,3 +1,4 @@
+/* article full content **************************************/
 body.page-node-type-article {
   .region-content > h2.page-header {
     display: none;
@@ -26,5 +27,30 @@ body.page-node-type-article {
     border: 0;
     margin-bottom: 20px;
   }
-  
+}
+/* articles list ***********************************************/
+body.path-articles {
+  .node--type-article {
+    .page-header {
+      margin-bottom: 0;
+      a {
+        color: @red-ensemble;
+        text-decoration: none;
+        display: block;
+        &:hover {
+          color: @green-link-ensemble;
+        }
+      }
+    }
+    padding: 20px;
+    margin: 20px 0;
+    background-color: @gray-light-ensemble;
+    min-height: 160px;
+    line-height: 1.5em;
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+  }
 }

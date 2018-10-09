@@ -166,11 +166,14 @@ body {
     }
   }
 }
-h2.page-header {
+.page-header {
   .title-bold();
+  border: 0 !important;
+  text-transform: uppercase;
+}
+h2.page-header {
   font-size: 2em;
   margin-top: 20px;
-  text-transform: uppercase;
 }
 #search-block-form--2 {
   @media (min-width: @screen-sm) {
@@ -410,4 +413,64 @@ footer.container {
 }
 button.navbar-toggle {
   margin-right: 25px !important;
+}
+/* icones thématiques */
+.icon-idea {
+  &:before {
+    .icon-taxo-theme();
+    content: "\e886";
+  }
+}
+.icon-organic {
+  &:before {
+    .icon-taxo-theme();
+    content: "\f1bb";
+  }
+}
+.icon-archive {
+  &:before {
+    .icon-taxo-theme();
+    content: "\e885";
+  }
+}
+.icon-international {
+  &:before {
+    .icon-taxo-theme();
+    content: "\e88a";
+  }
+}
+.icon-fight {
+  &:before {
+    .icon-taxo-theme();
+    content: "\e881";
+    font-size: 12em;
+    left: -60px !important;
+    top: -30px !important;
+  }
+}
+.icon-icon-occitanie {
+  &:before {
+    .icon-taxo-theme();
+    content: "\e878";
+  }
+}
+.icon-social {
+  &:before {
+    .icon-taxo-theme();
+    content: "\e88c";
+  }
+}
+.icon-solidarity {
+  &:before {
+    .icon-taxo-theme();
+    content: "\e806";
+  }
+}
+.icon-taxo-theme {
+  .glyphicon();
+  font-size: 6em;
+  color: #FFF;
+  position: absolute !important;
+  left: -15px !important;
+  top: 0 !important;
 }
