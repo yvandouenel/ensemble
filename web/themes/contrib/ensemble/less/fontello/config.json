@@ -1047,6 +1047,66 @@
       ]
     },
     {
+      "uid": "96ea1be71f597a5bdfc8f791ada4f651",
+      "css": "archive",
+      "code": 59525,
+      "src": "entypo"
+    },
+    {
+      "uid": "12d16dda691bda304e3b57d7bc0de5a9",
+      "css": "lightbulb",
+      "code": 59526,
+      "src": "typicons"
+    },
+    {
+      "uid": "5278ef7773e948d56c4d442c8c8c98cf",
+      "css": "lightbulb-1",
+      "code": 61675,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "629a8f18105619d27c013109a4064b46",
+      "css": "lightbulb-alt",
+      "code": 59527,
+      "src": "elusive"
+    },
+    {
+      "uid": "2b8ea04aa0e500ae056f9c7934af18e6",
+      "css": "tree",
+      "code": 59528,
+      "src": "typicons"
+    },
+    {
+      "uid": "88da60b3a17e5744695682833a178e73",
+      "css": "tree-1",
+      "code": 61883,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "197375a3cea8cb90b02d06e4ddf1433d",
+      "css": "globe",
+      "code": 59529,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "1e89103762be72b0720eda0468e62b90",
+      "css": "globe-1",
+      "code": 59530,
+      "src": "linecons"
+    },
+    {
+      "uid": "e36d581e4f2844db345bddc205d15dda",
+      "css": "group",
+      "code": 59531,
+      "src": "elusive"
+    },
+    {
+      "uid": "8d40bca7a7f11091ca865e07535fcc47",
+      "css": "group-circled",
+      "code": 59532,
+      "src": "elusive"
+    },
+    {
       "uid": "2458519cf2686137171ecceb53fbc899",
       "css": "fleche-gauche-diapo-selecter",
       "code": 59483,
