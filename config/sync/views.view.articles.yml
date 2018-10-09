@@ -3,7 +3,7 @@ langcode: fr
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.liste
     - node.type.article
     - system.menu.main
     - taxonomy.vocabulary.event_type
@@ -78,7 +78,8 @@ display:
       row:
         type: 'entity:node'
         options:
-          view_mode: teaser
+          relationship: none
+          view_mode: liste
       fields:
         title:
           id: title

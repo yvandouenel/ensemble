@@ -1,8 +1,9 @@
-uuid: 207e1c0d-3997-4581-a6c6-545b476cd509
+uuid: 9b3ddf41-7c22-4b5b-a00a-bc16181de0c4
 langcode: fr
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.liste
     - field.field.node.article.body
     - field.field.node.article.field_home_slideshow
     - field.field.node.article.field_image
@@ -16,16 +17,14 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: ds_2col_stacked
-      library: ds/ds_2col_stacked
+      id: ds_2col
+      library: ds/ds_2col
       disable_css: false
       entity_classes: all_classes
       settings:
         wrappers:
-          header: div
           left: div
           right: div
-          footer: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
@@ -33,10 +32,10 @@ third_party_settings:
         classes:
           layout_class: {  }
     regions:
-      header:
-        - field_thematique
-        - node_title
       left:
+        - field_thematique
+      right:
+        - node_title
         - body
     fields:
       node_title:
@@ -45,30 +44,34 @@ third_party_settings:
         label: hidden
         formatter: default
         settings:
-          wrapper: h2
+          link: true
+          wrapper: h3
           class: page-header
           exclude_node_title: '0'
-          link: false
-id: node.article.default
+id: node.article.liste
 targetEntityType: node
 bundle: article
-mode: default
+mode: liste
 content:
   body:
-    label: hidden
-    type: text_default
+    type: text_summary_or_trimmed
     weight: 2
-    settings: {  }
+    region: right
+    label: hidden
+    settings:
+      trim_length: 600
     third_party_settings: {  }
-    region: left
   field_thematique:
     weight: 0
-    label: inline
+    label: visually_hidden
     settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: header
+      view_mode: icon
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: entity_reference_entity_view
+    region: left
 hidden:
   content_moderation_control: true
   field_home_slideshow: true
