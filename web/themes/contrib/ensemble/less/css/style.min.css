@@ -1702,8 +1702,8 @@ button.navbar-toggle{margin-right:25px!important}
 .icon-archive:before{left:-15px!important;content:"\e885"}
 .icon-international:before{left:-15px!important;content:"\e88a"}
 .icon-fight:before{content:"\e881";font-size:12em;left:-60px!important;top:-30px!important}
-.icon-icon-occitanie:before,.icon-social:before,.icon-solidarity:before,.icon-taxo-theme{font-family:fontello;font-weight:400;display:inline-block;width:1em;text-align:center;text-transform:none;font-size:6em;color:#FFF;position:absolute!important;left:-15px!important;top:0!important;font-style:normal;speak:none;text-decoration:inherit;margin-right:10px;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.icon-icon-occitanie:before{content:"\e878"}
+.icon-occitanie:before,.icon-social:before,.icon-solidarity:before,.icon-taxo-theme{font-family:fontello;font-weight:400;display:inline-block;width:1em;text-align:center;text-transform:none;font-size:6em;color:#FFF;position:absolute!important;left:-15px!important;top:0!important;font-style:normal;speak:none;text-decoration:inherit;margin-right:10px;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.icon-occitanie:before{content:"\e878"}
 .icon-social:before{content:"\e88c"}
 .icon-solidarity:before{content:"\e806"}
 .path-frontpage .group-title.same-height-title{position:relative;display:table-cell;width:100%;vertical-align:bottom}
