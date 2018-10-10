@@ -44,10 +44,10 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Trier
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: 'trié par'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -61,8 +61,8 @@ display:
           tags:
             previous: ‹‹
             next: ››
-            first: '« First'
-            last: 'Last »'
+            first: '« Premier'
+            last: 'Dernier »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
