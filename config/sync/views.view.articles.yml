@@ -8,6 +8,7 @@ dependencies:
     - system.menu.main
     - taxonomy.vocabulary.event_type
   module:
+    - datetime
     - node
     - taxonomy
     - user
@@ -211,7 +212,8 @@ display:
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
+          plugin_id: datetime
+          entity_type: node
       title: Articles
       header: {  }
       footer: {  }

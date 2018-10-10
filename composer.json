@@ -23,7 +23,7 @@
         "drupal/admin_toolbar": "^1.24",
         "drupal/bootstrap": "^3.11",
         "drupal/config_installer": "^1.8",
-        "drupal/core": "~8.5.3",
+        "drupal/core": "^8.6.1",
         "drupal/crop": "^2.0",
         "drupal/devel": "^1.2",
         "drupal/draggableviews": "^1.0",
@@ -47,6 +47,8 @@
         "drupal/views_bootstrap": "^3.0",
         "drupal/views_geojson": "1.x-dev",
         "drupal/webform": "^5.0@RC",
+        "drupal/workbench": "^1.1",
+        "drupal/workflow": "^1.1",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
@@ -54,7 +56,7 @@
     },
     "require-dev": {
         "drupal/console": "^1.8",
-        "webflo/drupal-core-require-dev": "~8.5.3"
+        "webflo/drupal-core-require-dev": "^8.6.1"
     },
     "conflict": {
         "drupal/drupal": "*"
