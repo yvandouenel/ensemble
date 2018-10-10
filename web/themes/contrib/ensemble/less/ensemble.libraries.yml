@@ -39,6 +39,12 @@ sameheighttitles:
   dependencies:
       - core/jquery
 
+sameheightcols:
+  js:
+    js/sameheight/same-height-cols.js: {}
+  dependencies:
+      - core/jquery
+
 slideshow:
   js:
     js/slideshow/slideshow.js: {}
