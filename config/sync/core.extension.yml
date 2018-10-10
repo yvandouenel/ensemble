@@ -23,6 +23,7 @@ module:
   dynamic_page_cache: 0
   editor: 0
   embed: 0
+  ensemble_migrate: 0
   entity_browser: 0
   entity_embed: 0
   exclude_node_title: 0
