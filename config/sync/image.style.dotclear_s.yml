@@ -1,0 +1,15 @@
+uuid: 3b4041bc-ded6-421e-a80a-ed3903086cc3
+langcode: fr
+status: true
+dependencies: {  }
+name: dotclear_s
+label: 'Petite (Dotclear)'
+effects:
+  3ce8ad9e-e4cf-47e7-93d4-f164ce7d36bb:
+    uuid: 3ce8ad9e-e4cf-47e7-93d4-f164ce7d36bb
+    id: image_scale
+    weight: 1
+    data:
+      width: 240
+      height: 240
+      upscale: false

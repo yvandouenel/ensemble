@@ -1,0 +1,15 @@
+uuid: 1390d172-4b0e-49ba-9fdb-adc6679b8380
+langcode: fr
+status: true
+dependencies: {  }
+name: dotclear_t
+label: 'Vignette (Dotclear)'
+effects:
+  a67dcb02-cc87-41ff-9b29-ca104b4e11b2:
+    uuid: a67dcb02-cc87-41ff-9b29-ca104b4e11b2
+    id: image_scale
+    weight: 1
+    data:
+      width: 80
+      height: 80
+      upscale: false

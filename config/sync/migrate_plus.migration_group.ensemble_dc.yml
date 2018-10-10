@@ -1,0 +1,14 @@
+uuid: cd9f5ee9-8f2c-4efc-aff6-60fe23e78fc9
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lwlO5scZrKxbtHDHG7QDhXgGDx0BPdtMSEaunFpC5A8
+id: ensemble_dc
+label: 'Import from Ensemble dc'
+description: 'Migrations depuis la version Dotclear d''Ensemble'
+source_type: Dotclear
+module: null
+shared_configuration:
+  source:
+    key: dc
