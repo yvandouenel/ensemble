@@ -41,7 +41,19 @@ body {
     margin-top: 50px;
   }
 }
-
+/* images *************************************************************************************************************/
+figure {
+  position: relative;
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #FFF;
+    .title-regular();
+  }
+}
 /* Grille grid ********************************************************************************************************/
 .no-gutter {
   padding-right:0;
@@ -229,8 +241,8 @@ body:not(.path-frontpage) {
     display: block;
     clear: both;
   }
-  border: 2px solid @gray-ensemble;
   position: relative;
+  margin-bottom: 12px;
 
   .field--name-body {
     position: absolute;
@@ -278,9 +290,10 @@ body:not(.path-frontpage) {
     }
   }
 }
-.event-img-txt-date.event-event {
+.event-img-txt-date.event-event,
+.node--type-article.node--view-mode-teaser .img-txt{
   position: relative;
-  &:before{
+  &:before {
     .glyphicon();
     content:"\e807";
     color: black;
@@ -294,6 +307,11 @@ body:not(.path-frontpage) {
     left: 10px;
     z-index: 1;
     padding: 12px;
+  }
+}
+.node--type-article.node--view-mode-teaser .img-txt{
+  &:before {
+    content:"\e82c";
   }
 }
 /* footer *************************************************************************************************************/
