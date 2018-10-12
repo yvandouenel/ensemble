@@ -2,11 +2,11 @@ uuid: 1ac7a39f-c2f3-45b8-8e7f-6b4828e98729
 langcode: fr
 status: true
 dependencies: {  }
-label: 'Liste (768x540)'
+label: 'Large paysage'
 id: large_landsacape
 description: ''
-aspect_ratio: '768:540'
-soft_limit_width: 768
-soft_limit_height: 540
-hard_limit_width: 768
-hard_limit_height: 540
+aspect_ratio: '16:9'
+soft_limit_width: 1920
+soft_limit_height: 1000
+hard_limit_width: null
+hard_limit_height: null

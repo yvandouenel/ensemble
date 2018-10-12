@@ -5,6 +5,6 @@ dependencies:
   module:
     - media
 id: media.slideshow
-label: 'slideshow (640x360)'
+label: slideshow
 targetEntityType: media
 cache: true
