@@ -73,7 +73,8 @@
         event_short_date = data.features[i].properties.short_date.split(",");
         map_date = manageMapDate(event_short_date);
 
-        marker_class = getMarkerClass(event_type);
+        marker_class = "thematique-" + event_type_id;
+        console.log("marker_class " + marker_class);
        /* var event_date = new Date(event_date);
         event_minutes = (event_date.getMinutes() > 9) ? event_date.getMinutes() : "0" + event_date.getMinutes();*/
 
@@ -132,6 +133,7 @@
 
 
       if(first_map) {
+        console.log(legend_tab);
         addLegend(legend_tab);
       } else {
         $(".date-legend:not(:first)").remove();
@@ -188,7 +190,7 @@
             text: " - ",
           }).appendTo("#map-legend");
         }
-
+        console.log(legend_tab[key]['event_type_id']);
         $("<span></span>", {
           "class": key + " legend",
           "id": legend_tab[key]['event_type_id'],
@@ -347,24 +349,6 @@
         });
       }
     }
-
-    function getMarkerClass(event_type) {
-      if (event_type == "social") {
-        marker_class = "social";
-      } else if (event_type == "ensemble") {
-        marker_class = "ensemble";
-      } else if (event_type == "écologie") {
-        marker_class = "ecologie";
-      } else if (event_type == "international") {
-        marker_class = "international";
-      } else if (event_type == "réunion de comité") {
-        marker_class = "rc";
-      } else {
-        marker_class = "no-type";
-      }
-      return marker_class;
-    }
-
 
     function getRelativeDatesTab() {
       var next_monday = new Date();
