@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.event.field_release_date
     - node.type.event
   module:
+    - content_moderation
     - datetime
     - datetime_range
     - entity_browser
@@ -88,7 +89,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_home_slideshow:
-    weight: 33
+    weight: 14
     settings:
       display_label: true
     third_party_settings: {  }
@@ -109,7 +110,7 @@ content:
       field_widget_display_settings: {  }
     third_party_settings: {  }
   field_inscription:
-    weight: 15
+    weight: 13
     settings:
       default_data: true
     third_party_settings: {  }
@@ -158,12 +159,10 @@ content:
     type: daterange_datelist
     region: content
   moderation_state:
-    weight: 32
-    settings:
-      size: 60
-      placeholder: ''
+    weight: 15
+    settings: {  }
     third_party_settings: {  }
-    type: string_textfield
+    type: moderation_state_default
     region: content
   path:
     type: path

@@ -11,6 +11,7 @@ module:
   config: 0
   config_update: 0
   contact: 0
+  content_moderation: 0
   contextual: 0
   coopernetredirect: 0
   crop: 0
@@ -88,6 +89,7 @@ module:
   webform_node: 0
   webform_scheduled_email: 0
   webform_ui: 0
+  workflows: 0
   ds: 1
   menu_link_content: 1
   pathauto: 1

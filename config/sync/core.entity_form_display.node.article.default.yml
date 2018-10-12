@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.article.field_thematique
     - node.type.article
   module:
+    - content_moderation
     - datetime_range
     - entity_browser
     - path
@@ -80,11 +81,9 @@ content:
     third_party_settings: {  }
   moderation_state:
     weight: 128
-    settings:
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: string_textfield
+    type: moderation_state_default
     region: content
   path:
     type: path
