@@ -1,0 +1,27 @@
+uuid: 49e9600d-9061-418a-98fc-01dbc348ecaf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - crop.type.large_landsacape
+  module:
+    - crop
+_core:
+  default_config_hash: J2n0RpFzS0-bgSyxjs6rSdgxB1rb-bTAgqywNx_964M
+name: liste768x540
+label: 'Liste (768×540)'
+effects:
+  da78dde4-19fb-49de-82a3-3e5147191172:
+    uuid: da78dde4-19fb-49de-82a3-3e5147191172
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 768
+      height: 540
+      anchor: center-center
+  82fc9cb3-a613-4f54-9355-2d0aeccf8dab:
+    uuid: 82fc9cb3-a613-4f54-9355-2d0aeccf8dab
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: large_landsacape

@@ -2,11 +2,11 @@ uuid: e2973be2-c7da-41ee-9dba-0853ee15e39a
 langcode: fr
 status: true
 dependencies: {  }
-label: 'Portrait large'
+label: 'Large paysage (1200x737)'
 id: portrait_large
 description: ''
-aspect_ratio: '9:16'
-soft_limit_width: 450
-soft_limit_height: 800
-hard_limit_width: 45
-hard_limit_height: 80
+aspect_ratio: '1200:737'
+soft_limit_width: 1200
+soft_limit_height: 737
+hard_limit_width: 1200
+hard_limit_height: 737

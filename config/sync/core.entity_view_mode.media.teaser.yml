@@ -5,6 +5,6 @@ dependencies:
   module:
     - media
 id: media.teaser
-label: Teaser
+label: 'Liste (768x540)'
 targetEntityType: media
 cache: true
