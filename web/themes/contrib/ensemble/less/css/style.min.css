@@ -1964,12 +1964,13 @@ body.path-articles .node--type-article .field--name-node-link a:hover{background
 .path-frontpage .under-inci-info h3.h3-information{margin-top:50px}
 @media (max-width:992px){.path-frontpage .under-inci-info{background-color:transparent;padding:0;height:auto}
 .path-frontpage .under-inci-info h3{min-height:30px;margin-top:20px}
-.path-frontpage .under-inci-info h3.h3-information{margin-top:-30px;border:0}
+.path-frontpage .under-inci-info h3.h3-information{margin-top:-30px}
 .path-frontpage .under-inci-info h3 a{background-color:transparent;display:block;padding:60px 20px 5px;border-radius:5px;border:3px solid #4d4d4d;width:80%;margin:0 auto;text-align:center;font-size:2em}
 .path-frontpage .under-inci-info h3 a:before{float:left;margin-top:-50px}
 .path-frontpage .under-inci-info h3 a:after{content:"";display:block;clear:both}
 }
-@media (max-width:768px){.path-frontpage .under-inci-info h3 a:before{float:none;margin-top:-50px}
+@media (max-width:768px){.path-frontpage .under-inci-info h3.h3-information{margin-top:-30px;border:0}
+.path-frontpage .under-inci-info h3 a:before{float:none;margin-top:-50px}
 .path-frontpage .under-inci-info h3 a:after{content:"";display:block;clear:both}
 }
 .under-inci-info{color:#fff;background-color:#fff}
