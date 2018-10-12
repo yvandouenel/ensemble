@@ -30,6 +30,7 @@ permissions:
   - 'create image media'
   - 'create media'
   - 'create page content'
+  - 'create terms in tag_media'
   - 'create video_embed media'
   - 'delete article revisions'
   - 'delete media'
