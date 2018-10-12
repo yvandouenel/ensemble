@@ -133,6 +133,7 @@
         margin-top: 20px;
         &.h3-information {
           margin-top: -30px;
+          border: 0;
         }
         a{
           background-color: transparent;
@@ -147,6 +148,21 @@
           padding-top: 60px;
           &:before {
             float: left;
+            margin-top: -50px;
+          }
+          &:after {
+            content: "";
+            display: block;
+            clear: both;
+          }
+        }
+      }
+    }
+    @media (max-width: @screen-sm) {
+      h3{
+        a{
+          &:before {
+            float: none;
             margin-top: -50px;
           }
           &:after {
