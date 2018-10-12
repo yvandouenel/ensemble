@@ -16,7 +16,6 @@ class CoopernetredirectEventSubscriber implements EventSubscriberInterface {
 
   public function checkForCustomRedirect(GetResponseEvent $event) {
     $request = $event->getRequest();
-    dpm($request->attributes->get('_route'));
 
     if($request->attributes->get('_route') == "view.events.list_event" ) {
       // test if path finishes with a number
