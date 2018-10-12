@@ -1107,6 +1107,30 @@
       "src": "elusive"
     },
     {
+      "uid": "19e7b342a5e6bd0cd86de6d6208486a4",
+      "css": "leaf",
+      "code": 59533,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "41d534223ef447a01af3e2f629ec70eb",
+      "css": "leaf-1",
+      "code": 59534,
+      "src": "entypo"
+    },
+    {
+      "uid": "a904215f9fea569335d2a8addb4356b4",
+      "css": "leaf-2",
+      "code": 59535,
+      "src": "elusive"
+    },
+    {
+      "uid": "4ecf5fd3870bb82ba003d7f34845448d",
+      "css": "leaf-3",
+      "code": 59536,
+      "src": "typicons"
+    },
+    {
       "uid": "2458519cf2686137171ecceb53fbc899",
       "css": "fleche-gauche-diapo-selecter",
       "code": 59483,
