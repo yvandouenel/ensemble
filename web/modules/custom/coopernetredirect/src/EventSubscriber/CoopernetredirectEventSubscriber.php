@@ -28,7 +28,7 @@ class CoopernetredirectEventSubscriber implements EventSubscriberInterface {
     if($request->attributes->get('_route') == "entity.user.canonical" ) {
       // to do : test if user has the right role
       $current_user = \Drupal::currentUser();
-      $userrole = $current_user->getRoles();
+      //$userrole = $current_user->getRoles();
 
       // to do : test if user is just logged
       $event->setResponse(new RedirectResponse("/admin/content/moderated"), $status = 301, $headers);
