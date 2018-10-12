@@ -1969,7 +1969,7 @@ body.path-articles .node--type-article .field--name-node-link a:hover{background
 .path-frontpage .under-inci-info h3 a:before{float:left;margin-top:-50px}
 .path-frontpage .under-inci-info h3 a:after{content:"";display:block;clear:both}
 }
-@media (max-width:768px){.path-frontpage .under-inci-info h3.h3-information{margin-top:-30px;border:0}
+@media (max-width:768px){.path-frontpage .under-inci-info h3 a{border:0}
 .path-frontpage .under-inci-info h3 a:before{float:none;margin-top:-50px}
 .path-frontpage .under-inci-info h3 a:after{content:"";display:block;clear:both}
 }
