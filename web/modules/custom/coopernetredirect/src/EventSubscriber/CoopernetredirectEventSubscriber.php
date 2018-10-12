@@ -16,6 +16,7 @@ class CoopernetredirectEventSubscriber implements EventSubscriberInterface {
 
   public function checkForCustomRedirect(GetResponseEvent $event) {
     $request = $event->getRequest();
+    dpm($request->attributes->get('_route'));
 
     if($request->attributes->get('_route') == "view.events.list_event" ) {
       // test if path finishes with a number
@@ -24,6 +25,14 @@ class CoopernetredirectEventSubscriber implements EventSubscriberInterface {
       if($r == 0) {
         $event->setResponse(new RedirectResponse(Url::fromRoute('view.events.list_event')->toString() . "/" . date("Y") . date("m")), $status = 301, $headers);
       }
+    }
+    if($request->attributes->get('_route') == "entity.user.canonical" ) {
+      // to do : test if user has the right role
+      $current_user = \Drupal::currentUser();
+      $userrole = $current_user->getRoles();
+
+      // to do : test if user is just logged
+      $event->setResponse(new RedirectResponse("/admin/content/moderated"), $status = 301, $headers);
     }
   }
 }
