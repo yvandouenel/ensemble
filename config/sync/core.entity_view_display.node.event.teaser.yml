@@ -67,6 +67,7 @@ third_party_settings:
           link: true
           wrapper: h3
           class: 'event event-article-home-title'
+          exclude_node_title: '1'
   field_group:
     group_img_txt_date:
       children:

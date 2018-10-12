@@ -35,10 +35,10 @@ third_party_settings:
       ds_content:
         - node_link
         - group_group_title
+        - group_img_txt
         - field_image
         - node_title
         - body
-        - group_img_txt
     fields:
       node_link:
         plugin_id: node_link
@@ -58,15 +58,15 @@ third_party_settings:
         settings:
           link: true
           wrapper: h3
-          class: 'article event-article-home-title same-height-title'
+          class: 'article event-article-home-title'
+          exclude_node_title: '1'
   field_group:
     group_img_txt:
       children:
         - node_link
         - field_image
-        - body
       parent_name: ''
-      weight: 2
+      weight: 1
       format_type: html_element
       format_settings:
         label: 'img txt'
@@ -86,14 +86,15 @@ third_party_settings:
       weight: 0
       format_type: html_element
       format_settings:
-        id: ''
-        classes: 'group-title same-height-title'
+        label: 'Group title'
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'group-title same-height-title'
       label: 'Group title'
 id: node.article.teaser
 targetEntityType: node
@@ -102,10 +103,10 @@ mode: teaser
 content:
   body:
     label: hidden
-    type: text_trimmed
+    type: text_summary_or_trimmed
     weight: 2
     settings:
-      trim_length: 200
+      trim_length: 600
     third_party_settings: {  }
     region: ds_content
   field_image:
