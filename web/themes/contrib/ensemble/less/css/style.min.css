@@ -1073,6 +1073,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .pager li>a:focus,.pager li>a:hover{text-decoration:none;background-color:#eee}
 .pager .next>a,.pager .next>span{float:right}
 .pager .previous>a,.pager .previous>span{float:left}
+.close,.list-group-item>.badge{float:right}
 .pager .disabled>a,.pager .disabled>a:focus,.pager .disabled>a:hover,.pager .disabled>span{color:#777;background-color:#fff;cursor:not-allowed}
 a.badge:focus,a.badge:hover,a.label:focus,a.label:hover{color:#fff;cursor:pointer;text-decoration:none}
 .label{display:inline;padding:.2em .6em .3em;font-size:75%;color:#fff;vertical-align:baseline;border-radius:.25em}
@@ -1095,7 +1096,6 @@ a.badge:focus,a.badge:hover,a.label:focus,a.label:hover{color:#fff;cursor:pointe
 .btn-group-xs>.btn .badge,.btn-xs .badge{top:0;padding:1px 5px}
 .list-group-item.active>.badge,.nav-pills>.active>a>.badge{color:#337ab7;background-color:#fff}
 .jumbotron,.jumbotron .h1,.jumbotron h1{color:inherit}
-.list-group-item>.badge{float:right}
 .list-group-item>.badge+.badge{margin-right:5px}
 .nav-pills>li>a>.badge{margin-left:3px}
 .jumbotron{padding-top:30px;padding-bottom:30px;margin-bottom:30px;background-color:#eee}
@@ -1269,7 +1269,7 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:focus,a.list-gro
 .well blockquote{border-color:#ddd;border-color:rgba(0,0,0,.15)}
 .well-lg{padding:24px;border-radius:6px}
 .well-sm{padding:9px;border-radius:3px}
-.close{float:right;font-size:21px;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20)}
+.close{font-size:21px;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20)}
 .progress-wrapper .percentage,.progress-wrapper .progress-label,.tooltip{font-size:12px}
 .popover,.tooltip{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-style:normal;font-weight:400;letter-spacing:normal;line-break:auto;line-height:1.42857143;text-shadow:none;text-transform:none;white-space:normal;word-break:normal;word-spacing:normal;word-wrap:normal;text-decoration:none}
 .close:focus,.close:hover{color:#000;text-decoration:none;cursor:pointer;opacity:.5;filter:alpha(opacity=50)}
@@ -1639,9 +1639,11 @@ figure figcaption{position:absolute;bottom:0;width:100%;padding:10px;background-
 }
 #sticky-headband>div.container #navbar ul.menu--main a:hover,#sticky-headband>div.container #navbar ul.menu--main li.active a{background-color:#70b52c}
 #sticky-headband>div.container #navbar ul.menu--main a{color:#fff;text-transform:uppercase;font-family:Roboto,sans-serif;font-weight:900;font-style:normal;display:block;padding:15px 28px}
+.page-header,h3.page-header{font-family:Nunito,sans-serif;font-style:normal}
 #sticky-headband>div.container h1 .logo img{height:90px}
-.page-header{font-family:Nunito,sans-serif;font-weight:700;font-style:normal;border:0!important;text-transform:uppercase}
+.page-header{font-weight:700;border:0!important;text-transform:uppercase}
 h2.page-header{font-size:2em;margin-top:20px}
+h3.page-header{font-weight:800;font-size:1.6em;margin-top:20px}
 @media (min-width:768px){#search-block-form--2{display:none}
 }
 #full-content-header,body:not(.path-frontpage) .main-container{margin-top:145px}
@@ -1941,15 +1943,15 @@ body.page-node-type-article .same-height-col .under-inci-info .back-to-list a{di
 body.page-node-type-article .same-height-col .under-inci-info .back-to-list a:after{position:relative;font-family:fontello;font-weight:400;display:inline-block;text-decoration:inherit;margin-right:10px;text-transform:none;line-height:1em;content:"\e836";color:#fff;font-size:1.6em;margin-left:10px}
 body.page-node-type-article .same-height-col .under-inci-info .back-to-list a:hover{text-decoration:none;color:#fff;background-color:#e42621}
 body.page-node-type-article .same-height-col .under-inci-info .back-to-list a{font-size:1em}
-body.path-articles .node--type-article{padding:20px 20px 5px;margin:20px 0;background-color:#e6e6e6;line-height:1.5em}
-body.path-articles .node--type-article .body-list-article{min-height:140px;padding-bottom:65px}
-body.path-articles .node--type-article .page-header{margin-bottom:0}
-body.path-articles .node--type-article .page-header a{color:#e42621;text-decoration:none;display:block}
-body.path-articles .node--type-article .page-header a:hover{color:#00a400}
-body.path-articles .node--type-article:after{display:block;content:'';clear:both}
-body.path-articles .node--type-article .field--name-node-link{position:absolute;bottom:5px;right:10px;display:table}
-body.path-articles .node--type-article .field--name-node-link a{padding:15px;display:block;font-family:Nunito,sans-serif;font-weight:700;font-style:normal;text-transform:uppercase;background-color:#e42621;color:#FFF;text-decoration:none}
-body.path-articles .node--type-article .field--name-node-link a:hover{background-color:#70b52c;color:#000}
+body.path-articles .node--view-mode-liste{padding:20px 20px 5px;margin:20px 0;background-color:#e6e6e6;line-height:1.5em}
+body.path-articles .node--view-mode-liste .body-list-article{min-height:140px;padding-bottom:65px}
+body.path-articles .node--view-mode-liste .page-header{margin-bottom:0}
+body.path-articles .node--view-mode-liste .page-header a{color:#e42621;text-decoration:none;display:block}
+body.path-articles .node--view-mode-liste .page-header a:hover{color:#00a400}
+body.path-articles .node--view-mode-liste:after{display:block;content:'';clear:both}
+body.path-articles .node--view-mode-liste .field--name-node-link{position:absolute;bottom:5px;right:10px;display:table}
+body.path-articles .node--view-mode-liste .field--name-node-link a{padding:15px;display:block;font-family:Nunito,sans-serif;font-weight:700;font-style:normal;text-transform:uppercase;background-color:#e42621;color:#FFF;text-decoration:none}
+body.path-articles .node--view-mode-liste .field--name-node-link a:hover{background-color:#70b52c;color:#000}
 .modal-body li#custom-form-this-event a{display:block;background-color:#e6e6e6;padding:10px 20px;color:#000;text-decoration:none;margin-bottom:10px;text-align:center;font-size:1.8em}
 .modal-body li#custom-form-this-event a:hover{background-color:#000;color:#FFF}
 .modal-body li#custom-form-this-event a:before{position:relative;font-family:fontello;font-weight:400;font-size:1em;display:inline-block;text-decoration:inherit;margin-right:10px;text-transform:none;line-height:1em;content:"\e85b";color:#e42621}
