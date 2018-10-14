@@ -321,7 +321,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '2018-09-01 00:00:00'
+            value: '2018-07-01 00:00:00'
             type: date
           group: 1
           exposed: false
@@ -505,7 +505,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '2018-09-01 00:00:00'
+            value: '2018-07-01 00:00:00'
             type: date
           group: 1
           exposed: false
