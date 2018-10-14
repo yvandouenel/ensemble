@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.bandeau
     - field.field.media.image.field_media_image
+    - field.field.media.image.field_tag_media
     - image.style.bandeau_fin
     - media.type.image
   module:
@@ -27,6 +28,7 @@ content:
     region: content
 hidden:
   created: true
+  field_tag_media: true
   langcode: true
   name: true
   thumbnail: true
