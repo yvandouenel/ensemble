@@ -32,10 +32,11 @@ content:
       crop_list:
         - headband_thin
         - large_landsacape
+        - liste_768x540_
         - medium_carre
-        - portrait_large
         - slideshow
       progress_indicator: throbber
+      crop_types_required: {  }
       show_crop_area: false
     third_party_settings: {  }
     type: image_widget_crop
