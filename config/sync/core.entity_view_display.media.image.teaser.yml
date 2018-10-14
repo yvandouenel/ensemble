@@ -27,6 +27,7 @@ content:
     region: content
 hidden:
   created: true
+  field_tag_media: true
   langcode: true
   name: true
   thumbnail: true
