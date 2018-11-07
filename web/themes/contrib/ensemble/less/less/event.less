@@ -1,4 +1,5 @@
 .page-node-type-event {
+
   .region-content > h2.page-header {
     display: none;
   }
@@ -11,12 +12,16 @@
     }
   }
   .field--name-node-title > h2.page-header {
-    font-size: 1em;
+    font-size: 1.4em;
     &:before {
       .glyphicon();
       content: "\e807";
       color: @gray-ensemble;
       font-size: 2em;
+      position: relative;
+      display: block;
+      float: left;
+      margin-top: -10px;
     }
   }
   .field--name-body {
@@ -25,21 +30,55 @@
   .field--name-field-media-image {
     margin-bottom: 30px;
   }
+  .under-inci-info {
+    float: right;
+    margin-top: 0;
+    width: 30%;
+    button.information {
+      text-align: center;
+      width: auto !important;
+      padding: 0 !important;
+      float: none;
+      background-color: transparent;
+      border: 0;
+      margin-bottom: 20px;
+      &:before {
+        left: 15px !important;
+      }
+    }
+    button.incitation {
+      text-align: center;
+      width: auto !important;
+      float: left;
+      background-color: transparent;
+      border: 0;
+      margin-bottom: 20px;
+      &:before {
+        left: 15px !important;
+      }
+    }
+  }
+  .group-right {
+    border: 1px solid white;
+
+    .field--name-field-date {
+      border-top: 3px solid @gray-ensemble;
+      padding-top: 30px;
+      float: left;
+      clear: none;
+      min-width: 65%;
+    }
+    .field--name-field-address {
+      padding-top: 30px;
+      float: left;
+      clear: none;
+      min-width: 65%;
+    }
+  }
   .field--name-field-address {
     margin-bottom: 30px;
   }
-  .information {
-    float: left;
-    background-color: transparent;
-    border: 0;
-    margin-bottom: 20px;
-  }
-  .incitation {
-    float: left;
-    background-color: transparent;
-    border: 0;
-    margin-bottom: 20px;
-  }
+
   .field--name-field-address {
     clear: both;
   }
@@ -60,9 +99,7 @@
     margin-top: 30px;
   }
   .back-to-list {
-    a {
-      .button-back();
-    }
+    .button-back();
   }
 }
 /* Liste des événements ***********************************************************************************************/
