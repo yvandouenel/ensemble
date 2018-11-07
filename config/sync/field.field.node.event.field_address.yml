@@ -12,7 +12,7 @@ field_name: field_address
 entity_type: node
 bundle: event
 label: Adresse
-description: 'Adresse pour le grand public.'
+description: 'Adresse précise pour le grand public.'
 required: false
 translatable: false
 default_value: {  }

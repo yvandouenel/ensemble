@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.event.field_inscription
     - field.field.node.event.field_place
     - field.field.node.event.field_release_date
+    - field.field.node.event.field_ville
     - node.type.event
   module:
     - content_moderation
@@ -40,7 +41,7 @@ content:
     third_party_settings: {  }
     region: content
   field_address:
-    weight: 10
+    weight: 11
     settings:
       size: 60
       placeholder: ''
@@ -48,7 +49,7 @@ content:
     type: text_textfield
     region: content
   field_argumentaires:
-    weight: 12
+    weight: 13
     settings:
       match_operator: CONTAINS
       size: 60
@@ -94,16 +95,13 @@ content:
     type: entity_browser_entity_reference
     region: content
   field_event_type:
-    weight: 11
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    weight: 12
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_buttons
     region: content
   field_home_slideshow:
-    weight: 14
+    weight: 15
     settings:
       display_label: true
     third_party_settings: {  }
@@ -124,7 +122,7 @@ content:
       field_widget_display_settings: {  }
     third_party_settings: {  }
   field_inscription:
-    weight: 13
+    weight: 14
     settings:
       default_data: true
     third_party_settings: {  }
@@ -172,8 +170,16 @@ content:
     third_party_settings: {  }
     type: daterange_datelist
     region: content
+  field_ville:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   moderation_state:
-    weight: 15
+    weight: 16
     settings: {  }
     third_party_settings: {  }
     type: moderation_state_default

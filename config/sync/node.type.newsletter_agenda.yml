@@ -1,0 +1,18 @@
+uuid: 07ddd110-b884-4108-aaab-7752856df448
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Newsletter agenda'
+type: newsletter_agenda
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

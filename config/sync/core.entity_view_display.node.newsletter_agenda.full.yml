@@ -1,0 +1,66 @@
+uuid: 9651c385-1b9e-4559-aa41-4b0486bfc5a3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.newsletter_agenda.body
+    - field.field.node.newsletter_agenda.field_evenements
+    - node.type.newsletter_agenda
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+        - body
+        - field_evenements
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+id: node.newsletter_agenda.full
+targetEntityType: node
+bundle: newsletter_agenda
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  field_evenements:
+    weight: 2
+    label: above
+    settings:
+      view_mode: newsletter
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: entity_reference_entity_view
+    region: ds_content
+hidden:
+  langcode: true
+  links: true

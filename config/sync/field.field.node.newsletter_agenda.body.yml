@@ -1,0 +1,22 @@
+uuid: d4e05081-bc4a-4996-83fe-9d5753349f91
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.newsletter_agenda
+  module:
+    - text
+id: node.newsletter_agenda.body
+field_name: body
+entity_type: node
+bundle: newsletter_agenda
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

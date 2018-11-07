@@ -1,0 +1,31 @@
+uuid: f306b6e8-965f-4243-b011-f54a0192937d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.newsletter_agenda.body
+    - node.type.newsletter_agenda
+  module:
+    - text
+    - user
+id: node.newsletter_agenda.teaser
+targetEntityType: node
+bundle: newsletter_agenda
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

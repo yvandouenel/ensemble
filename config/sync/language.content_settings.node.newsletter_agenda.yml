@@ -1,0 +1,11 @@
+uuid: 01c3faa3-dcca-4997-8e7d-b1b4815865bb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.newsletter_agenda
+id: node.newsletter_agenda
+target_entity_type_id: node
+target_bundle: newsletter_agenda
+default_langcode: site_default
+language_alterable: false

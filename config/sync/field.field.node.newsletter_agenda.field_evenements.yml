@@ -1,0 +1,25 @@
+uuid: f98febcf-90ae-43b8-873f-c4a445d515e7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_evenements
+    - node.type.newsletter_agenda
+id: node.newsletter_agenda.field_evenements
+field_name: field_evenements
+entity_type: node
+bundle: newsletter_agenda
+label: Evénements
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: events
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

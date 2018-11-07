@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.event.field_inscription
     - field.field.node.event.field_place
     - field.field.node.event.field_release_date
+    - field.field.node.event.field_ville
     - node.type.event
   module:
     - datetime
@@ -44,19 +45,18 @@ third_party_settings:
     regions:
       header:
         - field_event_type
+        - field_home_slideshow
+        - field_ville
       left:
         - field_image
         - body
       right:
-        - field_link_info_go
         - field_address
         - field_date
         - node_changed_date
         - field_document
         - field_place
       footer:
-        - field_bloc
-        - field_bloc_incitation
         - field_argumentaires
         - field_inscription
     fields:
@@ -129,7 +129,7 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
-    region: content
+    region: header
   field_image:
     type: entity_reference_entity_view
     weight: 1
@@ -215,6 +215,14 @@ content:
         markercluster_control: 0
       gmap_api_key: ''
     third_party_settings: {  }
+  field_ville:
+    weight: 15
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: header
 hidden:
   content_moderation_control: true
   field_release_date: true

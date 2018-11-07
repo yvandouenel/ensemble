@@ -267,6 +267,7 @@ display:
         sorts: false
         filters: false
         filter_groups: false
+        header: false
       filters:
         status:
           expose:
@@ -359,6 +360,20 @@ display:
         operator: AND
         groups:
           1: AND
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: '<h2 id="a-la-une">à la une</h2>'
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:

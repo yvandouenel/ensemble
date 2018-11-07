@@ -1,0 +1,22 @@
+uuid: 8e06ae7a-5174-4112-9610-98ae5455d16e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.newsletter_agenda
+id: node.newsletter_agenda.promote
+field_name: promote
+entity_type: node
+bundle: newsletter_agenda
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

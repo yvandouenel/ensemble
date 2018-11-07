@@ -1,0 +1,10 @@
+uuid: 091630f8-49f9-4460-9456-c696a94e1299
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.newsletter
+label: Newsletter
+targetEntityType: node
+cache: true

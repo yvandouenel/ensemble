@@ -1,0 +1,42 @@
+uuid: fb27feaa-7bdb-4799-8cfe-1fe2c55341e6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.newsletter_agenda.body
+    - field.field.node.newsletter_agenda.field_evenements
+    - node.type.newsletter_agenda
+  module:
+    - ds
+    - text
+    - user
+id: node.newsletter_agenda.default
+targetEntityType: node
+bundle: newsletter_agenda
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_evenements:
+    weight: 102
+    label: above
+    settings:
+      view_mode: newsletter
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: entity_reference_entity_view
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

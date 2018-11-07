@@ -1,0 +1,19 @@
+uuid: 7a028e86-48af-4b14-81d4-fe2d0176e9b0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ville
+    - node.type.event
+id: node.event.field_ville
+field_name: field_ville
+entity_type: node
+bundle: event
+label: Ville
+description: 'La ville apparaît dans les résumé de l''événement et dans la newsletter'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
