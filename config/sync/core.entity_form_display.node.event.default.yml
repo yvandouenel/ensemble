@@ -18,11 +18,11 @@ dependencies:
     - node.type.event
   module:
     - content_moderation
-    - datetime
     - datetime_range
     - entity_browser
     - geofield_map
     - path
+    - single_datetime
     - text
     - webform
 id: node.event.default
@@ -59,11 +59,25 @@ content:
   field_date:
     weight: 2
     settings:
-      date_order: DMY
-      time_type: '24'
-      increment: 15
+      hour_format: 24h
+      allow_times: '15'
+      exclude_date: ''
+      datetimepicker_theme: default
+      min_date: ''
+      max_date: ''
+      year_start: ''
+      year_end: ''
+      disable_days:
+        1: 0
+        2: 0
+        3: 0
+        4: 0
+        5: 0
+        6: 0
+        7: 0
+      inline: 0
     third_party_settings: {  }
-    type: datetime_datelist
+    type: single_date_time_widget
     region: content
   field_document:
     weight: 4
