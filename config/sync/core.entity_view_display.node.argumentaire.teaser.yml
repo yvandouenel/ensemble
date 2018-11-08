@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.argumentaire.body
     - field.field.node.argumentaire.field_image
+    - field.field.node.argumentaire.field_release_date
     - field.field.node.argumentaire.field_thematique
     - node.type.argumentaire
   module:
@@ -31,11 +32,12 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
+        - group_group_title
         - node_title
         - group_img_txt_date
+        - body
         - node_link
         - field_image
-        - body
     fields:
       node_link:
         plugin_id: node_link
@@ -44,32 +46,50 @@ third_party_settings:
         formatter: default
       node_title:
         plugin_id: node_title
-        weight: 0
+        weight: 1
         label: hidden
         formatter: default
         settings:
           link: true
           wrapper: h3
-          class: same-height-title
+          class: 'article event-article-home-title'
+          exclude_node_title: '1'
   field_group:
     group_img_txt_date:
       children:
         - node_link
         - field_image
-        - body
       parent_name: ''
       weight: 1
       format_type: html_element
       format_settings:
-        id: ''
-        classes: event-img-txt-date
+        label: 'img txt date'
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: img-txt
       label: 'img txt date'
+    group_group_title:
+      children:
+        - node_title
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: 'Group title'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'group-title same-height-title'
+      label: 'Group title'
 id: node.argumentaire.teaser
 targetEntityType: node
 bundle: argumentaire
@@ -78,7 +98,7 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 14
+    weight: 2
     settings:
       trim_length: 200
     third_party_settings: {  }
@@ -93,6 +113,7 @@ content:
       link: false
     third_party_settings: {  }
 hidden:
+  field_release_date: true
   field_thematique: true
   langcode: true
   links: true

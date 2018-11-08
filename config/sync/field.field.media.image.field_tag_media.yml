@@ -11,7 +11,7 @@ field_name: field_tag_media
 entity_type: media
 bundle: image
 label: Tag
-description: ''
+description: "Les \"tags\" sont des mots clés qui permettent de retrouver les images.Nne placer ici que des mots clés génériques. Si plusieurs mots clés sont nécessaires, les séparer par une virgule (,).\r\nExemple: imaginons que vous vouliez taguer la photo du portrait de François Ruffin : ne pas utiliser le terme Ruffin qui devra se trouver dans le titre de l'image mais plutôt : portrait, personnalité"
 required: true
 translatable: false
 default_value: {  }
