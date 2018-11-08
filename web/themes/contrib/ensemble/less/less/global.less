@@ -296,7 +296,8 @@ body:not(.path-frontpage) {
   }
 }
 .event-img-txt-date.event-event,
-.node--type-article.node--view-mode-teaser .img-txt{
+.node--type-article.node--view-mode-teaser .img-txt,
+.node--type-argumentaire.node--view-mode-teaser .img-txt {
   position: relative;
   &:before {
     .glyphicon();
@@ -317,6 +318,39 @@ body:not(.path-frontpage) {
 .node--type-article.node--view-mode-teaser .img-txt{
   &:before {
     content:"\e82c";
+  }
+}
+.node--type-argumentaire.node--view-mode-teaser .img-txt{
+  &:before {
+    content:"\e805";
+  }
+}
+.event-article-home-title {
+  &.event {
+    a {
+      color: @gray-darker-ensemble;
+      .title-bold();
+      font-size: 1.4em;
+      width: 100%;
+      display: block;
+    }
+  }
+  &.article {
+    a {
+      color: @gray-darker-ensemble;
+      .title-bold();
+      font-size: 1.4em;
+    }
+  }
+}
+.group-title.same-height-title {
+  position: relative;
+  display: table-cell;
+  width: 100%;
+  vertical-align: bottom;
+
+  a {
+    display: block;
   }
 }
 /* footer *************************************************************************************************************/
@@ -530,5 +564,25 @@ button.navbar-toggle {
 
       }
     }
+  }
+}
+.hour{
+  &:before {
+    .glyphicon();
+    content: "\e891";
+    color: @violet-ensemble;
+    margin-left: 20px;
+    margin-right: 3px;
+    top: 0;
+  }
+}
+.town{
+  &:before {
+    .glyphicon();
+    content: "\e878";
+    color: @black-ensemble;
+    margin-left: 20px;
+    margin-right: 3px;
+    top: 0;
   }
 }
