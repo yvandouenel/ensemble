@@ -1131,6 +1131,42 @@
       "src": "typicons"
     },
     {
+      "uid": "8663320a860b00f26e94d3d15c9ba99a",
+      "css": "clock-1",
+      "code": 59537,
+      "src": "entypo"
+    },
+    {
+      "uid": "89eb512cb82a1c3fe83cb16134f9876c",
+      "css": "back-in-time",
+      "code": 59538,
+      "src": "entypo"
+    },
+    {
+      "uid": "b99d736cef489a3150ba8aac7c4e8403",
+      "css": "clock",
+      "code": 59539,
+      "src": "iconic"
+    },
+    {
+      "uid": "9avusbdkm7q4vcmevr0x88zxewys65wr",
+      "css": "clock-alt",
+      "code": 59540,
+      "src": "modernpics"
+    },
+    {
+      "uid": "0ohst63cgq1mf1syayvfl8mphms8dbes",
+      "css": "clock-2",
+      "code": 59541,
+      "src": "modernpics"
+    },
+    {
+      "uid": "501f33ed61da407feb057a7699ef93f7",
+      "css": "clock-3",
+      "code": 59542,
+      "src": "websymbols"
+    },
+    {
       "uid": "2458519cf2686137171ecceb53fbc899",
       "css": "fleche-gauche-diapo-selecter",
       "code": 59483,

@@ -144,6 +144,12 @@
 .icon-leaf-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe88e;&nbsp;'); }
 .icon-leaf-2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe88f;&nbsp;'); }
 .icon-leaf-3 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe890;&nbsp;'); }
+.icon-clock-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe891;&nbsp;'); }
+.icon-back-in-time { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe892;&nbsp;'); }
+.icon-clock { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe893;&nbsp;'); }
+.icon-clock-alt { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe894;&nbsp;'); }
+.icon-clock-2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe895;&nbsp;'); }
+.icon-clock-3 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe896;&nbsp;'); }
 .icon-heart-broken { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf028;&nbsp;'); }
 .icon-location-4 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf031;&nbsp;'); }
 .icon-blank { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0c8;&nbsp;'); }
