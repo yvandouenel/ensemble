@@ -72,5 +72,6 @@ managedates:
 monthevents:
   js:
     js/managedates/monthevents.js: {}
+    js/events/toggle_map.js: {}
   dependencies:
       - core/jquery
