@@ -1753,9 +1753,9 @@ button.navbar-toggle{margin-right:25px!important}
 #block-cartepermanente .thematique-6.legend:before{color:#9400d3;content:"\e886"}
 #block-cartepermanente .thematique-12:before,#block-cartepermanente .thematique-7:before{color:#e42621}
 #block-cartepermanente .thematique-7.legend:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#e42621;content:"\e882";text-decoration:none;font-size:1.7em;left:-5px;margin-right:-5px}
-#block-cartepermanente .international.legend:before,#block-cartepermanente .international:before{color:#333}
 #block-cartepermanente .thematique-12.legend:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#333;content:"\f031";margin-right:3px;text-decoration:none}
 #block-cartepermanente .international.legend:before,#block-cartepermanente .no-type.legend:before,#block-cartepermanente .rc.legend:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;width:1em;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e878";margin-right:3px;text-decoration:none;text-align:center}
+#block-cartepermanente .international.legend:before,#block-cartepermanente .international:before{color:#333}
 #block-cartepermanente .no-type.legend:before{color:#777}
 #block-cartepermanente .rc.legend:before,#block-cartepermanente .rc:before{color:#9400d3}
 #block-cartepermanente .event-short-date{width:80px;text-align:center;background-color:#fff;font-size:1.2em;margin-left:-20px;margin-top:5px}
@@ -1766,7 +1766,7 @@ button.navbar-toggle{margin-right:25px!important}
 #block-cartepermanente #date-markers-legend>span.selected-period{color:#e42621;text-decoration:none}
 #block-cartepermanente #date-markers-legend>span.selected-period:before{color:#e42621}
 #block-cartepermanente #date-markers-legend>span:before{display:inline-block;margin-right:10px;color:#777;content:"\e834"}
-#block-cartepermanente #date-markers-legend>span:hover,#block-cartepermanente #date-markers-legend>span:hover:before,body.path-agenda #links-months #current-month a:hover,body.path-agenda #links-months #next-month a:hover,body.path-agenda #links-months #previous-month a:hover{color:#e42621}
+#block-cartepermanente #date-markers-legend>span:hover,#block-cartepermanente #date-markers-legend>span:hover:before{color:#e42621}
 #block-cartepermanente #map-legend>span{display:block;padding-left:5px}
 #block-cartepermanente #map-legend>span.label-legend{text-decoration:none}
 #block-cartepermanente #map-legend>span.all-legend:before{display:inline-block;color:#777;content:"\e830";margin-right:5px}
@@ -1886,7 +1886,7 @@ button.navbar-toggle{margin-right:25px!important}
 .leaflet-tooltip-right{margin-left:6px}
 .leaflet-tooltip-left:before,.leaflet-tooltip-right:before{top:50%;margin-top:-6px}
 .leaflet-tooltip-left:before{right:0;margin-right:-12px;border-left-color:#fff}
-.page-node-type-event .back-to-list a:after,.page-node-type-event .field--name-node-title>h2.page-header:before{position:relative;top:1px;speak:none;text-decoration:inherit;margin-right:10px;text-align:center;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-style:normal}
+.page-node-type-event .back-to-list a:after,.page-node-type-event .field--name-node-title>h2.page-header:before{position:relative;top:1px;font-style:normal;speak:none;text-decoration:inherit;margin-right:10px;text-align:center;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .leaflet-tooltip-right:before{left:0;margin-left:-12px;border-right-color:#fff}
 .page-node-type-event .under-inci-info button.incitation:before,.page-node-type-event .under-inci-info button.information:before{left:15px!important}
 .page-node-type-event .region-content>h2.page-header{display:none}
@@ -1894,6 +1894,7 @@ button.navbar-toggle{margin-right:25px!important}
 .page-node-type-event .field--name-field-event-type a{color:#000}
 .page-node-type-event .field--name-node-title>h2.page-header{font-size:1.4em}
 .page-node-type-event .field--name-node-title>h2.page-header:before{font-family:fontello;font-weight:400;width:1em;text-transform:none;content:"\e807";color:#ccc;font-size:2em;display:block;float:left;margin-top:-10px}
+.page-node-type-event .back-to-list a,body.path-agenda h2.page-header{color:#4d4d4d;font-family:Nunito,sans-serif}
 .page-node-type-event .field--name-body{padding-right:30px}
 .page-node-type-event .field--name-field-media-image{margin-bottom:30px}
 .page-node-type-event .under-inci-info{float:right;margin-top:0;width:30%}
@@ -1907,16 +1908,24 @@ button.navbar-toggle{margin-right:25px!important}
 .page-node-type-event .field--name-field-date:after{content:'';display:block;clear:both;margin-bottom:15px}
 .page-node-type-event .field--name-node-changed-date{clear:both;padding-top:15px}
 .page-node-type-event .field--name-field-place{margin-top:30px}
-.page-node-type-event .back-to-list a{display:block;float:right;font-family:Nunito,sans-serif;font-weight:700;font-style:normal;font-size:1.2em;color:#4d4d4d;text-transform:uppercase;padding:8px 5px 15px 15px;margin-top:20px;background-color:#e6e6e6}
+.page-node-type-event .back-to-list a{display:block;float:right;font-weight:700;font-style:normal;font-size:1.2em;text-transform:uppercase;padding:8px 5px 15px 15px;margin-top:20px;background-color:#e6e6e6}
 .page-node-type-event .back-to-list a:after{font-family:fontello;font-weight:400;display:inline-block;width:1em;text-transform:none;content:"\e836";color:#fff;font-size:1.6em;margin-left:10px}
 .page-node-type-event .back-to-list a:hover{text-decoration:none;color:#fff;background-color:#e42621}
-body.path-agenda h2.page-header{color:#4d4d4d;font-family:Nunito,sans-serif;font-weight:400;font-style:normal;font-size:1em}
+body.path-agenda h2.page-header{font-weight:400;font-style:normal;font-size:1em}
+body.path-agenda h2.page-header #button-toggle-map.map-open:before,body.path-agenda h2.page-header #button-toggle-map:before{position:relative;top:1px;font-family:fontello;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-style:normal}
+body.path-agenda h2.page-header #button-toggle-map{float:right}
+body.path-agenda h2.page-header #button-toggle-map:before{color:#777;content:"\e878"}
+body.path-agenda h2.page-header #button-toggle-map:hover{color:#e42621;cursor:pointer}
+body.path-agenda h2.page-header #button-toggle-map:hover:before{color:#e42621}
+body.path-agenda h2.page-header #button-toggle-map.map-open:before{content:"\e832";color:#e42621}
+body.path-agenda .view-with-map{margin-top:40px}
 body.path-agenda #links-months{margin:0 auto;display:table}
 body.path-agenda #links-months #current-month,body.path-agenda #links-months #next-month,body.path-agenda #links-months #previous-month{display:table-cell;vertical-align:middle}
 body.path-agenda #links-months #current-month a,body.path-agenda #links-months #next-month a,body.path-agenda #links-months #previous-month a{font-family:Roboto,sans-serif;font-weight:900;font-style:normal;text-transform:uppercase;color:#4d4d4d;text-decoration:none}
 @media (max-width:768px){body.path-agenda #links-months #current-month a,body.path-agenda #links-months #next-month a,body.path-agenda #links-months #previous-month a{font-size:.7em}
 }
 body.path-agenda #links-months #next-month a:before,body.path-agenda #links-months #previous-month a:after{position:relative;top:1px;font-family:fontello;font-weight:400;font-size:1em;speak:none;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;border-radius:25px;margin-right:10px;font-style:normal;display:inline-block;text-decoration:inherit}
+body.path-agenda #links-months #current-month a:hover,body.path-agenda #links-months #next-month a:hover,body.path-agenda #links-months #previous-month a:hover{color:#e42621}
 body.path-agenda #links-months #previous-month{width:0%;text-align:right}
 body.path-agenda #links-months #previous-month a:after{width:1em;text-align:center;content:"\e833";padding:5px 20px 3px 4px;color:#FFF;background-color:#4d4d4d;margin-left:10px}
 body.path-agenda #links-months #previous-month a:hover{color:#e42621}

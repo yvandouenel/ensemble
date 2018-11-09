@@ -108,7 +108,32 @@ body.path-agenda {
     color: @gray-darker-ensemble;
     .title-regular();
     font-size: 1em;
+    #button-toggle-map{
+      float: right;
+      &:before {
+        .glyphicon();
+        content: "\e878";
+      }
+      &:hover {
+        color: @red-ensemble;
+        cursor: pointer;
+        &:before {
+          color: @red-ensemble;
+        }
+      }
+      &.map-open {
+        &:before {
+          .glyphicon();
+          content: "\e832";
+          color: @red-ensemble;
+        }
+      }
+    }
   }
+  .view-with-map {
+    margin-top: 40px;
+  }
+
   /* Zone de gestion des mois ***********************************/
   #links-months {
     margin: 0 auto;
