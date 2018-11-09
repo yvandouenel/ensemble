@@ -1,9 +1,9 @@
-uuid: c63c9496-64de-4fa7-9f6c-175191e73141
+uuid: 4909d700-3c68-45ee-b4ff-e693902525c9
 langcode: fr
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.reunion
     - field.field.node.event.body
     - field.field.node.event.field_address
     - field.field.node.event.field_argumentaires
@@ -42,17 +42,17 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - node_link
-        - node_title
         - group_group_title
-        - field_image
+        - node_title
         - group_img_txt_date
-        - field_date
         - body
+        - node_link
+        - field_image
+        - field_date
     fields:
       node_link:
         plugin_id: node_link
-        weight: 0
+        weight: 7
         label: hidden
         formatter: default
         settings:
@@ -71,60 +71,58 @@ third_party_settings:
           class: 'event event-article-home-title'
           exclude_node_title: '1'
   field_group:
+    group_group_title:
+      children:
+        - node_title
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'group-title same-height-title'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Group title'
     group_img_txt_date:
       children:
         - node_link
         - field_image
         - field_date
       parent_name: ''
-      weight: 2
-      format_type: html_element
-      format_settings:
-        label: 'img txt date'
-        element: div
-        show_label: false
-        label_element: h3
-        attributes: ''
-        effect: none
-        speed: fast
-        id: ''
-        classes: 'event-img-txt-date event-event'
-      label: 'img txt date'
-    group_group_title:
-      children:
-        - node_title
-      parent_name: ''
       weight: 1
       format_type: html_element
       format_settings:
-        label: 'Group title'
+        id: ''
+        classes: 'event-img-txt-date event-event'
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: 'group-title same-height-title'
-      label: 'Group title'
-id: node.event.teaser
+      label: 'img txt date'
+id: node.event.reunion
 targetEntityType: node
 bundle: event
-mode: teaser
+mode: reunion
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 3
+    weight: 2
+    region: ds_content
+    label: visually_hidden
     settings:
       trim_length: 200
     third_party_settings: {  }
-    region: ds_content
   field_date:
     type: datetime_custom
-    weight: 3
+    weight: 9
     region: ds_content
-    label: hidden
+    label: visually_hidden
     settings:
       timezone_override: ''
       date_format: 'Y-m-d H:i:00'
@@ -133,9 +131,9 @@ content:
         ds_limit: ''
   field_image:
     type: entity_reference_entity_view
-    weight: 1
+    weight: 8
     region: ds_content
-    label: hidden
+    label: visually_hidden
     settings:
       view_mode: teaser
       link: false

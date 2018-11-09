@@ -1,0 +1,23 @@
+uuid: a29807f0-5e37-445c-8234-5ffd1552ac03
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_meeting_ensemble
+    - node.type.event
+id: node.event.field_event_meeting_ensemble
+field_name: field_event_meeting_ensemble
+entity_type: node
+bundle: event
+label: 'Réunion Ensemble!34'
+description: 'Si vous cochez cette case, cet événement appraraîtra sur la page spécifique aux réunions d''Ensemble!34 (/participer/reunions)'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: oui
+  off_label: non
+field_type: boolean

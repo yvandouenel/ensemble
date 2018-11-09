@@ -1,0 +1,10 @@
+uuid: 706bdf39-a7db-4726-bd84-9fd4303d310b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.reunion
+label: reunion
+targetEntityType: node
+cache: true

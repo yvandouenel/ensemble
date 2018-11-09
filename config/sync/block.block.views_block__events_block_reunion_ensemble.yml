@@ -1,0 +1,30 @@
+uuid: c0ee675c-d843-47bc-8033-e512d9243f3e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - system
+    - views
+  theme:
+    - ensemble
+id: views_block__events_block_reunion_ensemble
+theme: ensemble
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:events-block_reunion_ensemble'
+settings:
+  id: 'views_block:events-block_reunion_ensemble'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /participer/reunions
+    negate: false
+    context_mapping: {  }

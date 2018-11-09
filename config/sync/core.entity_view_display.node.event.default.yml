@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.event.field_argumentaires
     - field.field.node.event.field_date
     - field.field.node.event.field_document
+    - field.field.node.event.field_event_meeting_ensemble
     - field.field.node.event.field_event_type
     - field.field.node.event.field_home_slideshow
     - field.field.node.event.field_image
@@ -47,6 +48,7 @@ third_party_settings:
         - field_event_type
         - field_home_slideshow
         - field_ville
+        - field_event_meeting_ensemble
       left:
         - field_image
         - body
@@ -112,6 +114,16 @@ content:
       link: false
     third_party_settings: {  }
     region: right
+  field_event_meeting_ensemble:
+    weight: 16
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: header
   field_event_type:
     type: entity_reference_label
     weight: 0

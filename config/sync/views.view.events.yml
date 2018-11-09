@@ -3,6 +3,7 @@ langcode: fr
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.reunion
     - core.entity_view_mode.node.teaser
     - field.storage.node.body
     - field.storage.node.field_address
@@ -745,6 +746,164 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_address'
+        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_event_type'
+        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_place'
+  block_reunion_ensemble:
+    display_plugin: block
+    id: block_reunion_ensemble
+    display_title: 'Bloc réunions ensemble'
+    position: 6
+    display_options:
+      display_extenders: {  }
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            event: event
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        field_date_value:
+          id: field_date_value
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+        field_event_meeting_ensemble_value:
+          id: field_event_meeting_ensemble_value
+          table: node__field_event_meeting_ensemble
+          field: field_event_meeting_ensemble_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+      defaults:
+        filters: false
+        filter_groups: false
+        style: false
+        row: false
+        query: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      display_description: ''
+      style:
+        type: views_bootstrap_grid
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          alignment: horizontal
+          columns: '3'
+          col_xs: col-xs-12
+          col_sm: col-sm-12
+          col_md: col-md-6
+          col_lg: col-lg-4
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: reunion
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: true
+          replica: false
+          query_comment: ''
+          query_tags: null
     cache_metadata:
       max-age: -1
       contexts:
