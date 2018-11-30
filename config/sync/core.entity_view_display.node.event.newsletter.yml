@@ -102,6 +102,7 @@ hidden:
   field_address: true
   field_argumentaires: true
   field_document: true
+  field_event_meeting_ensemble: true
   field_event_type: true
   field_home_slideshow: true
   field_inscription: true
