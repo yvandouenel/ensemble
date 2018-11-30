@@ -68,7 +68,7 @@ class EnsembleArticle extends SqlBase {
     return [
       'post_id' => [
         'type' => 'integer',
-        'alias' => 'post_id',
+        'alias' => 'b',
       ],
     ];
   }

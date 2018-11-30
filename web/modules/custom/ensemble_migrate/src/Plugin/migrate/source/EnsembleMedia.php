@@ -83,7 +83,7 @@ class EnsembleMedia extends SqlBase {
     return [
       'media_id' => [
         'type' => 'integer',
-        'alias' => 'media_id',
+        'alias' => 'm',
       ],
     ];
   }

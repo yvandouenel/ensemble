@@ -40,7 +40,7 @@ class EnsembleThematique extends SqlBase {
     return [
       'cat_id' => [
         'type' => 'integer',
-        'alias' => 'cat_id',
+        'alias' => 'c',
       ],
     ];
   }
