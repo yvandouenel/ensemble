@@ -33,23 +33,14 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - node_link
         - group_group_title
+        - node_link
+        - node_title
         - group_img_txt
         - field_image
-        - node_title
         - body
+        - node_post_date
     fields:
-      node_link:
-        plugin_id: node_link
-        weight: 0
-        label: hidden
-        formatter: default
-        settings:
-          'link text': 'Read more'
-          'link class': read-more
-          wrapper: ''
-          class: ''
       node_title:
         plugin_id: node_title
         weight: 1
@@ -60,6 +51,21 @@ third_party_settings:
           wrapper: h3
           class: 'article event-article-home-title'
           exclude_node_title: '1'
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 3
+        label: hidden
+        formatter: ds_post_date_long
+      node_link:
+        plugin_id: node_link
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          'link text': 'Read more'
+          'link class': read-more
+          wrapper: ''
+          class: ''
   field_group:
     group_img_txt:
       children:
