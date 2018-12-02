@@ -2001,12 +2001,13 @@ body.path-articles .node--view-mode-liste .field--name-node-link a:hover{backgro
 .path-frontpage .under-inci-info .btn-primary{background-color:transparent;border:0;margin:0}
 .path-frontpage .under-inci-info h3{min-height:30px;margin-top:20px}
 .path-frontpage .under-inci-info h3.h3-information{margin-top:50px}
-@media (max-width:992px){.path-frontpage .under-inci-info{background-color:transparent;padding:0;height:auto}
+@media (max-width:992px){.path-frontpage .under-inci-info h3 a:after,.path-frontpage .under-inci-info:after{content:"";clear:both;display:block}
+.path-frontpage .under-inci-info{background-color:transparent;padding:0;height:auto;display:table;margin:0 auto}
+.path-frontpage .under-inci-info button.btn-primary{float:left}
 .path-frontpage .under-inci-info h3{min-height:30px;margin-top:20px}
 .path-frontpage .under-inci-info h3.h3-information{margin-top:-30px}
 .path-frontpage .under-inci-info h3 a{background-color:transparent;display:block;padding:60px 20px 5px;border-radius:5px;border:3px solid #4d4d4d;width:80%;margin:0 auto;text-align:center;font-size:2em}
 .path-frontpage .under-inci-info h3 a:before{float:left;margin-top:-50px}
-.path-frontpage .under-inci-info h3 a:after{content:"";display:block;clear:both}
 }
 @media (max-width:768px){.path-frontpage .under-inci-info h3 a{border:0}
 .path-frontpage .under-inci-info h3 a:before{float:none;margin-top:-50px}
@@ -2028,9 +2029,11 @@ body.path-articles .node--view-mode-liste .field--name-node-link a:hover{backgro
 .under-inci-info h3{padding:0;width:100%;border-radius:8px;margin:10px auto}
 .under-inci-info h3 a{display:block;text-align:center;padding:10px}
 }
-#a-la-une{position:absolute;top:0;left:105px;font-family:Nunito,sans-serif;font-weight:700;font-style:normal;color:#FFF;padding:10px 20px;text-transform:uppercase;background-color:#4d4d4d;z-index:1}
+#a-la-une{position:absolute;top:0;left:104px;font-family:Nunito,sans-serif;font-weight:700;font-style:normal;color:#FFF;padding:10px 20px;text-transform:uppercase;background-color:#4d4d4d;z-index:1}
+@media (max-width:992px){#a-la-une{display:none}
+}
 #top-home-ss-incentive{margin-top:143px;background-color:#fff}
-@media (min-width:992px){#block-views-block-frontpage-block-slideshow{max-height:483px;overflow:hidden;position:relative}
+@media (min-width:992px){#block-views-block-frontpage-block-slideshow{max-height:483px;overflow:hidden;position:relative;top:18px}
 #block-views-block-frontpage-block-slideshow .wrapper-diapo .row-diapo{float:left}
 #block-views-block-frontpage-block-slideshow .wrapper-diapo .row-diapo .diapositive{position:relative}
 #block-views-block-frontpage-block-slideshow .wrapper-diapo .row-diapo .diapositive img{margin:0!important}

@@ -128,6 +128,16 @@
       background-color: transparent;
       padding: 0;
       height: auto;
+      display: table;
+      margin: 0 auto;
+      button.btn-primary {
+        float: left
+      }
+      &:after{
+        content: "";
+        display: block;
+        clear: both;
+      }
       h3{
         min-height: 30px;
         margin-top: 20px;

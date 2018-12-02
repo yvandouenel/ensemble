@@ -1,13 +1,16 @@
 #a-la-une {
   position: absolute;
   top: 0;
-  left: 105px;
+  left: 104px;
   .title-bold();
   color: #FFF;
   padding: 10px 20px;
   text-transform: uppercase;
   background-color: @gray-darker-ensemble;
   z-index: 1;
+  @media (max-width: @screen-md) {
+    display: none;
+  }
 }
 #top-home-ss-incentive {
   margin-top: 143px;
@@ -20,6 +23,7 @@
     max-height: 483px;
     overflow: hidden;
     position: relative;
+    top: 18px;
     .wrapper-diapo {
       .row-diapo {
         float: left;
