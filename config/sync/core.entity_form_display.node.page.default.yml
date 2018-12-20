@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_referencement
     - node.type.page
   module:
+    - metatag
     - path
     - text
 _core:
@@ -30,6 +32,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_referencement:
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   langcode:
     type: language_select
     weight: 2

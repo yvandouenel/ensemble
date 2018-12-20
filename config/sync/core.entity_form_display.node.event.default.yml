@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.event.field_image
     - field.field.node.event.field_inscription
     - field.field.node.event.field_place
+    - field.field.node.event.field_referencement
     - field.field.node.event.field_release_date
     - field.field.node.event.field_ville
     - node.type.event
@@ -23,6 +24,7 @@ dependencies:
     - datetime_range
     - entity_browser
     - geofield_map
+    - metatag
     - path
     - single_datetime
     - text
@@ -168,6 +170,12 @@ content:
       zoom_level: 5
     third_party_settings: {  }
     type: geofield_map
+    region: content
+  field_referencement:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_release_date:
     weight: 5

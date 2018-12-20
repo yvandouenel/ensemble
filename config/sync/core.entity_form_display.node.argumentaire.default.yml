@@ -6,12 +6,14 @@ dependencies:
     - entity_browser.browser.assets_browser
     - field.field.node.argumentaire.body
     - field.field.node.argumentaire.field_image
+    - field.field.node.argumentaire.field_referencement
     - field.field.node.argumentaire.field_release_date
     - field.field.node.argumentaire.field_thematique
     - node.type.argumentaire
   module:
     - datetime_range
     - entity_browser
+    - metatag
     - path
     - text
 id: node.argumentaire.default
@@ -47,6 +49,12 @@ content:
       field_widget_display_settings: {  }
     third_party_settings: {  }
     type: entity_browser_entity_reference
+    region: content
+  field_referencement:
+    weight: 126
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_release_date:
     weight: 124

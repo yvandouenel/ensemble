@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.field_home_slideshow
     - field.field.node.article.field_image
+    - field.field.node.article.field_referencement
     - field.field.node.article.field_release_date
     - field.field.node.article.field_thematique
     - node.type.article
@@ -14,6 +15,7 @@ dependencies:
     - content_moderation
     - datetime_range
     - entity_browser
+    - metatag
     - path
     - text
 id: node.article.default
@@ -56,6 +58,12 @@ content:
       field_widget_display_settings: {  }
     third_party_settings: {  }
     type: entity_browser_entity_reference
+    region: content
+  field_referencement:
+    weight: 129
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_release_date:
     weight: 9

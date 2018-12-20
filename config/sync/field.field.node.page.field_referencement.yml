@@ -1,0 +1,21 @@
+uuid: 93ef9e70-4f6b-473b-8e6e-d171c4427852
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_referencement
+    - node.type.page
+  module:
+    - metatag
+id: node.page.field_referencement
+field_name: field_referencement
+entity_type: node
+bundle: page
+label: Référencement
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

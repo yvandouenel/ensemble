@@ -1,0 +1,21 @@
+uuid: f882c63f-32cf-40ac-8d34-0f4ed4b8faba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_referencement
+    - node.type.argumentaire
+  module:
+    - metatag
+id: node.argumentaire.field_referencement
+field_name: field_referencement
+entity_type: node
+bundle: argumentaire
+label: Référencement
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

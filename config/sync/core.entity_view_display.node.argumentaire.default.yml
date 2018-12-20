@@ -5,12 +5,14 @@ dependencies:
   config:
     - field.field.node.argumentaire.body
     - field.field.node.argumentaire.field_image
+    - field.field.node.argumentaire.field_referencement
     - field.field.node.argumentaire.field_release_date
     - field.field.node.argumentaire.field_thematique
     - node.type.argumentaire
   module:
     - datetime_range
     - ds
+    - metatag
     - text
     - user
 third_party_settings:
@@ -54,6 +56,13 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: ds_content
+  field_referencement:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
   field_release_date:
     weight: 2
     label: above
