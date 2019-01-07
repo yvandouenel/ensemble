@@ -1,17 +1,15 @@
 uuid: b3a9f576-f598-47cc-80e2-9f4ee3e6c371
 langcode: fr
 status: true
-dependencies:
-  config:
-    - crop.type.slideshow
-  module:
-    - crop
+dependencies: {  }
 name: slideshow
 label: 'Slideshow (640x360)'
 effects:
-  7d98dd7f-64b4-4405-a9a1-45179cea46d3:
-    uuid: 7d98dd7f-64b4-4405-a9a1-45179cea46d3
-    id: crop_crop
-    weight: -10
+  df07855b-d1fb-4cf6-aaf3-52694c7b752d:
+    uuid: df07855b-d1fb-4cf6-aaf3-52694c7b752d
+    id: image_scale_and_crop
+    weight: 1
     data:
-      crop_type: slideshow
+      width: 640
+      height: 360
+      anchor: center-center
