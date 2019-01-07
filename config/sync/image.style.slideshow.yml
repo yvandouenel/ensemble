@@ -15,10 +15,3 @@ effects:
     weight: -10
     data:
       crop_type: slideshow
-  76ca9baa-fe40-424b-b261-aab50f6ba48d:
-    uuid: 76ca9baa-fe40-424b-b261-aab50f6ba48d
-    id: image_resize
-    weight: 2
-    data:
-      width: 640
-      height: 360

@@ -15,10 +15,3 @@ effects:
     weight: -10
     data:
       crop_type: headband_thin
-  cf1f62cd-51b2-4736-85b7-4c4de3b4f64c:
-    uuid: cf1f62cd-51b2-4736-85b7-4c4de3b4f64c
-    id: image_resize
-    weight: 2
-    data:
-      width: 768
-      height: 331

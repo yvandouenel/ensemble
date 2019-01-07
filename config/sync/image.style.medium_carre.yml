@@ -15,11 +15,3 @@ effects:
     weight: -10
     data:
       crop_type: medium_carre
-  bf1358a0-b8b8-4fbb-ba05-3c16f8e6617b:
-    uuid: bf1358a0-b8b8-4fbb-ba05-3c16f8e6617b
-    id: image_scale
-    weight: -9
-    data:
-      width: 400
-      height: 400
-      upscale: false

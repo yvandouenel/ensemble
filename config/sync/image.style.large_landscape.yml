@@ -9,14 +9,6 @@ dependencies:
 name: large_landscape
 label: 'Paysage large 1200x737'
 effects:
-  147a177e-27bd-4a03-942c-190d3db62b1c:
-    uuid: 147a177e-27bd-4a03-942c-190d3db62b1c
-    id: image_scale_and_crop
-    weight: -9
-    data:
-      width: 1200
-      height: 737
-      anchor: center-center
   5e44ef91-a28c-4238-8664-77b29a9ad241:
     uuid: 5e44ef91-a28c-4238-8664-77b29a9ad241
     id: crop_crop
