@@ -1,17 +1,15 @@
 uuid: 80323959-585c-400c-865f-1daa08022e44
 langcode: fr
 status: true
-dependencies:
-  config:
-    - crop.type.liste_768x540_
-  module:
-    - crop
+dependencies: {  }
 name: liste_768x540_
 label: 'Liste (768x540)'
 effects:
-  164835e5-745e-49d9-b200-34f2ff74b437:
-    uuid: 164835e5-745e-49d9-b200-34f2ff74b437
-    id: crop_crop
+  76409804-3256-4009-86cd-979ff3d7a08b:
+    uuid: 76409804-3256-4009-86cd-979ff3d7a08b
+    id: image_scale_and_crop
     weight: 1
     data:
-      crop_type: liste_768x540_
+      width: 768
+      height: 540
+      anchor: center-center

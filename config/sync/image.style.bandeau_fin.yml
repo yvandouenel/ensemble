@@ -1,17 +1,15 @@
 uuid: 7c7a30cc-8392-42a9-84ee-b862cb22052f
 langcode: fr
 status: true
-dependencies:
-  config:
-    - crop.type.headband_thin
-  module:
-    - crop
+dependencies: {  }
 name: bandeau_fin
 label: 'Haut événement (768x331)'
 effects:
-  4a0f44f5-80bc-4dd2-ac6b-dddd14f662ef:
-    uuid: 4a0f44f5-80bc-4dd2-ac6b-dddd14f662ef
-    id: crop_crop
-    weight: -10
+  1b1f9a6b-8bdd-4172-a7fd-6f0de00ffaa4:
+    uuid: 1b1f9a6b-8bdd-4172-a7fd-6f0de00ffaa4
+    id: image_scale_and_crop
+    weight: 1
     data:
-      crop_type: headband_thin
+      width: 768
+      height: 331
+      anchor: center-center
