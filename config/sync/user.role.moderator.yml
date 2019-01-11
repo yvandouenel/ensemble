@@ -24,6 +24,7 @@ permissions:
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'access workbench'
+  - 'administer news feeds'
   - 'administer nodes'
   - 'administer workflow'
   - 'create article content'

@@ -1,0 +1,12 @@
+uuid: 794c386a-d608-4ad3-9c45-071d2ec54b2a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - aggregator
+_core:
+  default_config_hash: 0LZvohlEB6FpI9Irz7wHVLBVKGcjHzhvI8mCzjHndrc
+id: aggregator_item.summary
+label: Summary
+targetEntityType: aggregator_item
+cache: true
