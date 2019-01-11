@@ -212,6 +212,7 @@ hidden:
   content_moderation_control: true
   field_event_meeting_ensemble: true
   field_home_slideshow: true
+  field_referencement: true
   field_release_date: true
   field_ville: true
   langcode: true
