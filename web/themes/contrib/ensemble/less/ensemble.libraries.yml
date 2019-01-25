@@ -75,3 +75,10 @@ monthevents:
     js/events/toggle_map.js: {}
   dependencies:
       - core/jquery
+
+newsletter:
+  js:
+    js/newsletter/newsletter.js: {}
+  dependencies:
+      - core/jquery
+      
