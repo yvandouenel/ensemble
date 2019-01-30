@@ -1,3 +1,4 @@
+
 {#
 /**
  * @file
@@ -65,8 +66,8 @@
  *   in different view modes.
  */
 #}
+
 {{ attach_library('ensemble/newsletter') }}
-<h1>C'est de la bombe baby</h1>
 {%
   set classes = [
     node.bundle|clean_class,
@@ -77,36 +78,23 @@
     'clearfix',
   ]
 %}
-<article{{ attributes.addClass(classes) }}>
-
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes.addClass('author') }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-
-  <div{{ content_attributes.addClass('content') }}>
-    {{ content }}
+  <div id="basic-fields">
+    <div class="basic-image">
+      {{ field_image }}
+    </div>
+    <div class="basic-body">
+      {{ body }}
+    </div>
+    <div id="basic-events-from-view">
+      {{ field_evenements }}
+    </div>
   </div>
 
-</article>
-
+<div id="newsletter-rendered">
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
-    <title>Test</title>
+    <title>Contenu du title de la newsletter</title>
     <!--[if !mso]><!-- -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!--<![endif]-->
@@ -316,13 +304,13 @@
           <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
       
         <v:rect  style="width:600px;" xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false">
-        <v:fill  origin="0.5, 0" position="0.5, 0" src="http://5lhv.mj.am/img/5lhv/b/1z99t/xtox0.png" color="#ffffff" type="tile" />
+        <v:fill  origin="0.5, 0" position="0.5, 0" src="http://www.resistons.net/themes/contrib/ensemble/less/images/newsletter/bandeau-newsletter.png" color="#ffffff" type="tile" />
         <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
       <![endif]-->
 
-      <div style="background:#ffffff url(http://5lhv.mj.am/img/5lhv/b/1z99t/xtox0.png) top center / null no-repeat;Margin:0px auto;max-width:600px;">
+      <div id="newsletter-div-headband" style="background:#ffffff url(http://www.resistons.net/themes/contrib/ensemble/less/images/newsletter/bandeau-newsletter.png) top center / null no-repeat;Margin:0px auto;max-width:600px;">
         <div style="line-height:0;font-size:0;">
-          <table align="center" background="http://5lhv.mj.am/img/5lhv/b/1z99t/xtox0.png" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff url(http://5lhv.mj.am/img/5lhv/b/1z99t/xtox0.png) top center / null no-repeat;width:100%;">
+          <table align="center" background="http://www.resistons.net/themes/contrib/ensemble/less/images/newsletter/bandeau-newsletter.png" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff url(http://www.resistons.net/themes/contrib/ensemble/less/images/newsletter/bandeau-newsletter.png) top center / null no-repeat;width:100%;min-height:140px;">
             <tbody>
               <tr>
                 <td style="direction:ltr;font-size:0px;padding:0 0 0 0;padding-bottom:40px;padding-top:40px;text-align:center;vertical-align:top;">
@@ -340,7 +328,9 @@
                             <tbody>
                               <tr>
                                 <td style="width:181px;">
+                                  <!-- Texte ou image sur bandeau
                                   <img alt="" height="auto" src="http://5lhv.mj.am/img/5lhv/b/1z99t/xtoxw.png" style="border:none;border-radius:px;display:block;outline:none;text-decoration:none;height:auto;width:100%;" width="181"/>
+                                  -->
                                 </td>
                               </tr>
                             </tbody>
@@ -605,4 +595,4 @@
     </div>
   </body>
 </html>
-
+</div>
