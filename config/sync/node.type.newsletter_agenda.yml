@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: 'Newsletter agenda'
 type: newsletter_agenda
-description: ''
+description: 'Permet de choisir les derniers événements à envoyer dans une liste puis de copier le code adéquat pour un envoi via mailchimp'
 help: ''
 new_revision: true
 preview_mode: 1

@@ -1,0 +1,15 @@
+uuid: 49a1e65a-f2db-480f-9287-cd2b1e51d3ab
+langcode: fr
+status: true
+dependencies: {  }
+name: bandeau_newsletter
+label: 'Bandeau newsletter 600x160'
+effects:
+  d214b9cc-beea-4146-95b5-bd28c94ac1e5:
+    uuid: d214b9cc-beea-4146-95b5-bd28c94ac1e5
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 160
+      anchor: center-center

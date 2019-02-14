@@ -1,24 +1,26 @@
-uuid: 27b50400-bed1-4df1-8156-683b31401e4e
+uuid: 95105a38-eda7-4ecd-a272-b9c9d51b2fc1
 langcode: fr
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.bandeau_newletter
     - field.field.media.image.field_media_image
     - field.field.media.image.field_tag_media
+    - image.style.bandeau_newsletter
     - media.type.image
   module:
     - image
 _core:
   default_config_hash: jOwnt_yq6AKAfqU6f0xKnxEkFQ2eTPJWxrk3WMLbL68
-id: media.image.default
+id: media.image.bandeau_newletter
 targetEntityType: media
 bundle: image
-mode: default
+mode: bandeau_newletter
 content:
   field_media_image:
     label: hidden
     settings:
-      image_style: ''
+      image_style: bandeau_newsletter
       image_link: file
     third_party_settings: {  }
     type: image

@@ -1,0 +1,21 @@
+uuid: 717e260b-3246-4784-bef9-3a7118a1047d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_code_a_copier
+    - node.type.newsletter_agenda
+id: node.newsletter_agenda.field_code_a_copier
+field_name: field_code_a_copier
+entity_type: node
+bundle: newsletter_agenda
+label: 'Code à copier'
+description: 'Texte à copier'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Code à copier'
+default_value_callback: ''
+settings: {  }
+field_type: string_long

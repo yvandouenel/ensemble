@@ -1,0 +1,22 @@
+uuid: e92bde1a-f4ca-4168-845c-72e1c9d8b3f3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.newsletter_agenda
+id: node.newsletter_agenda.status
+field_name: status
+entity_type: node
+bundle: newsletter_agenda
+label: Publié
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

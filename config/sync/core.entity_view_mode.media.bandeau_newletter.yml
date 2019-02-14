@@ -1,0 +1,10 @@
+uuid: afe49375-ec10-4202-b7b1-4bc0ad83e931
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.bandeau_newletter
+label: 'Bandeau newletter'
+targetEntityType: media
+cache: true

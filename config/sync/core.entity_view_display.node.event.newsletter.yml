@@ -9,11 +9,13 @@ dependencies:
     - field.field.node.event.field_argumentaires
     - field.field.node.event.field_date
     - field.field.node.event.field_document
+    - field.field.node.event.field_event_meeting_ensemble
     - field.field.node.event.field_event_type
     - field.field.node.event.field_home_slideshow
     - field.field.node.event.field_image
     - field.field.node.event.field_inscription
     - field.field.node.event.field_place
+    - field.field.node.event.field_referencement
     - field.field.node.event.field_release_date
     - field.field.node.event.field_ville
     - node.type.event
@@ -40,15 +42,16 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
+        - field_image
         - node_title
         - field_ville
-        - field_date
         - body
-        - field_image
+        - field_date
+        - field_address
     fields:
       node_title:
         plugin_id: node_title
-        weight: 0
+        weight: 1
         label: hidden
         formatter: default
         settings:
@@ -69,9 +72,17 @@ content:
     settings:
       trim_length: 200
     third_party_settings: {  }
+  field_address:
+    type: text_trimmed
+    weight: 5
+    region: ds_content
+    label: above
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
   field_date:
     type: datetime_custom
-    weight: 2
+    weight: 4
     region: ds_content
     label: above
     settings:
@@ -82,16 +93,16 @@ content:
         ds_limit: ''
   field_image:
     type: entity_reference_entity_view
-    weight: 4
+    weight: 0
     region: ds_content
-    label: visually_hidden
+    label: above
     settings:
-      view_mode: teaser
+      view_mode: default
       link: false
     third_party_settings: {  }
   field_ville:
     type: string
-    weight: 1
+    weight: 2
     region: ds_content
     label: inline
     settings:
@@ -99,7 +110,6 @@ content:
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
-  field_address: true
   field_argumentaires: true
   field_document: true
   field_event_meeting_ensemble: true
@@ -107,6 +117,7 @@ hidden:
   field_home_slideshow: true
   field_inscription: true
   field_place: true
+  field_referencement: true
   field_release_date: true
   langcode: true
   links: true

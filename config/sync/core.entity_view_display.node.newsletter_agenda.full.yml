@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.newsletter_agenda.body
+    - field.field.node.newsletter_agenda.field_code_a_copier
     - field.field.node.newsletter_agenda.field_evenements
     - node.type.newsletter_agenda
   module:
@@ -29,15 +30,9 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - node_title
         - body
         - field_evenements
-    fields:
-      node_title:
-        plugin_id: node_title
-        weight: 0
-        label: hidden
-        formatter: default
+        - field_code_a_copier
 id: node.newsletter_agenda.full
 targetEntityType: node
 bundle: newsletter_agenda
@@ -46,12 +41,21 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     region: ds_content
-  field_evenements:
+  field_code_a_copier:
+    type: basic_string
     weight: 2
+    region: ds_content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_evenements:
+    type: entity_reference_entity_view
+    weight: 1
+    region: ds_content
     label: above
     settings:
       view_mode: newsletter
@@ -59,8 +63,6 @@ content:
     third_party_settings:
       ds:
         ds_limit: ''
-    type: entity_reference_entity_view
-    region: ds_content
 hidden:
   langcode: true
   links: true

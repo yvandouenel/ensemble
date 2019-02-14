@@ -1,0 +1,10 @@
+uuid: 2acadf85-6432-4a70-a804-90899304462d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.newsletter
+label: newsletter
+targetEntityType: media
+cache: true

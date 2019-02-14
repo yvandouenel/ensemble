@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.newsletter_agenda.body
+    - field.field.node.newsletter_agenda.field_code_a_copier
     - field.field.node.newsletter_agenda.field_evenements
     - node.type.newsletter_agenda
   module:
@@ -18,12 +19,19 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_code_a_copier:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_evenements:
-    weight: 102
+    weight: 2
     label: above
     settings:
       view_mode: newsletter
@@ -33,10 +41,6 @@ content:
         ds_limit: ''
     type: entity_reference_entity_view
     region: content
-  links:
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   langcode: true
+  links: true
