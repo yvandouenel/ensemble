@@ -79,9 +79,6 @@
   ]
 %}
   <div id="basic-fields">
-    <div class="basic-image">
-      {{ field_image }}
-    </div>
     <div class="basic-body">
       {{ body }}
     </div>
@@ -398,10 +395,10 @@
                     <tr>
                       <td align="left" vertical-align="middle" style="font-size:0px;padding:0 0 0 0;padding-top:0px;padding-right:25px;padding-bottom:10px;padding-left:25px;word-break:break-word;">
                         <div style="font-family:Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#5e6977;">
-                          <p style="font-size: 15px; margin: 10px 0;" class="newsletter-chapo">
+                          <div style="font-size: 15px; margin: 10px 0;" id="newsletter-chapo">
                             Texte d'introduction chapo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra, nulla eu sodales dapibus, 
                             metus odio lacinia tellus, id dictum dolor metus ut orci. Donec facilisis elit eu ultrices sodales. 
-                          </p>
+                          </div>
                         </div>
                       </td>
                     </tr>
@@ -480,7 +477,7 @@
                       <td align="left" vertical-align="top" style="font-size:0px;padding:0 0 0 0;padding-top:0;padding-right:25px;padding-bottom:10px;padding-left:25px;word-break:break-word;">
                         <div style="font-family:Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#5e6977;">
                           <h2 style="font-size: 20px; font-weight: bold;margin-top:0; padding-top:0;" class="newsletter-title-event"> 
-                              <a href="http://www.resistons.net/index.php/agenda/creer-evenement-44" style="color:#f9605c;font-family:Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;" target="_blank">
+                              <a href="http://www.resistons.net/index.php/agenda/creer-evenement-44" style="color:#f9605c;font-size: 20px; font-weight: bold;margin-top:0; padding-top:0" target="_blank">
                             FORMATION VISA 34 (VIGILANCE ET INITIATIVES SYNDICALES ANTIFASCISTES)
                           </a>
                           </h2>
@@ -488,13 +485,13 @@
                             <p style="font-size: 15px; margin: 10px 0;"> Connaître l'extrême droite pour mieux la combattre</p>
                           </div>
                           <p style="font-size: 15px; margin: 10px 0;" >
-                            <span class="newsletter-date-label"><b>Dates : </b></span><br />
+                            <span class="newsletter-date-label"><b style="font-weight: bold;">Dates : </b></span><br />
                             <div class="newsletter-dates">
                               <div class="newsletter-date"><span >26 janvier 2019 - 10:00</span><br /></div>
                               <div class="newsletter-date"><span >27 janvier 2019 - 10:00</span><br /></div>
                             </div>
                           <p style="font-size: 15px; margin: 10px 0;">
-                            <b>Adresse</b> :<br />
+                            <b style="font-weight: bold;">Adresse</b> :<br />
                             <span class="newsletter-address">Bourse du travail</span>
                           </p>
                         </div>
@@ -597,4 +594,8 @@
     </div>
   </body>
 </html>
+</div>
+
+<div id="basic-rendered-text">
+  {{ field_code_a_copier }}
 </div>
