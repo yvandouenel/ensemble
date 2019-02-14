@@ -1,21 +1,35 @@
 jQuery(function ($) {
     // récupération des éléments de base
+    const title = $("h2.page-header").text();
+    const chapo  = $(".field--name-body").html();
     const base_path = window.location.origin;
-    const headband_src = $(".basic-image img").attr("src");
     const img_from = [];
     const title_from = [];
     const txt_from = [];
     const dates_from = [];
     const location_from = [];
     const event_url_from = [];
+    let html_to_copy;
 
-    // modification des styles de base de la newsletter
-    const head_band_div_dest = $("#newsletter-div-headband");
-    // remplacement 
-    console.log(head_band_div_dest.attr("style"));
+
+    // on cache les éléments venant de la vue
+   /*  $("#basic-fields").css({
+        border: "10px solid red"
+    }); */
+    $("#basic-fields").css({
+        clip: "rect(1px,1px,1px,1px)",
+        height: "1px",
+        margin: "0",
+        overflow: "hidden",
+        padding: "0",
+        position: "absolute",
+        width: "1px"
+    });
+
+    // Remplacement du titre et du texte d'introduction
+    $("#newsletter-h1").text(title);
+    $("#newsletter-chapo").html(chapo);
     
-    //console.log("base path : " + base_path);
-    console.log("url image bandeau : " + base_path + headband_src);
     
     // récupération des événénement provenant de la vue
     $("#basic-events-from-view > div > div > div.field--item").each(function(i) {
@@ -48,7 +62,7 @@ jQuery(function ($) {
         });
         
     });
-    $(".newsletter-to-duplicate").each(function(i){
+    $(".newsletter-to-duplicate").each(function(i) {
         console.log("image " + i + " : " + img_from[i].attr("src"));
         // remplacement des images
         $(".newsletter-img",$(this)).attr("src",img_from[i].attr("src"));
@@ -69,5 +83,9 @@ jQuery(function ($) {
         $(".newsletter-link",$(this)).attr("href",base_path + title_from[i].attr("href"));
     });
 
-    console.log(img_from);
+    /******************************************************************************************** */
+    html_to_copy = $("#newsletter-rendered").html();
+    html_to_copy = '<html style="background-color:#F4F4F4;">' + html_to_copy + '</html>';
+    $(".field--name-field-code-a-copier").text(html_to_copy);
+    
 });
