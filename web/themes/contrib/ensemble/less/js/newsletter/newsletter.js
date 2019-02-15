@@ -38,6 +38,7 @@ jQuery(function ($) {
         
         // récupération des images
         $(".img-responsive", $(this)).each(function() {
+            $(this).attr("src", "http://www.resistons.net" + $(this).attr("src") );
             img_from.push($(this));
         });
 
