@@ -12,16 +12,7 @@ function coopernetnewsletter_views_pre_render($view)
         foreach ($view->result as $event) {
             $dates = $event->_entity->field_date->getValue();
             foreach ($dates as $date) {
-                if (empty($event->_entity->field_next_date->getValue()) &&
-                    $date['value'] > $today) {
-                    $event->field_next_date->value = $date;
-                } elseif (
-                    (($event->_entity->field_next_date->getValue() > $date['value']) ||
-                        ($event->_entity->field_next_date->getValue() < $today))
-                    &&
-                    ($date['value'] > $today)
-                ) {
-                    dpm("Changement de date ?");
+                if($date['value'] > $today ) {
                     $events[$date['value']] = $event;
                 }
             }
