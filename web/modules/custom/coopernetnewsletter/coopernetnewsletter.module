@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function coopernetnewsletter_views_pre_render($view)
+{
+    //dpm($view); // provoque une erreur mais je ne sais pas pourquoi
+    if ($view->current_display == "entity_reference_newsletter") {
+        $events = array();
+        $today = gmdate('Y-m-d\TH:i:s'); // j'ai récupéré ce format dans la vue concernée (entity_reference_newsletter)
+        foreach ($view->result as $event) {
+            $dates = $event->_entity->field_date->getValue();
+            foreach ($dates as $date) {
+                if (empty($event->_entity->field_next_date->getValue()) &&
+                    $date['value'] > $today) {
+                    $event->field_next_date->value = $date;
+                } elseif (
+                    (($event->_entity->field_next_date->getValue() > $date['value']) ||
+                        ($event->_entity->field_next_date->getValue() < $today))
+                    &&
+                    ($date['value'] > $today)
+                ) {
+                    dpm("Changement de date ?");
+                    $events[$date['value']] = $event;
+                }
+            }
+        }
+        ksort($events); // Class en fonction de la valeur de la clé
+        $view->result = $events;
+    }
+
+}
