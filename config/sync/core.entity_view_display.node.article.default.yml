@@ -38,6 +38,7 @@ third_party_settings:
       header:
         - field_thematique
         - node_title
+        - field_referencement
       left:
         - body
     fields:
@@ -69,7 +70,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
-    region: content
+    region: header
   field_thematique:
     weight: 0
     label: inline

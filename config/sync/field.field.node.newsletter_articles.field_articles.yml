@@ -1,0 +1,25 @@
+uuid: 9579dcc2-9421-4bb9-b0b7-e18163ceb723
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_articles
+    - node.type.newsletter_articles
+id: node.newsletter_articles.field_articles
+field_name: field_articles
+entity_type: node
+bundle: newsletter_articles
+label: Articles
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: events
+      display_name: entity_reference_newsletter
+      arguments: {  }
+field_type: entity_reference

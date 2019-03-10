@@ -1,0 +1,44 @@
+uuid: 2fda67e2-8646-4abf-9dba-8a4ed6f919a1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.newsletter_articles.body
+    - field.field.node.newsletter_articles.field_articles
+    - node.type.newsletter_articles
+  module:
+    - ds
+    - text
+    - user
+id: node.newsletter_articles.teaser
+targetEntityType: node
+bundle: newsletter_articles
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_articles:
+    type: entity_reference_entity_view
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      view_mode: newsletter
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

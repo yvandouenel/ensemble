@@ -1,0 +1,19 @@
+uuid: e2fd12ff-0812-4619-ada1-e035f1bc63d1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_code_a_copier
+    - node.type.newsletter_articles
+id: node.newsletter_articles.field_code_a_copier
+field_name: field_code_a_copier
+entity_type: node
+bundle: newsletter_articles
+label: 'Code à copier'
+description: 'Texte à copier pour le coller dans mailjet'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

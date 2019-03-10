@@ -11,7 +11,7 @@ dependencies:
 _core:
   default_config_hash: 0JhSbClCFgLQkyLCjxydZDoTOGs_qu-yyy_a77m8EcM
 id: aggregator_sources
-label: 'Aggregator sources'
+label: 'Sources Aggregator'
 module: aggregator
 description: ''
 tag: aggregator
@@ -22,7 +22,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Maître
     position: 0
     display_options:
       access:
@@ -43,10 +43,10 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Appliquer
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -59,17 +59,17 @@ display:
           total_pages: null
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Éléments par page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Tout -'
             offset: false
-            offset_label: Offset
+            offset_label: Décalage
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
+            previous: '‹ Précédent'
+            next: 'Suivant ›'
+            first: '« Premier'
+            last: 'Dernier »'
           quantity: 9
       style:
         type: default
@@ -151,7 +151,7 @@ display:
   feed_1:
     display_plugin: feed
     id: feed_1
-    display_title: Feed
+    display_title: Flux
     position: 2
     display_options:
       style:
@@ -397,7 +397,7 @@ display:
       displays:
         page_1: page_1
         default: '0'
-      title: 'OPML feed'
+      title: 'Flux OPML'
       sitename_title: true
       display_extenders: {  }
     cache_metadata:

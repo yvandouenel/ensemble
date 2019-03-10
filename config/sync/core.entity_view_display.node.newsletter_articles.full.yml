@@ -1,0 +1,60 @@
+uuid: d9a090c4-5bdf-4957-8cef-2fea168cf5fe
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.newsletter_articles.body
+    - field.field.node.newsletter_articles.field_articles
+    - field.field.node.newsletter_articles.field_code_a_copier
+    - node.type.newsletter_articles
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - body
+        - field_articles
+        - field_code_a_copier
+id: node.newsletter_articles.full
+targetEntityType: node
+bundle: newsletter_articles
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_articles:
+    weight: 1
+    label: above
+    settings:
+      view_mode: newsletter
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: entity_reference_entity_view
+    region: content
+  field_code_a_copier:
+    type: basic_string
+    weight: 2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  links: true

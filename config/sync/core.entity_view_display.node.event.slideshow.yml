@@ -85,10 +85,13 @@ hidden:
   field_argumentaires: true
   field_date: true
   field_document: true
+  field_event_meeting_ensemble: true
   field_event_type: true
   field_home_slideshow: true
   field_inscription: true
   field_place: true
+  field_referencement: true
   field_release_date: true
+  field_ville: true
   langcode: true
   links: true

@@ -1,0 +1,79 @@
+uuid: aa1da8b7-831b-421a-985a-511c3a6c00fd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.newsletter
+    - field.field.node.article.body
+    - field.field.node.article.field_home_slideshow
+    - field.field.node.article.field_image
+    - field.field.node.article.field_referencement
+    - field.field.node.article.field_release_date
+    - field.field.node.article.field_thematique
+    - node.type.article
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_image
+        - node_title
+        - body
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: page-header
+          exclude_node_title: '1'
+id: node.article.newsletter
+targetEntityType: node
+bundle: article
+mode: newsletter
+content:
+  body:
+    type: text_summary_or_trimmed
+    weight: 2
+    region: ds_content
+    label: hidden
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+  field_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+hidden:
+  content_moderation_control: true
+  field_home_slideshow: true
+  field_referencement: true
+  field_release_date: true
+  field_thematique: true
+  langcode: true
+  links: true

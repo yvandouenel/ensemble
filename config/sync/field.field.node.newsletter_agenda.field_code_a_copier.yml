@@ -10,7 +10,7 @@ field_name: field_code_a_copier
 entity_type: node
 bundle: newsletter_agenda
 label: 'Code à copier'
-description: 'Texte à copier'
+description: 'Texte à copier pour le coller dans mailjet'
 required: false
 translatable: false
 default_value:

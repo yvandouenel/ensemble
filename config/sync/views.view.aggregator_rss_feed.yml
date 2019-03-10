@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: 2uV1-bP-4ZwdUPr4BsJG_vxcEg_Half6UjEvYStWZsA
 id: aggregator_rss_feed
-label: 'Aggregator RSS feed'
+label: 'Flux RSS Aggregator'
 module: aggregator
 description: ''
 tag: aggregator
@@ -19,7 +19,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Maître
     position: 0
     display_options:
       access:
@@ -40,10 +40,10 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Appliquer
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -56,17 +56,17 @@ display:
           total_pages: 0
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Éléments par page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Tout -'
             offset: false
-            offset_label: Offset
+            offset_label: Décalage
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
+            previous: '‹ Précédent'
+            next: 'Suivant ›'
+            first: '« Premier'
+            last: 'Dernier »'
           quantity: 9
       style:
         type: default
@@ -80,7 +80,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Item ID'
+          label: 'Identifiant d''élément'
           exclude: false
           plugin_id: field
           alter:
@@ -127,7 +127,7 @@ display:
           entity_field: iid
       filters: {  }
       sorts: {  }
-      title: 'Aggregator RSS feed'
+      title: 'Flux RSS Aggregator'
       header: {  }
       footer: {  }
       empty: {  }
@@ -146,7 +146,7 @@ display:
   feed_items:
     display_plugin: feed
     id: feed_items
-    display_title: Feed
+    display_title: Flux
     position: 1
     display_options:
       path: aggregator/rss

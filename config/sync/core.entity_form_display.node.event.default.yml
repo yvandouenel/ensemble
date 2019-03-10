@@ -80,6 +80,8 @@ content:
         6: 0
         7: 0
       inline: 0
+      allowed_hours: ''
+      mask: false
     third_party_settings: {  }
     type: single_date_time_widget
     region: content
@@ -168,6 +170,7 @@ content:
       html5_geolocation: 0
       map_google_api_key: ''
       zoom_level: 5
+      hide_coordinates: false
     third_party_settings: {  }
     type: geofield_map
     region: content

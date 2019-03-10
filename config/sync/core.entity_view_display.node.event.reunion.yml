@@ -148,6 +148,7 @@ hidden:
   field_home_slideshow: true
   field_inscription: true
   field_place: true
+  field_referencement: true
   field_release_date: true
   field_ville: true
   langcode: true

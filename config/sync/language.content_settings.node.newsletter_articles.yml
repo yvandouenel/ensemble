@@ -1,0 +1,11 @@
+uuid: d9d3e6d1-00fe-4b63-b141-601c872b240b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.newsletter_articles
+id: node.newsletter_articles
+target_entity_type_id: node
+target_bundle: newsletter_articles
+default_langcode: site_default
+language_alterable: false

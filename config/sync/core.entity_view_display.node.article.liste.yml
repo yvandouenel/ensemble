@@ -87,6 +87,7 @@ hidden:
   content_moderation_control: true
   field_home_slideshow: true
   field_image: true
+  field_referencement: true
   field_release_date: true
   langcode: true
   links: true
