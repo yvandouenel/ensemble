@@ -17,7 +17,7 @@ function coopernetnewsletter_views_pre_render($view)
                 }
             }
         }
-        ksort($events); // Class en fonction de la valeur de la clé
+        ksort($events); // Classe en fonction de la valeur de la clé
         $view->result = $events;
     }
 
