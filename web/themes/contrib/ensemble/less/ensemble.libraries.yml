@@ -76,9 +76,13 @@ monthevents:
   dependencies:
       - core/jquery
 
-newsletter:
+newsletteragenda:
   js:
-    js/newsletter/newsletter.js: {}
+    js/newsletter/newsletteragenda.js: {}
   dependencies:
       - core/jquery
-      
+newsletterarticles:
+  js:
+    js/newsletter/newsletterarticle.js: {}
+  dependencies:
+      - core/jquery
