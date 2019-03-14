@@ -15,7 +15,7 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: layout_onecol
+      id: ds_1col
       library: layout_discovery/onecol
       disable_css: false
       entity_classes: all_classes
