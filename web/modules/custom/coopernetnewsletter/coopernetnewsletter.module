@@ -6,6 +6,7 @@
 function coopernetnewsletter_views_pre_render($view)
 {
     //dpm($view); // provoque une erreur mais je ne sais pas pourquoi
+    //dpm($view->current_display);
     if ($view->current_display == "entity_reference_newsletter") {
         $events = array();
         $today = gmdate('Y-m-d\TH:i:s'); // j'ai récupéré ce format dans la vue concernée (entity_reference_newsletter)
@@ -19,6 +20,17 @@ function coopernetnewsletter_views_pre_render($view)
         }
         ksort($events); // Classe en fonction de la valeur de la clé
         $view->result = $events;
+    } else if ($view->current_display == "entity_reference_nl_articles") {
+      $articles = array();
+      $cpt = 0;
+      // on limite la vue à 20 résultats
+      foreach ($view->result as $article) {
+        if($cpt < 20) {
+          $articles[] = $article;
+        } else {break;}
+        $cpt ++;
+      }
+      $view->result = $articles;
     }
 
 }
