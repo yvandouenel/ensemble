@@ -507,6 +507,7 @@ display:
         filters: false
         filter_groups: false
         fields: false
+        sorts: false
       filter_groups:
         operator: AND
         groups:
@@ -566,6 +567,21 @@ display:
           inline: {  }
           separator: '-'
           hide_empty: false
+      sorts:
+        field_release_date_end_value:
+          id: field_release_date_end_value
+          table: node__field_release_date
+          field: field_release_date_end_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          plugin_id: datetime
+          entity_type: node
     cache_metadata:
       max-age: -1
       contexts:
