@@ -12,7 +12,7 @@ jQuery(function($) {
   const has_address = [];
 
   // on cache les éléments venant de la vue
-   $("#basic-fields").css({
+   /* $("#basic-fields").css({
         clip: "rect(1px,1px,1px,1px)",
         height: "1px",
         margin: "0",
@@ -20,7 +20,7 @@ jQuery(function($) {
         padding: "0",
         position: "absolute",
         width: "1px"
-    });
+    }); */
 
   // Remplacement du titre et du texte d'introduction
   $("#newsletter-h1").text(title);
