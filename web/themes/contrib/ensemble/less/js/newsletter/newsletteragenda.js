@@ -8,12 +8,13 @@ jQuery(function($) {
   const txt_from = [];
   const dates_from = [];
   const location_from = [];
+  const town_from = [];
   const base_url = window.location.origin;
   let html_to_copy;
   const has_address = [];
 
   //on cache les éléments venant de la vue
-   $("#basic-fields").css({
+  $("#basic-fields").css({
         clip: "rect(1px,1px,1px,1px)",
         height: "1px",
         margin: "0",
@@ -55,12 +56,19 @@ jQuery(function($) {
     $(".field--name-field-date .field--items", $(this)).each(function() {
       dates_from.push($(this));
     });
-
+    // récupération de la ville
+    $(".field--name-field-ville", $(this)).each(function() {
+      town_from.push($(this));
+    });
     // récupération de l'adresse
     has_address[i] = false;
-    $(".field--name-field-address .field--item", $(this)).each(function() {
+    $(".field--name-field-address .field--item:first", $(this)).each(function(
+      index
+    ) {
       has_address[i] = true;
       location_from.push($(this));
+      console.log("Dans each de field-adress " + index);
+      console.log($(this));
     });
   });
   $(".newsletter-to-duplicate").each(function(i) {
@@ -70,7 +78,7 @@ jQuery(function($) {
 
     // remplacement des titres
     $(".newsletter-title-event a", $(this))
-      .text(title_from[i].text())
+      .text(town_from[i].text() + " - " + title_from[i].text())
       .attr("href", base_path + title_from[i].attr("href"));
 
     // remplacement des textes
@@ -81,7 +89,9 @@ jQuery(function($) {
 
     // remplacement de l'adresse
     if (has_address[i]) {
-      $(".newsletter-address", $(this)).text(location_from[i].text());
+      $(".newsletter-address", $(this)).html(
+        location_from[i].text() + '<br>' + town_from[i].text()
+      );
     }
 
     // remplacement des liens lire la suite
