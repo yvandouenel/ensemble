@@ -92,3 +92,4 @@ type_settings:
     node:
       - article
       - event
+  default_moderation_state: draft

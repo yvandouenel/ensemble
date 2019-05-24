@@ -9,11 +9,13 @@ dependencies:
     - field.field.node.event.field_argumentaires
     - field.field.node.event.field_date
     - field.field.node.event.field_document
+    - field.field.node.event.field_event_meeting_ensemble
     - field.field.node.event.field_event_type
     - field.field.node.event.field_home_slideshow
     - field.field.node.event.field_image
     - field.field.node.event.field_inscription
     - field.field.node.event.field_place
+    - field.field.node.event.field_referencement
     - field.field.node.event.field_release_date
     - field.field.node.event.field_ville
     - node.type.event

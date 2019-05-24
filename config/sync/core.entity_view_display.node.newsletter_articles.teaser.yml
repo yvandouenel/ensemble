@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.newsletter_articles.body
     - field.field.node.newsletter_articles.field_articles
+    - field.field.node.newsletter_articles.field_code_a_copier
     - node.type.newsletter_articles
   module:
     - ds
@@ -41,4 +42,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_code_a_copier: true
   langcode: true

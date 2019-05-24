@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.newsletter_agenda.body
+    - field.field.node.newsletter_agenda.field_code_a_copier
+    - field.field.node.newsletter_agenda.field_evenements
     - node.type.newsletter_agenda
   module:
     - text
@@ -28,5 +30,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_code_a_copier: true
   field_evenements: true
   langcode: true

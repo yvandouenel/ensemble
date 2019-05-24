@@ -45,7 +45,7 @@ third_party_settings:
         settings:
           link: true
           wrapper: h2
-          class: ''
+          class: page-header
           exclude_node_title: '1'
 id: node.article.newsletter
 targetEntityType: node
