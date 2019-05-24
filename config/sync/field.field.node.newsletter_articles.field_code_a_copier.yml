@@ -13,7 +13,9 @@ label: 'Code à copier'
 description: 'Texte à copier pour le coller dans mailjet'
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: 'Code à copier'
 default_value_callback: ''
 settings: {  }
 field_type: string_long

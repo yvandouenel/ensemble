@@ -38,18 +38,9 @@ third_party_settings:
       right:
         - node_title
         - body
+        - node_post_date
         - node_link
     fields:
-      node_link:
-        plugin_id: node_link
-        weight: 3
-        label: hidden
-        formatter: default
-        settings:
-          'link text': 'lire la suite'
-          'link class': ''
-          wrapper: ''
-          class: ''
       node_title:
         plugin_id: node_title
         weight: 1
@@ -60,6 +51,21 @@ third_party_settings:
           wrapper: h3
           class: page-header
           exclude_node_title: '0'
+      node_link:
+        plugin_id: node_link
+        weight: 4
+        label: hidden
+        formatter: default
+        settings:
+          'link text': 'lire la suite'
+          'link class': ''
+          wrapper: ''
+          class: ''
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 3
+        label: hidden
+        formatter: ds_post_date_short
 id: node.article.liste
 targetEntityType: node
 bundle: article
