@@ -24,6 +24,7 @@
 {{ attach_library('ensemble/sameheightcols') }}
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.3&appId=1815308221819289&autoLogAppEvents=1"></script>
+
 <{{ outer_wrapper }}{{ attributes.addClass('ds-2col-stacked', 'clearfix') }}>
 
 <div class="row">
@@ -38,7 +39,7 @@
   <div class="col-md-9">
 <div class="same-height-col">
     <{{ left_wrapper }}{{ left_attributes.addClass('group-left') }}>
-    <div class="fb-like" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    <div class="fb-like" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
       {{ left }}
     </{{ left_wrapper }}>
   </div>
