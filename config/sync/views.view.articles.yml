@@ -375,7 +375,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 12
+          items_per_page: 24
           offset: 0
       render_pager: false
       inherit_pager: false
@@ -670,7 +670,7 @@ display:
         type: full
         options:
           items_per_page: 18
-          offset: 12
+          offset: 24
           id: 0
           total_pages: null
           tags:
