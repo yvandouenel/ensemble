@@ -23,50 +23,67 @@
 {{ attach_library('ensemble/sameheight') }}
 {{ attach_library('ensemble/sameheightcols') }}
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.3&appId=1815308221819289&autoLogAppEvents=1"></script>
+<script async crossorigin="anonymous" defer src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.3&appId=1815308221819289&autoLogAppEvents=1"></script>
 
-<{{ outer_wrapper }}{{ attributes.addClass('ds-2col-stacked', 'clearfix') }}>
+<{{outer_wrapper}}{{attributes.addClass('ds-2col-stacked','clearfix')}}>
 
-<div class="row">
-  <div class="col-md-12">
+  <div class="row">
+    <div class="col-md-12">
       {{ title_suffix.contextual_links }}
-    <{{ header_wrapper }}{{ header_attributes.addClass('group-header') }}>
-      {{ header }}
-  </{{ header_wrapper }}>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-9">
-<div class="same-height-col">
-    <{{ left_wrapper }}{{ left_attributes.addClass('group-left') }}>
-    <div class="fb-like" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-      {{ left }}
-    </{{ left_wrapper }}>
-  </div>
-  </div>
-  <div class="col-md-3">
-    <div class="same-height-col">
-    <div class="under-inci-info">
-      <button class="btn btn-primary btn-lg information" data-target="#infoModal" data-toggle="modal" type="button">Je m'informe</button>
-      <button class="btn btn-primary btn-lg incitation" data-target="#goModal" data-toggle="modal" type="button">Je participe</button>
-      <div class="back-to-list"><a href="/articles">Retour à la liste</a></div>
+      <{{header_wrapper}}{{header_attributes.addClass('group-header')}}>
+        {{ header }}
+      </{{header_wrapper}}>
     </div>
-    <{{ right_wrapper }}{{ right_attributes.addClass('group-right') }}>
-      {{ right }}
-  </{{ right_wrapper }}>
   </div>
+  <div class="row">
+    <div class="col-md-9">
+      <div class="same-height-col">
+        <{{left_wrapper}}{{left_attributes.addClass('group-left')}}>
+          <div class="social-buttons">
+
+            <a class="twitter-share-button" data-count="none" href="https://twitter.com/share">Tweet</a>
+            <script>
+              !function (d, s, id) {
+                var js,
+                  fjs = d.getElementsByTagName(s)[0],
+                  p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (! d.getElementById(id)) {
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = p + '://platform.twitter.com/widgets.js';
+                  fjs.parentNode.insertBefore(js, fjs);
+                }
+              }(document, 'script', 'twitter-wjs');
+            </script>
+            <div class="fb-like" data-action="like" data-layout="standard" data-share="true" data-show-faces="false" data-size="small" data-width=""></div>
+          </div>
+
+          {{ left }}
+        </{{left_wrapper}}>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="same-height-col">
+        <div class="under-inci-info">
+          <button class="btn btn-primary btn-lg information" data-target="#infoModal" data-toggle="modal" type="button">Je m'informe</button>
+          <button class="btn btn-primary btn-lg incitation" data-target="#goModal" data-toggle="modal" type="button">Je participe</button>
+          <div class="back-to-list">
+            <a href="/articles">Retour à la liste</a>
+          </div>
+        </div>
+        <{{right_wrapper}}{{right_attributes.addClass('group-right')}}>
+          {{ right }}
+        </{{right_wrapper}}>
+      </div>
+    </div>
   </div>
-</div>
 
-<div class="row">
-  <div class="col-md-12">
-    <{{ footer_wrapper }}{{ footer_attributes.addClass('group-footer') }}>
-      {{ footer }}
-  </{{ footer_wrapper }}>
-</div>
-</div>
+  <div class="row">
+    <div class="col-md-12">
+      <{{footer_wrapper}}{{footer_attributes.addClass('group-footer')}}>
+        {{ footer }}
+      </{{footer_wrapper}}>
+    </div>
+  </div>
 
-</{{ outer_wrapper }}>
+</{{outer_wrapper}}>
