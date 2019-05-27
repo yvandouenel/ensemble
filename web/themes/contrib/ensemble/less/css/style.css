@@ -7770,6 +7770,12 @@ body p a {
 body p a:hover {
   color: #4d4d4d;
 }
+body strong {
+  font-weight: bold;
+}
+body em {
+  font-style: italic;
+}
 body .container {
   background-color: white;
 }
