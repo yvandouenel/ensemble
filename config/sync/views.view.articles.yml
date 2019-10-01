@@ -547,6 +547,11 @@ display:
           entity_type: node
           entity_field: created
           plugin_id: date
+      pager:
+        type: some
+        options:
+          items_per_page: 30
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
