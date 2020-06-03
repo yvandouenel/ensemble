@@ -23,7 +23,7 @@
         "drupal/admin_toolbar": "^1.24",
         "drupal/bootstrap": "^3.11",
         "drupal/config_installer": "^1.8",
-        "drupal/core": "^8.6.4",
+        "drupal/core": "^8.8",
         "drupal/crop": "^2.0",
         "drupal/devel": "^1.2",
         "drupal/draggableviews": "^1.0",
@@ -40,7 +40,7 @@
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/metatag": "^1.7",
         "drupal/migrate_tools": "^4.0",
-        "drupal/pathauto": "^1.2",
+        "drupal/pathauto": "^1.6",
         "drupal/rules": "^3.0@alpha",
         "drupal/rules_role_email": "^1.0@alpha",
         "drupal/single_datetime": "^1.6",
@@ -58,7 +58,8 @@
     },
     "require-dev": {
         "drupal/console": "^1.8",
-        "webflo/drupal-core-require-dev": "^8.6.4"
+        "drupal/core-dev": "^8.8",
+        "symfony/debug": "^3.4"
     },
     "conflict": {
         "drupal/drupal": "*"
