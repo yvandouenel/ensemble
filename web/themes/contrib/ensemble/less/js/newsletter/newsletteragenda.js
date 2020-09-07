@@ -1,5 +1,6 @@
 jQuery(function($) {
-  // récupération des éléments de base
+  console.log('Dans newsletteragenda.js ****************************************************************');
+ // récupération des éléments de base
   const title = $("h2.page-header").text();
   const chapo = $(".field--name-body").html();
   const base_path = window.location.origin;
@@ -71,6 +72,8 @@ jQuery(function($) {
       console.log($(this));
     });
   });
+
+  
   $(".newsletter-to-duplicate").each(function(i) {
     console.log("image " + i + " : " + img_from[i].attr("src"));
     // remplacement des images
@@ -100,9 +103,11 @@ jQuery(function($) {
       base_path + title_from[i].attr("href")
     );
   });
-  console.log("tableau des adresses : ", has_address);
-  /******************************************************************************************** */
+  //console.log("tableau des adresses : ", has_address);
+  
   html_to_copy = $("#newsletter-rendered").html();
+  console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxx html_to_copy : ", html_to_copy);
+  
   html_to_copy =
     '<html style="background-color:#F4F4F4;">' + html_to_copy + "</html>";
   $(".field--name-field-code-a-copier").text(html_to_copy);
