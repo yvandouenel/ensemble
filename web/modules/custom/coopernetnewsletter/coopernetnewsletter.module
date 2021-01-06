@@ -7,7 +7,7 @@ function coopernetnewsletter_views_pre_render($view)
 {
     //dpm($view); // provoque une erreur mais je ne sais pas pourquoi
     //dpm($view->current_display);
-    if ($view->current_display == "entity_reference_1") {
+    if ($view->current_display == "entity_reference_") {
         $events = array();
         $today = gmdate('Y-m-d\TH:i:s'); // j'ai récupéré ce format dans la vue concernée (entity_reference_newsletter)
         foreach ($view->result as $event) {
