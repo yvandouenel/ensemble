@@ -1,4 +1,4 @@
-uuid: f98febcf-90ae-43b8-873f-c4a445d515e7
+uuid: 8c3986d4-31b6-48ee-b462-a97021ff393f
 langcode: fr
 status: true
 dependencies:
@@ -20,6 +20,6 @@ settings:
   handler_settings:
     view:
       view_name: events
-      display_name: entity_reference_newsletter
+      display_name: entity_reference_1
       arguments: {  }
 field_type: entity_reference

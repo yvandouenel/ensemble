@@ -7,16 +7,16 @@ dependencies:
 id: event_page
 label: 'Page événement'
 type: 'canonical_entities:node'
-pattern: 'agenda/[current-page:title]'
+pattern: 'agenda/[node:title]'
 selection_criteria:
-  391dfce1-9aaf-4dc5-bea5-b863f3b38bcf:
+  5ac37544-43f6-46f2-b632-e997ca1dd4d5:
     id: node_type
     bundles:
       event: event
     negate: false
     context_mapping:
       node: node
-    uuid: 391dfce1-9aaf-4dc5-bea5-b863f3b38bcf
+    uuid: 5ac37544-43f6-46f2-b632-e997ca1dd4d5
 selection_logic: and
 weight: -5
 relationships: {  }

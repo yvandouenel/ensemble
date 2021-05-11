@@ -1,0 +1,7 @@
+uuid: 2c7c6eb7-ba54-40bd-8968-8d9442f8dc63
+langcode: fr
+status: false
+dependencies: {  }
+formId: search_block_form
+captchaType: captcha/Math
+label: search-block-form

@@ -1,0 +1,7 @@
+uuid: ad3a0d97-d418-44d3-be36-f4238688e8fb
+langcode: fr
+status: false
+dependencies: {  }
+formId: node_newsletter_agenda_form
+captchaType: default
+label: null

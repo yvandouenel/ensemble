@@ -19,7 +19,6 @@ dependencies:
     - field.field.node.event.field_release_date
     - field.field.node.event.field_ville
     - node.type.event
-    - workflows.workflow.editorial
   module:
     - content_moderation
     - datetime_range
@@ -42,6 +41,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
   field_address:
@@ -58,6 +58,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content

@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.newsletter_agenda.field_evenements
     - node.type.newsletter_agenda
   module:
-    - ds
     - text
     - user
 id: node.newsletter_agenda.default
@@ -31,15 +30,12 @@ content:
     type: basic_string
     region: content
   field_evenements:
-    weight: 2
+    weight: 4
     label: above
     settings:
-      view_mode: newsletter
-      link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
-    type: entity_reference_entity_view
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
 hidden:
   langcode: true

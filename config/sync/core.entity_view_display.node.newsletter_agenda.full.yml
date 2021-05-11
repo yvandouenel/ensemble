@@ -20,6 +20,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -54,7 +55,7 @@ content:
     third_party_settings: {  }
   field_evenements:
     type: entity_reference_entity_view
-    weight: 1
+    weight: 0
     region: ds_content
     label: above
     settings:
